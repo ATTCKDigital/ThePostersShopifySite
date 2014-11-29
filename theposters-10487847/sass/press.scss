@@ -1,10 +1,11 @@
 @import "vars";
 
 #press-blog {
-	overflow: hidden;
 	background-repeat: no-repeat;
 	background-position: center top;
   	margin-bottom: $gap;
+	overflow: hidden;
+	text-align: center;
 
 	ul {
 		list-style: none;
@@ -13,12 +14,13 @@
 
 		li {
 			float: left;
-			width: 250px;
-			min-height: 250px;
 			margin-bottom: $gap/2;
       		margin-right: 28px;
+			min-height: 250px;
+			width: 250px;
 
       		&.satimage {
+      			margin-top: -110px;
       			width: 530px;
 
       			img {
@@ -27,19 +29,51 @@
       		}
 
 			p {
+				color: $darkGray;
 				display: block;
+				font-size: 0.85em;
 				margin: 0;
 				padding: 0;
 				text-align: center;
-				font-size: 0.85em;
-				color: $darkGray;
 			}
 
 			img {
-				width: 100%;
 				border: 10px solid $white;
 				margin-bottom: 5px;
+				width: 100%;
+				-webkit-transition: all .2s;
+				-moz-transition: all .2s;
+				-ms-transition: all .2s;
+				-o-transition: all .2s;
+        		transition: all .2s;
 			}
+			
+			&:hover {
+				img {
+					-webkit-transform: scale(1.05);
+					transform: scale(1.05);
+				}
+
+				p {
+					color: black;
+				}
+			}
+		}
+	}
+	
+	.press-inquiries {
+		color: #999;
+		float: right;
+		font-size: 0.8em;
+		letter-spacing: 0.05em;
+		line-height: 1.3em;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		top: 25px;
+		
+		a {
+			color: #999;
 		}
 	}
 }

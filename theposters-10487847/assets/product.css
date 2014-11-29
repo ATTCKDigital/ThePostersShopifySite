@@ -83,20 +83,19 @@
 .product .image img {
   max-width: 287px;
   max-height: 287px;
-  border: 10px solid #fff;
 }
-/* line 91, ../sass/product.scss */
+/* line 90, ../sass/product.scss */
 .product .details {
   text-align: center;
 }
-/* line 94, ../sass/product.scss */
+/* line 93, ../sass/product.scss */
 .product .details a {
   color: #666;
   font-size: 1.45em;
   text-transform: uppercase;
   display: block;
 }
-/* line 101, ../sass/product.scss */
+/* line 100, ../sass/product.scss */
 .product .details .availability {
   background-color: #fff;
   clear: both;
@@ -112,16 +111,20 @@
   text-transform: uppercase;
   top: -8px;
 }
-/* line 116, ../sass/product.scss */
+/* line 115, ../sass/product.scss */
 .product .details .availability .days-remaining {
   color: #f00;
 }
+/* line 123, ../sass/product.scss */
+.product:hover .details a {
+  color: #000;
+}
 
-/* line 124, ../sass/product.scss */
+/* line 131, ../sass/product.scss */
 #active-products .for-sale-collection {
   text-align: center;
 }
-/* line 132, ../sass/product.scss */
+/* line 139, ../sass/product.scss */
 #active-products .for-sale-header {
   margin: 0 auto;
   width: 463px;
@@ -130,7 +133,7 @@
 /**
  * Product Detail Page
  */
-/* line 141, ../sass/product.scss */
+/* line 148, ../sass/product.scss */
 #zoom-image {
   position: fixed;
   z-index: 100;
@@ -146,20 +149,19 @@
   background-repeat: no-repeat;
 }
 
-/* line 158, ../sass/product.scss */
+/* line 165, ../sass/product.scss */
 #product #product-images #featured-image {
   text-align: center;
 }
-/* line 161, ../sass/product.scss */
+/* line 168, ../sass/product.scss */
 #product #product-images #featured-image img {
   width: 100%;
-  border: 10px solid #fff;
 }
-/* line 167, ../sass/product.scss */
+/* line 173, ../sass/product.scss */
 #product #product-images #thumbs {
   clear: both;
 }
-/* line 170, ../sass/product.scss */
+/* line 176, ../sass/product.scss */
 #product #product-images #thumbs .image {
   border: 10px solid #fff;
   width: 200px;
@@ -168,24 +170,28 @@
   float: left;
   margin: 26px 26px 0 0;
 }
-/* line 178, ../sass/product.scss */
+/* line 184, ../sass/product.scss */
 #product #product-images #thumbs .image:last-child {
   margin: 26px 0 0 0;
 }
-/* line 182, ../sass/product.scss */
+/* line 188, ../sass/product.scss */
 #product #product-images #thumbs .image img {
   min-width: 200px;
   min-height: 200px;
 }
-/* line 189, ../sass/product.scss */
+/* line 195, ../sass/product.scss */
 #product #product-images .social {
   clear: both;
 }
-/* line 195, ../sass/product.scss */
-#product #details hr {
-  border-top: 1px solid #262626;
+/* line 198, ../sass/product.scss */
+#product #product-images .social .social-share {
+  margin: 0 6px 0 0;
 }
-/* line 199, ../sass/product.scss */
+/* line 205, ../sass/product.scss */
+#product #details hr {
+  border-top: 1px solid #AFAEAF;
+}
+/* line 210, ../sass/product.scss */
 #product #details h1.title {
   color: #999;
   font-size: 1.2em;
@@ -193,7 +199,7 @@
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 207, ../sass/product.scss */
+/* line 218, ../sass/product.scss */
 #product #details #artist {
   font-size: 2em;
   font-weight: 700;
@@ -202,7 +208,7 @@
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 216, ../sass/product.scss */
+/* line 227, ../sass/product.scss */
 #product #details #availability {
   background-color: #fff;
   clear: both;
@@ -218,59 +224,75 @@
   padding: 0 4px;
   text-transform: uppercase;
 }
-/* line 231, ../sass/product.scss */
+/* line 242, ../sass/product.scss */
 #product #details #availability .days-remaining {
   color: #f00;
   position: relative;
   top: 0;
 }
-/* line 238, ../sass/product.scss */
+/* line 249, ../sass/product.scss */
 #product #details .description {
-  font-size: 0.85em;
-  line-height: 1.1em;
+  font-size: 16pt;
+  line-height: 22pt;
   margin: 40px 0;
 }
-/* line 245, ../sass/product.scss */
+/* line 256, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 249, ../sass/product.scss */
+/* line 260, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
   text-align: center;
-  width: 50px;
+  width: 34px;
 }
-/* line 254, ../sass/product.scss */
+/* line 264, ../sass/product.scss */
+#product #details #add-item-form .quantity-wrapper input:focus {
+  color: #000;
+}
+/* line 269, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper label {
-  color: #999;
-  font-size: .8em;
+  color: #666;
+  font-size: 14pt;
   left: 4px;
   position: relative;
   top: -2px;
 }
-/* line 263, ../sass/product.scss */
+/* line 278, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
   text-align: right;
   width: 60%;
 }
-/* line 268, ../sass/product.scss */
+/* line 283, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price {
   display: inline-block;
-  font-size: 1.25em;
+  font-size: 22pt;
   font-weight: 700;
   letter-spacing: normal;
-  line-height: 30px;
+  line-height: 22pt;
   margin-right: 15px;
 }
-/* line 277, ../sass/product.scss */
+/* line 292, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
   text-transform: uppercase;
 }
 
-/* line 287, ../sass/product.scss */
+/* line 302, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
+  padding-top: 60px;
+}
+
+/* line 307, ../sass/product.scss */
+.people-are-talking {
+  padding-top: 40px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+/* line 312, ../sass/product.scss */
+.people-are-talking p {
+  margin: 0 0 5px;
 }

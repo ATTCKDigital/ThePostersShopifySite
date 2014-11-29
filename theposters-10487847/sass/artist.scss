@@ -3,9 +3,9 @@
  */
 
 .artist-list {
-	width: 100%;
+	width: 939px;
 	list-style: none;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 
 	li {
@@ -35,10 +35,11 @@
 		font-size: 2em;
 		height: 273px;
 		line-height: 266px;
-		margin: 8px;
+		margin: 0 60px 60px 0;
 		overflow: hidden;
 		text-align: center;
 		width: 273px;
+		transition: all 0.2s ease-in-out;
 		-webkit-filter: grayscale(100%);
 		-moz-filter: grayscale(100%);
 		-ms-filter: grayscale(100%);
@@ -53,11 +54,21 @@
 			margin: 0;
 			text-transform: uppercase;
 		}
+
+		&:hover {
+			-webkit-filter: grayscale(0%);
+			-moz-filter: grayscale(0%);
+			-ms-filter: grayscale(0%);
+			-o-filter: grayscale(0%);
+			filter: grayscale(0%);
+
+			a {
+				background-color: rgba(#fff, 0.65);
+			}
+		}
 	}
 
 	#join-posters {
-		padding-top: 15px;
-		
 		a {
 			float: left;
 			left: 15px;
@@ -146,5 +157,13 @@
 				height: 240px;
 			}
 		}
+	}
+
+	.social-grid {
+		background-color: #eeeeef;
+	}
+
+	.people-are-talking {
+		background-color: #eeeeef;
 	}
 }

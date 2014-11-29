@@ -33,9 +33,9 @@
       </div>
       <div class="col-sm-5">
         <div id="details">
-          <hr />
-          <h1 class="title" itemprop="name">{{ product.title }}</h1>
-          <div id="artist" class="shadow-header">{{ product.vendor }}</div>
+          <hr style="margin-top: 0" />
+          <h1 class="title" itemprop="name">{{ product.vendor }}</h1>
+          <div id="artist" class="shadow-header">{{ product.title }}</div>
           <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
           <hr />
 
@@ -51,7 +51,7 @@
             </select>
 
             <div class="quantity-wrapper">
-              <input id="quantity" type="number" name="quantity" value="1" class="tc item-quantity" />
+              <input id="quantity" type="text" name="quantity" value="1" class="tc item-quantity" />
               <label>QTY</label>
             </div>
 
@@ -101,5 +101,10 @@
       </section>
     </script>
   {% endraw %}
+</div>
+
+<div class="people-are-talking">
+  <p>We always love to see where the posters find a home.</p>
+  <p>Tag yours on Instagram with #ThePosters, or <a href="mailto:info@theposters.co">email us</a> a picture so we can share in the excitement!</p>
 </div>
 </section>

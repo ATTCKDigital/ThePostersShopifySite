@@ -84,7 +84,6 @@
 		img {
 			max-width: 287px;
 			max-height: 287px;
-			border: 10px solid #fff;
 		}
 	}
 
@@ -115,6 +114,14 @@
 
 			.days-remaining {
 				color: #f00;
+			}
+		}
+	}
+
+	&:hover {
+		.details {
+			a {
+				color: #000;
 			}
 		}
 	}
@@ -160,7 +167,6 @@
 			
 			img {
 				width: 100%;
-				border: 10px solid $white;
 			}
 		}
 
@@ -188,12 +194,17 @@
 
 		.social {
 			clear: both;
+
+			.social-share {
+				margin: 0 6px 0 0;
+			}
 		}
 	}
 
 	#details {
 		hr { 
-			border-top: 1px solid $foreColor;
+			border-top: 1px solid #AFAEAF;
+
 		}
 
 		h1.title {
@@ -236,8 +247,8 @@
 		}
 
 		.description {
-			font-size: 0.85em;
-			line-height: 1.1em;
+			font-size: 16pt;
+			line-height: 22pt;
 			margin: $gap 0;
 		}
 
@@ -248,12 +259,16 @@
 
 				input {
 					text-align: center;
-					width: 50px;
+					width: 34px;
+					
+					&:focus {
+						color: #000;
+					}
 				}
 				
 				label {
-					color: #999;
-					font-size: .8em;
+					color: #666;
+					font-size: 14pt;
 					left: 4px;
 					position: relative;
 					top: -2px;
@@ -267,10 +282,10 @@
 
 				#price {
 					display: inline-block;
-					font-size: 1.25em;
+					font-size: 22pt;
 					font-weight: 700;
 					letter-spacing: normal;
-					line-height: 30px;
+					line-height: 22pt;
 					margin-right: 15px;
 				}
 
@@ -286,4 +301,15 @@
 
 #about-the-artist {
 	background-color: #eeeeef;
+	padding-top: 60px;
+}
+
+.people-are-talking {
+	padding-top: 40px;
+	padding-bottom: 120px;
+	text-align: center;
+
+	p {
+		margin: 0 0 5px;
+	}
 }

@@ -1,8 +1,8 @@
 /* line 3, ../sass/typography.scss */
 .section-header {
-  border-top: 1px solid #262626;
-  border-bottom: 1px solid #262626;
-  color: #262626;
+  border-top: 1px solid #afaeaf;
+  border-bottom: 1px solid #afaeaf;
+  color: #666666;
   display: inline-block;
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -26,27 +26,28 @@
   line-height: 1.3em;
   text-transform: none;
   margin-top: 10px;
+  color: #000;
 }
 
-/* line 32, ../sass/typography.scss */
+/* line 33, ../sass/typography.scss */
 .btn {
   border-radius: 0;
   border: 1px solid #fff;
   outline: 1px solid #f00;
 }
-/* line 37, ../sass/typography.scss */
+/* line 38, ../sass/typography.scss */
 .btn.btn-default {
   border: 1px solid #fff;
   outline: 1px solid #414141;
 }
 
-/* line 43, ../sass/typography.scss */
+/* line 44, ../sass/typography.scss */
 #social {
   float: right;
   line-height: 30px;
   padding-top: 15px;
 }
-/* line 48, ../sass/typography.scss */
+/* line 49, ../sass/typography.scss */
 #social > h2 {
   color: #999999;
   float: left;
@@ -55,7 +56,7 @@
   margin: 3px 10px 0 0;
   text-transform: uppercase;
 }
-/* line 57, ../sass/typography.scss */
+/* line 58, ../sass/typography.scss */
 #social > a {
   border: 1px solid #878787;
   display: block;
@@ -65,31 +66,31 @@
   width: 20px;
   position: relative;
 }
-/* line 66, ../sass/typography.scss */
+/* line 67, ../sass/typography.scss */
 #social > a img {
   width: 100%;
   display: block;
   position: absolute;
   margin: 0;
 }
-/* line 72, ../sass/typography.scss */
+/* line 73, ../sass/typography.scss */
 #social > a img.hover-on {
   display: none;
 }
-/* line 76, ../sass/typography.scss */
+/* line 77, ../sass/typography.scss */
 #social > a img.hover-off {
   display: block;
 }
-/* line 83, ../sass/typography.scss */
+/* line 84, ../sass/typography.scss */
 #social > a:hover img.hover-on {
   display: block;
 }
-/* line 87, ../sass/typography.scss */
+/* line 88, ../sass/typography.scss */
 #social > a:hover img.hover-off {
   display: none;
 }
 
-/* line 95, ../sass/typography.scss */
+/* line 96, ../sass/typography.scss */
 h1, h2, h3, h4 {
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;

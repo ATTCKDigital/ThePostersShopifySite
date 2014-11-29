@@ -30,9 +30,7 @@
 
 {% include 'we-are-posters' %}
 
-<div class="googly">
-  <img src="{{ 'theposters350804.jpg' | asset_url }}" />
-</div>
+{% include 'fundedhours' %}
 
 <div id="press-section" style="background-image: url({{ 'presssat.png' | asset_url }})">
   <div class="container">
@@ -40,7 +38,7 @@
       <div class="col-sm-12">
         <ul>
           {% for article in blogs["press"].articles limit: 7 %}
-            <li><a href="{{ article.title }}">{{ article.content }}</a></li>
+            <li><a href="{{ article.title }}" target="_blank">{{ article.content }}</a></li>
           {% endfor %}
         </ul>
       </div>

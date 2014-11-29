@@ -6,7 +6,7 @@
 <ul>
   <li class="satimage"><img src="{{ 'presssat.png' | asset_url }}" /></li>
   {% for article in blog.articles %}
-    <li><a href="{{ article.title }}">{{ article.content }}</a></li>
+    <li><a href="{{ article.title }}" target="_blank">{{ article.content }}</a></li>
   {% endfor %}
 </ul>
 </div>

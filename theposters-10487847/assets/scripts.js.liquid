@@ -162,6 +162,15 @@ $(document).ready(function () {
     var qty = $(this).closest('a').siblings('.item-quantity').val();
     updateCartItem($(this).closest('a').data('lid'), qty);
   });
+
+  $('body').on('click', '#cart-flyout #checkout', function (e) {
+    if($('.cart-items').find('.cart-item').length < 1) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      return false;
+    }
+  });
 });
 
 /**

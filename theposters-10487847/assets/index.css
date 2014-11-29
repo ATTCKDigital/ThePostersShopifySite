@@ -35,7 +35,6 @@
 
 /* line 39, ../sass/index.scss */
 .previewImage_container {
-  border: 20px solid #fff;
   margin: 0 auto 80px auto;
   max-width: 500px;
   width: 100%;
@@ -47,7 +46,7 @@
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 53, ../sass/index.scss */
+/* line 52, ../sass/index.scss */
 .previewImage_container hr {
   background: white;
   border: 0;
@@ -65,14 +64,14 @@
   -o-transition: all .5s;
   transition: all .5s;
 }
-/* line 72, ../sass/index.scss */
+/* line 71, ../sass/index.scss */
 .previewImage_container img {
   display: inline-block;
   margin: 0;
   padding: 0;
   width: 100%;
 }
-/* line 79, ../sass/index.scss */
+/* line 78, ../sass/index.scss */
 .previewImage_container .action.button {
   background: #fc0d1b;
   bottom: 30%;
@@ -96,7 +95,7 @@
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 104, ../sass/index.scss */
+/* line 103, ../sass/index.scss */
 .previewImage_container .blackscreen {
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
@@ -113,7 +112,7 @@
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 122, ../sass/index.scss */
+/* line 121, ../sass/index.scss */
 .previewImage_container .copy {
   color: white;
   opacity: 0;
@@ -124,188 +123,188 @@
   z-index: 2;
   -webkit-transition: all .5s;
 }
-/* line 131, ../sass/index.scss */
+/* line 130, ../sass/index.scss */
 .previewImage_container .copy.availability {
   color: #CCC;
   font-size: .7em;
 }
-/* line 136, ../sass/index.scss */
+/* line 135, ../sass/index.scss */
 .previewImage_container .copy.date {
   color: #CCC;
 }
-/* line 140, ../sass/index.scss */
+/* line 139, ../sass/index.scss */
 .previewImage_container .copy.title {
   font-size: 2em;
 }
-/* line 149, ../sass/index.scss */
+/* line 148, ../sass/index.scss */
 .previewImage_container.anim1 .copy.availability {
   left: 10%;
   top: 50%;
 }
-/* line 154, ../sass/index.scss */
+/* line 153, ../sass/index.scss */
 .previewImage_container.anim1 .copy.date {
   left: -100%;
   top: 35%;
 }
-/* line 159, ../sass/index.scss */
+/* line 158, ../sass/index.scss */
 .previewImage_container.anim1 .copy.title {
   left: 100%;
   top: 40%;
 }
-/* line 165, ../sass/index.scss */
+/* line 164, ../sass/index.scss */
 .previewImage_container.anim1:hover {
   cursor: pointer;
 }
-/* line 168, ../sass/index.scss */
+/* line 167, ../sass/index.scss */
 .previewImage_container.anim1:hover hr {
   opacity: 1;
 }
-/* line 171, ../sass/index.scss */
+/* line 170, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.bottom {
   bottom: 35%;
 }
-/* line 175, ../sass/index.scss */
+/* line 174, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.top {
   top: 31%;
 }
-/* line 180, ../sass/index.scss */
+/* line 179, ../sass/index.scss */
 .previewImage_container.anim1:hover .blackscreen {
   opacity: 1;
 }
-/* line 185, ../sass/index.scss */
+/* line 184, ../sass/index.scss */
 .previewImage_container.anim1:hover .button.action {
   bottom: 40%;
   opacity: 1;
 }
-/* line 189, ../sass/index.scss */
+/* line 188, ../sass/index.scss */
 .previewImage_container.anim1:hover .button.action:hover {
   background: #d9000d;
 }
-/* line 195, ../sass/index.scss */
+/* line 194, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy {
   opacity: 1;
 }
-/* line 198, ../sass/index.scss */
+/* line 197, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy.availability {
   top: 45.5%;
 }
-/* line 202, ../sass/index.scss */
+/* line 201, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy.date {
   left: 10%;
 }
-/* line 206, ../sass/index.scss */
+/* line 205, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy.title {
   left: 10%;
 }
-/* line 212, ../sass/index.scss */
+/* line 211, ../sass/index.scss */
 .previewImage_container.anim1 hr {
   -webkit-transition: all .5s;
 }
-/* line 213, ../sass/index.scss */
+/* line 212, ../sass/index.scss */
 .previewImage_container.anim1 hr.bottom {
   bottom: -10%;
 }
-/* line 217, ../sass/index.scss */
+/* line 216, ../sass/index.scss */
 .previewImage_container.anim1 hr.top {
   top: -10%;
 }
-/* line 224, ../sass/index.scss */
+/* line 223, ../sass/index.scss */
 .previewImage_container.anim1 .copy {
   -webkit-transition: all .5s;
 }
-/* line 225, ../sass/index.scss */
+/* line 224, ../sass/index.scss */
 .previewImage_container.anim1 .copy.availability {
   left: 10%;
   top: 50%;
 }
-/* line 230, ../sass/index.scss */
+/* line 229, ../sass/index.scss */
 .previewImage_container.anim1 .copy.date {
   color: #CCC;
   left: -100%;
   top: 35%;
 }
-/* line 236, ../sass/index.scss */
+/* line 235, ../sass/index.scss */
 .previewImage_container.anim1 .copy.title {
   font-size: 2em;
   left: 100%;
   top: 40%;
 }
-/* line 248, ../sass/index.scss */
+/* line 247, ../sass/index.scss */
 .previewImage_container.anim2 hr.bottom {
   bottom: 32%;
 }
-/* line 252, ../sass/index.scss */
+/* line 251, ../sass/index.scss */
 .previewImage_container.anim2 hr.top {
   top: 28%;
 }
-/* line 258, ../sass/index.scss */
+/* line 257, ../sass/index.scss */
 .previewImage_container.anim2 .button.action {
   bottom: 40%;
 }
-/* line 264, ../sass/index.scss */
+/* line 263, ../sass/index.scss */
 .previewImage_container.anim2 .copy.availability {
   left: 10%;
 }
-/* line 268, ../sass/index.scss */
+/* line 267, ../sass/index.scss */
 .previewImage_container.anim2 .copy.date {
   left: 10%;
 }
-/* line 272, ../sass/index.scss */
+/* line 271, ../sass/index.scss */
 .previewImage_container.anim2 .copy.title {
   left: 10%;
 }
-/* line 277, ../sass/index.scss */
+/* line 276, ../sass/index.scss */
 .previewImage_container.anim2:hover {
   cursor: pointer;
 }
-/* line 280, ../sass/index.scss */
+/* line 279, ../sass/index.scss */
 .previewImage_container.anim2:hover hr {
   opacity: 1;
 }
-/* line 283, ../sass/index.scss */
+/* line 282, ../sass/index.scss */
 .previewImage_container.anim2:hover hr.bottom {
   bottom: 35%;
 }
-/* line 287, ../sass/index.scss */
+/* line 286, ../sass/index.scss */
 .previewImage_container.anim2:hover hr.top {
   top: 31%;
 }
-/* line 292, ../sass/index.scss */
+/* line 291, ../sass/index.scss */
 .previewImage_container.anim2:hover .blackscreen {
   opacity: 1;
 }
-/* line 297, ../sass/index.scss */
+/* line 296, ../sass/index.scss */
 .previewImage_container.anim2:hover .button.action {
   -webkit-animation-duration: .7s;
   -webkit-animation-delay: .4s;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-name: buttonfade;
 }
-/* line 303, ../sass/index.scss */
+/* line 302, ../sass/index.scss */
 .previewImage_container.anim2:hover .button.action:hover {
   background: #d9000d;
 }
-/* line 312, ../sass/index.scss */
+/* line 311, ../sass/index.scss */
 .previewImage_container.anim2:hover .copy.availability {
   -webkit-animation-duration: .2s;
   -webkit-animation-delay: .4s;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-name: availabilityslide;
 }
-/* line 319, ../sass/index.scss */
+/* line 318, ../sass/index.scss */
 .previewImage_container.anim2:hover .copy.date {
   -webkit-animation-duration: .2s;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-name: dateslide;
 }
-/* line 325, ../sass/index.scss */
+/* line 324, ../sass/index.scss */
 .previewImage_container.anim2:hover .copy.title {
   -webkit-animation-duration: .2s;
   -webkit-animation-delay: .2s;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-name: titleslide;
 }
-/* line 333, ../sass/index.scss */
+/* line 332, ../sass/index.scss */
 .previewImage_container.anim2:hover .modal {
   opacity: 1;
 }
@@ -352,13 +351,13 @@
 /**
  * We Are The Posters Section
  */
-/* line 391, ../sass/index.scss */
+/* line 390, ../sass/index.scss */
 #we-are-the-posters .we-are-the-posters-header {
   margin: 0 auto;
   width: 663px;
 }
 
-/* line 397, ../sass/index.scss */
+/* line 396, ../sass/index.scss */
 #we-are-the-posters-video {
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -366,7 +365,7 @@
   padding-bottom: 50px;
   padding-top: 95px;
 }
-/* line 404, ../sass/index.scss */
+/* line 403, ../sass/index.scss */
 #we-are-the-posters-video .video-container {
   background: white;
   border: 1px solid #000;
@@ -376,17 +375,17 @@
   top: -75px;
   width: 580px;
 }
-/* line 413, ../sass/index.scss */
+/* line 412, ../sass/index.scss */
 #we-are-the-posters-video .video-container iframe {
   margin: 0;
   border: 0;
   display: block;
 }
-/* line 419, ../sass/index.scss */
+/* line 418, ../sass/index.scss */
 #we-are-the-posters-video .video-container img {
   width: 100%;
 }
-/* line 424, ../sass/index.scss */
+/* line 423, ../sass/index.scss */
 #we-are-the-posters-video .small-social {
   margin: 0 auto;
   position: relative;
@@ -395,15 +394,15 @@
   top: -80px;
   width: 580px;
 }
-/* line 432, ../sass/index.scss */
+/* line 431, ../sass/index.scss */
 #we-are-the-posters-video .small-social a {
   margin: 0 3px;
 }
-/* line 436, ../sass/index.scss */
+/* line 435, ../sass/index.scss */
 #we-are-the-posters-video .small-social h2 {
   display: none;
 }
-/* line 440, ../sass/index.scss */
+/* line 439, ../sass/index.scss */
 #we-are-the-posters-video .small-social .pinterest {
   display: none;
 }
@@ -411,47 +410,47 @@
 /**
  * Mission Section with Countdown
  */
-/* line 450, ../sass/index.scss */
+/* line 449, ../sass/index.scss */
 #mission-section {
   text-align: center;
   padding: 75px 0;
   margin-bottom: 60px;
 }
-/* line 455, ../sass/index.scss */
+/* line 454, ../sass/index.scss */
 #mission-section h2 {
   color: #999999;
   font-size: 1.8em;
   margin: 0;
   text-transform: uppercase;
 }
-/* line 461, ../sass/index.scss */
+/* line 460, ../sass/index.scss */
 #mission-section h2.mission-footer {
   font-size: 1.47em;
   margin-top: 5px;
 }
-/* line 467, ../sass/index.scss */
+/* line 466, ../sass/index.scss */
 #mission-section h3 {
   color: #fff;
   font-size: 2.75em;
   margin: -3px 0 -2px;
   text-transform: uppercase;
 }
-/* line 474, ../sass/index.scss */
+/* line 473, ../sass/index.scss */
 #mission-section hr {
   border-color: #888;
   min-width: 440px;
   width: 33%;
 }
-/* line 479, ../sass/index.scss */
+/* line 478, ../sass/index.scss */
 #mission-section hr.bottom {
   margin-top: 30px;
 }
-/* line 484, ../sass/index.scss */
+/* line 483, ../sass/index.scss */
 #mission-section p {
   margin-bottom: 35px;
   margin-top: 30px;
 }
-/* line 489, ../sass/index.scss */
+/* line 488, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
   color: #fff;
@@ -461,12 +460,12 @@
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 498, ../sass/index.scss */
+/* line 497, ../sass/index.scss */
 #mission-section .btn-default:hover {
   color: #333;
   background: #fff;
 }
-/* line 504, ../sass/index.scss */
+/* line 503, ../sass/index.scss */
 #mission-section.mission-white-bg {
   text-align: center;
   padding: 100px 0 50px 0;
@@ -475,20 +474,20 @@
   background-repeat: no-repeat;
   background-size: 100%;
 }
-/* line 512, ../sass/index.scss */
+/* line 511, ../sass/index.scss */
 #mission-section.mission-white-bg hr, #mission-section.mission-white-bg .btn-default {
   display: none;
 }
-/* line 516, ../sass/index.scss */
+/* line 515, ../sass/index.scss */
 #mission-section.mission-white-bg h2 {
   color: #262626;
 }
-/* line 520, ../sass/index.scss */
+/* line 519, ../sass/index.scss */
 #mission-section.mission-white-bg h3 {
   color: #000;
 }
 
-/* line 526, ../sass/index.scss */
+/* line 525, ../sass/index.scss */
 .googly {
   background-color: #4b4b4b;
   padding: 50px 0;
@@ -497,7 +496,7 @@
   border-bottom: 10px solid #fff;
   margin-bottom: 50px;
 }
-/* line 534, ../sass/index.scss */
+/* line 533, ../sass/index.scss */
 .googly img {
   width: 400px;
   border: 10px solid #fff;
@@ -506,26 +505,26 @@
 /**
  * Press Section
  */
-/* line 544, ../sass/index.scss */
+/* line 543, ../sass/index.scss */
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
   margin-bottom: 10px;
 }
-/* line 550, ../sass/index.scss */
+/* line 549, ../sass/index.scss */
 #press-section ul {
   list-style: none;
   margin: 145px 0 0 0;
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 550, ../sass/index.scss */
+  /* line 549, ../sass/index.scss */
   #press-section ul {
     margin: 375px 0 0 0;
   }
 }
-/* line 559, ../sass/index.scss */
+/* line 558, ../sass/index.scss */
 #press-section ul li {
   float: left;
   width: 200px;
@@ -533,28 +532,28 @@
   margin-bottom: 20px;
   margin-right: 28px;
 }
-/* line 567, ../sass/index.scss */
+/* line 566, ../sass/index.scss */
 #press-section ul li:hover img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 572, ../sass/index.scss */
+/* line 571, ../sass/index.scss */
 #press-section ul li:hover p {
   color: black;
 }
-/* line 577, ../sass/index.scss */
+/* line 576, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 583, ../sass/index.scss */
+  /* line 582, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 589, ../sass/index.scss */
+/* line 588, ../sass/index.scss */
 #press-section ul li p {
   color: #999;
   display: block;
@@ -568,7 +567,7 @@
   -webkit-transition: color .2s;
   transition: color .2s;
 }
-/* line 603, ../sass/index.scss */
+/* line 602, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
   border: 10px solid #fff;

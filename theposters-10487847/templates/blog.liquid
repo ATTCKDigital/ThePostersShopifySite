@@ -1,17 +1,27 @@
 {% if blog.handle == 'press' %}
-<div class="container">
-<div class="row">
-<div id="press-blog" class="col-sm-12">
-<h1 class="shadow-header section-header">Press for the Posters</h1>
-<ul>
-  <li class="satimage"><img src="{{ 'presssat.png' | asset_url }}" /></li>
-  {% for article in blog.articles %}
-    <li><a href="{{ article.title }}" target="_blank">{{ article.content }}</a></li>
-  {% endfor %}
-</ul>
-</div>
-</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div id="press-blog" class="col-sm-12">
+                <h1 class="shadow-header section-header">
+                    Press for the Posters
+                </h1>
+                <div class="press-inquiries">
+                    Press Inquiries:<br>
+                    <a href="mailto:press@theposters.co">press@theposters.co</a>
+                </div>
+            <ul>
+                <li class="satimage">
+                    <img src="{{ 'presssat.png' | asset_url }}" />
+                </li>
+                {% for article in blog.articles %}
+                    <li>
+                        <a href="{{ article.title }}" target="_blank">{{ article.content }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </div>
 {% else %}
 <div id="blog">
   

@@ -2096,7 +2096,7 @@ a#login-recover:hover {
   color:#666;
 }
 
-div#login-signup{
+div#login-signup, div#customer-register {
 padding-bottom: 120px;
 }
 

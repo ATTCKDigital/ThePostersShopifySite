@@ -1,5 +1,5 @@
 {% layout settings.customer_layout %}
-
+  <div class="container">
 <div id="customer-register">
   <div class="row">
     <div id="register" class="col-sm-6">
@@ -35,7 +35,11 @@
 	      </div>
 	
 	    {% endform %}
+	  </div>
+	  
         
     </div><!-- #register -->
   </div><!-- .row -->
 </div><!-- #customer-register -->
+
+<div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>

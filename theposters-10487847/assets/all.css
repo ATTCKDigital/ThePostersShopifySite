@@ -163,6 +163,7 @@ header#main-header nav ul li a {
 header#main-header nav ul li a:hover, header#main-header nav ul li a.active {
   border-bottom: 3px solid #000;
   margin: 0 15px 10px 15px;
+  color:#000;
 }
 /* line 67, ../sass/global.scss */
 header#main-header nav ul li#logo {
@@ -179,14 +180,14 @@ header#main-header nav ul li#logo a {
   width: 81px;
 }
 /* line 82, ../sass/global.scss */
-header#main-header nav ul li:nth-child(4) a {
-  border-color: #999;
-  color: #999;
+header#main-header nav ul li:nth-child(4) a:hover, header#main-header nav ul li:nth-child(4) a.active, {
+  /*border-color: #999;*/
+  color: #666;
 }
 /* line 89, ../sass/global.scss */
-header#main-header nav ul li:nth-child(5) a {
-  border-color: #999;
-  color: #999;
+header#main-header nav ul li:nth-child(5) a:hover, header#main-header nav ul li:nth-child(5) a.active, {
+  /*border-color: #999;*/
+  color: #666;
 }
 /* line 98, ../sass/global.scss */
 header#main-header #cart-info {
@@ -1721,14 +1722,18 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 5, ../sass/mission.scss */
 .mission-page-heading h2 {
-  width: 300px;
+  width: 442px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 15px 30px;
+  color: #666666;
+  font-weight: 700;
+  font-size: 2.85em;
   text-transform: uppercase;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid #afaeaf;
+  border-bottom: 1px solid #afaeaf;
   text-align: center;
-  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  text-shadow: 1px 1px 0px #e6e3e4, 2px 2px 0px #777, 1px 2px 0px #777,2px 1px 0px #777;
 }
 
 /* line 17, ../sass/mission.scss */

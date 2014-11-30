@@ -3,8 +3,7 @@
   border-top: 1px solid #afaeaf;
   border-bottom: 1px solid #afaeaf;
   color: #666666;
-  display: block;
-  width:442px;
+  display: inline-block;
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 2.85em;
@@ -35,7 +34,7 @@
   border-radius: 0;
   border: 1px solid #fff;
   outline: 1px solid #f00;
-  
+}
 /* line 38, ../sass/typography.scss */
 .btn.btn-default {
   border: 1px solid #fff;
@@ -103,7 +102,7 @@ html, body {
   padding: 0;
   background-color: #e5e2e4;
   color: #666666;
-  font-size: 16pt;
+  font-size: 20px;
   letter-spacing: 1px;
   line-height: 28px;
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -112,8 +111,7 @@ html, body {
 
 /* line 15, ../sass/global.scss */
 a {
-  color: #999;
-  font-weight: 300;
+  color: #666666;
 }
 /* line 18, ../sass/global.scss */
 a:hover {
@@ -2043,20 +2041,30 @@ body {
 /* line 4, ../sass/login.scss */
 #login .section-header {
   /*margin: 40px 0;*/
+  width: 442px;
 }
+
+div#login{
+width:442px;
+}
+
+div#create{
+width:442px;
+
+}
+
 
 /* line 10, ../sass/login.scss */
 #login-signup .label {
-  color: #888;
+  color: #666;
   display: block;
-  font-size: 0.9em;
+  font-size: 13pt;
   letter-spacing: 0em;
   padding: 5px 0 0 0;
   text-align: left;
 }
 /* line 19, ../sass/login.scss */
 #login-signup input {
-  border: 1px solid #888;
   margin-bottom: 15px;
   padding: 0 5px;
   width: 100%;
@@ -2067,10 +2075,29 @@ body {
 }
 /* line 30, ../sass/login.scss */
 #login-signup .btn-primary {
-  background-color: #000;
+  background-color: #f00;
+  border: 1px solid #fff;
   text-transform: uppercase;
-  border-display:none;
   float: right;
+}
+/* line 34, ../sass/login.scss */
+#login-signup .btn-primary:hover {
+  border: 1px solid #000;
+  outline: 2px solid #f00;
+}
+a#login-recover {
+  color:#999;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight:300;
+  font-size: 13pt;
+}
+
+a#login-recover:hover {
+  color:#666;
+}
+
+div#login-signup{
+padding-bottom: 120px;
 }
 
 /* line 3, ../sass/press.scss */

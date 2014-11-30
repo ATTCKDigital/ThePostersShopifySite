@@ -34,8 +34,8 @@
 .btn {
   border-radius: 0;
   border: 1px solid #fff;
-  /*outline: 1px solid #f00;*/ /* was causing red outline for btn*/
-}
+  outline: 1px solid #f00;
+  
 /* line 38, ../sass/typography.scss */
 .btn.btn-default {
   border: 1px solid #fff;

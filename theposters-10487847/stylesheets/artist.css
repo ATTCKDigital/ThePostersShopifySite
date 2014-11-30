@@ -1,0 +1,171 @@
+/**
+ * Artist Listing Page
+ */
+/* line 5, ../sass/artist.scss */
+.artist-list {
+  width: 939px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 12, ../sass/artist.scss */
+.artist-list li:nth-child(4n+1) {
+  float: left;
+  margin-left: 0;
+}
+/* line 17, ../sass/artist.scss */
+.artist-list li:nth-child(4n+1)#join-posters a {
+  left: 0;
+  top: 0;
+}
+/* line 24, ../sass/artist.scss */
+.artist-list li:nth-child(4n+4) {
+  margin-right: 0;
+}
+/* line 30, ../sass/artist.scss */
+.artist-list .artist {
+  background-position: center center;
+  background-size: cover;
+  border: 9px solid #fff;
+  float: left;
+  font-size: 2em;
+  height: 273px;
+  line-height: 266px;
+  margin: 0 60px 60px 0;
+  overflow: hidden;
+  text-align: center;
+  width: 273px;
+  transition: all 0.2s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 49, ../sass/artist.scss */
+.artist-list .artist a {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #000;
+  display: block;
+  font-size: 0.8em;
+  margin: 0;
+  text-transform: uppercase;
+}
+/* line 58, ../sass/artist.scss */
+.artist-list .artist:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+/* line 65, ../sass/artist.scss */
+.artist-list .artist:hover a {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+/* line 72, ../sass/artist.scss */
+.artist-list #join-posters a {
+  float: left;
+  left: 15px;
+  overflow: hidden;
+  position: relative;
+  top: 15px;
+}
+
+/**
+ * Artist Profile
+ */
+/* line 87, ../sass/artist.scss */
+.artist-profile .artist-header {
+  background-color: #eeeeef;
+  border-bottom: 10px solid #fff;
+  border-top: 10px solid #fff;
+  height: 400px;
+  overflow: hidden;
+}
+/* line 94, ../sass/artist.scss */
+.artist-profile .artist-header .artist-image {
+  background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+}
+/* line 100, ../sass/artist.scss */
+.artist-profile .artist-header .artist-image-wrapper {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+/* line 108, ../sass/artist.scss */
+.artist-profile .artist-header .artist-title {
+  float: left;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  width: 50%;
+}
+/* line 115, ../sass/artist.scss */
+.artist-profile .artist-header .artist-title h1 {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: -47px;
+  padding: 15px 30px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+}
+/* line 130, ../sass/artist.scss */
+.artist-profile .artist-description {
+  font-size: .8em;
+  line-height: 1.4em;
+  margin: 50px 0;
+  padding: 15px 0;
+}
+/* line 137, ../sass/artist.scss */
+.artist-profile .artist-products {
+  margin-top: 25px;
+}
+/* line 140, ../sass/artist.scss */
+.artist-profile .artist-products:nth-child(4) {
+  clear: right;
+}
+/* line 145, ../sass/artist.scss */
+.artist-profile .artist-video {
+  clear: both;
+  background-color: #eeeeef;
+}
+/* line 149, ../sass/artist.scss */
+.artist-profile .artist-video .artist-video-description {
+  padding: 110px 0;
+  text-align: right;
+  width: 80%;
+  float: right;
+  font-size: 0.9em;
+}
+/* line 157, ../sass/artist.scss */
+.artist-profile .artist-video .artist-video-content {
+  margin: 0 auto;
+  padding: 90px 0;
+  overflow: hidden;
+}
+/* line 162, ../sass/artist.scss */
+.artist-profile .artist-video .artist-video-content iframe {
+  margin: 0 2px 0 15px;
+  float: left;
+  border: 10px solid #fff;
+  outline: 2px solid #000;
+  width: 400px;
+  height: 240px;
+}
+/* line 173, ../sass/artist.scss */
+.artist-profile .social-grid {
+  background-color: #eeeeef;
+}
+/* line 177, ../sass/artist.scss */
+.artist-profile .people-are-talking {
+  background-color: #eeeeef;
+}

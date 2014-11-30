@@ -1,0 +1,565 @@
+/* line 3, ../sass/global.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e2e4;
+  color: #666666;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+/* line 15, ../sass/global.scss */
+a {
+  color: #666666;
+}
+/* line 18, ../sass/global.scss */
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 24, ../sass/global.scss */
+header#main-header {
+  background-color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+/* line 29, ../sass/global.scss */
+header#main-header:after {
+  content: ' ';
+  display: block;
+  background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/paper-edge.png) repeat-x;
+  height: 8px;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+/* line 40, ../sass/global.scss */
+header#main-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 45, ../sass/global.scss */
+header#main-header nav ul li {
+  float: left;
+}
+/* line 48, ../sass/global.scss */
+header#main-header nav ul li a {
+  bottom: -10px;
+  display: block;
+  font-weight: 700;
+  font-size: 0.8em;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  line-height: 1.3em;
+  margin: 0 15px 15px 15px;
+  padding: 85px 0 0 0;
+  position: relative;
+  text-transform: uppercase;
+}
+/* line 61, ../sass/global.scss */
+header#main-header nav ul li a:hover, header#main-header nav ul li a.active {
+  border-bottom: 3px solid #000;
+  margin: 0 15px 10px 15px;
+}
+/* line 67, ../sass/global.scss */
+header#main-header nav ul li#logo {
+  margin-right: 15px;
+}
+/* line 70, ../sass/global.scss */
+header#main-header nav ul li#logo a {
+  border: 0;
+  bottom: initial;
+  height: 105px;
+  margin: 11px 0 0 0;
+  padding: 0;
+  text-indent: -9999px;
+  width: 81px;
+}
+/* line 82, ../sass/global.scss */
+header#main-header nav ul li:nth-child(4) a {
+  border-color: #999;
+  color: #999;
+}
+/* line 89, ../sass/global.scss */
+header#main-header nav ul li:nth-child(5) a {
+  border-color: #999;
+  color: #999;
+}
+/* line 98, ../sass/global.scss */
+header#main-header #cart-info {
+  padding-top: 85px;
+  text-align: right;
+}
+/* line 102, ../sass/global.scss */
+header#main-header #cart-info .login {
+  border-bottom: 1px transparent;
+  color: #999;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-right: 28px;
+  position: relative;
+  top: -3px;
+}
+/* line 112, ../sass/global.scss */
+header#main-header #cart-info .login:hover {
+  border-bottom: 1px solid #999;
+}
+/* line 117, ../sass/global.scss */
+header#main-header #cart-info .toggle-cart {
+  color: #666;
+  display: inline-block;
+  font-size: 16px;
+  height: 35px;
+  line-height: 45px;
+  position: relative;
+  text-align: center;
+  top: -3px;
+  width: 29px;
+  background-position: 0 0;
+}
+/* line 129, ../sass/global.scss */
+header#main-header #cart-info .toggle-cart:hover {
+  background-position: -30px 0;
+  color: #fff;
+}
+
+/* http://www.dennisplucinik.com/blog/2007/09/01/css-hack-text-indent-10000px/ */
+/* line 138, ../sass/global.scss */
+.ir {
+  background-repeat: no-repeat;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+}
+
+/* line 147, ../sass/global.scss */
+.shadow-header {
+  text-shadow: 1px 1px 0px #e6e3e4, 2px 2px 0px #777, 1px 2px 0px #777,2px 1px 0px #777;
+}
+/* line 150, ../sass/global.scss */
+.shadow-header small {
+  text-shadow: none;
+}
+
+/* line 155, ../sass/global.scss */
+.shadow-header-grey {
+  border-color: #afaeaf;
+  color: #666;
+  text-shadow: 1px 1px 0px #e6e3e4, 2px 2px 0px #666, 1px 2px 0px #666,2px 1px 0px #666;
+}
+/* line 160, ../sass/global.scss */
+.shadow-header-grey small {
+  margin: 0 30px;
+  margin-top: 3px;
+  text-shadow: none;
+}
+
+/* line 167, ../sass/global.scss */
+.shadow-header-inverted {
+  text-shadow: 2px 2px 0px #333, 3px 3px 0px #9f9f9f;
+}
+
+/* line 171, ../sass/global.scss */
+.sprite {
+  background: no-repeat;
+}
+/* line 174, ../sass/global.scss */
+.sprite.arrow-white-right {
+  background-image: url(arrow-white.png);
+  height: 22px;
+  width: 15px;
+}
+
+/* line 181, ../sass/global.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 185, ../sass/global.scss */
+#main-content {
+  padding: 60px 0 0 0;
+}
+
+/* line 189, ../sass/global.scss */
+footer#main-footer {
+  padding-top: 60px;
+  background-color: #fff;
+  margin-top: 0;
+  overflow: hidden;
+}
+/* line 195, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe {
+  background-color: #e5e2e4;
+  height: 45px;
+  position: relative;
+}
+/* line 200, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input {
+  background-color: #EEE;
+  border: 0;
+  color: #999;
+  display: block;
+  font-size: 0.7em;
+  font-style: italic;
+  height: 45px;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all .2s;
+}
+/* line 213, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input::-webkit-input-placeholder {
+  font-style: italic;
+}
+/* line 217, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input:-moz-placeholder {
+  font-style: italic;
+}
+/* line 221, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input::-moz-placeholder {
+  font-style: italic;
+}
+/* line 225, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input:-ms-input-placeholder {
+  font-style: italic;
+}
+/* line 230, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input:focus {
+  color: #000;
+}
+/* line 233, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input:focus::-webkit-input-placeholder {
+  color: #000;
+}
+/* line 237, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input:focus:-moz-placeholder {
+  color: #000;
+}
+/* line 241, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input:focus::-moz-placeholder {
+  color: #000;
+}
+/* line 245, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input:focus:-ms-input-placeholder {
+  color: #000;
+}
+/* line 251, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe button {
+  width: 45px;
+  height: 45px;
+  float: right;
+  border: 0;
+  position: relative;
+  z-index: 1;
+}
+/* line 259, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe button.arrow-white-right {
+  background-color: #999;
+  background-position: 15px 11px;
+}
+/* line 266, ../sass/global.scss */
+footer#main-footer .social-follow-us {
+  position: relative;
+  float: right;
+  top: -4px;
+}
+@media screen and (max-width: 1200px) {
+  /* line 266, ../sass/global.scss */
+  footer#main-footer .social-follow-us {
+    top: -30px;
+  }
+}
+/* line 275, ../sass/global.scss */
+footer#main-footer .social-follow-us h2 {
+  color: #999;
+  display: block;
+  float: left;
+  font-size: .7em;
+  font-weight: normal;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 50px;
+  margin: 0 10px 0 0;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+  /* line 275, ../sass/global.scss */
+  footer#main-footer .social-follow-us h2 {
+    clear: both;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+/* line 294, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon {
+  background-color: #eaeaea;
+  display: block;
+  float: left;
+  margin: 0 10px 1px 0;
+  text-align: center;
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+@media screen and (max-width: 1200px) {
+  /* line 306, ../sass/global.scss */
+  footer#main-footer .social-follow-us a.social-icon:nth-child(2n) {
+    clear: both;
+  }
+}
+/* line 311, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon img {
+  position: absolute;
+}
+/* line 314, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon img.hover-on {
+  display: none;
+}
+/* line 318, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon img.hover-off {
+  display: block;
+}
+/* line 325, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon:hover img.hover-on {
+  display: block;
+}
+/* line 329, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon:hover img.hover-off {
+  display: none;
+}
+/* line 337, ../sass/global.scss */
+footer#main-footer nav {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  /* line 337, ../sass/global.scss */
+  footer#main-footer nav {
+    margin-bottom: 60px;
+    margin-top: 30px;
+  }
+}
+/* line 347, ../sass/global.scss */
+footer#main-footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 352, ../sass/global.scss */
+footer#main-footer nav ul li {
+  display: inline;
+  float: left;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  /* line 352, ../sass/global.scss */
+  footer#main-footer nav ul li {
+    width: 33%;
+  }
+  /* line 361, ../sass/global.scss */
+  footer#main-footer nav ul li:nth-child(3n + 1) {
+    clear: left;
+    text-align: right;
+  }
+  /* line 366, ../sass/global.scss */
+  footer#main-footer nav ul li:nth-child(3n + 2) {
+    text-align: center;
+  }
+}
+/* line 371, ../sass/global.scss */
+footer#main-footer nav ul li a {
+  color: #999;
+  display: block;
+  font-size: 0.72em;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+/* line 378, ../sass/global.scss */
+footer#main-footer nav ul li a:hover {
+  color: #000;
+}
+/* line 383, ../sass/global.scss */
+footer#main-footer nav ul li span {
+  color: #999;
+  display: block;
+  font-size: 0.72em;
+  padding: 0 20px 0 0;
+  text-transform: uppercase;
+}
+/* line 391, ../sass/global.scss */
+footer#main-footer nav ul li:nth-child(1) {
+  padding-left: 0;
+}
+/* line 394, ../sass/global.scss */
+footer#main-footer nav ul li:nth-child(1) a {
+  padding-left: 0;
+}
+/* line 399, ../sass/global.scss */
+footer#main-footer nav ul li:last-child {
+  padding-right: 0;
+}
+/* line 402, ../sass/global.scss */
+footer#main-footer nav ul li:last-child a {
+  padding-right: 0;
+}
+
+/* line 411, ../sass/global.scss */
+#main-wrapper {
+  left: 0;
+  position: relative;
+  width: 100%;
+}
+
+/* line 417, ../sass/global.scss */
+#cart-flyout {
+  background-color: #eaeaeb;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  right: -20%;
+  top: 0;
+  width: 20%;
+}
+/* line 428, ../sass/global.scss */
+#cart-flyout .cart-top-btn {
+  background-color: #505050;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: block;
+  float: left;
+  height: 131px;
+  line-height: 131px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+/* line 442, ../sass/global.scss */
+#cart-flyout .cart-top-btn:before {
+  content: '';
+  display: block;
+  background: url("arrow-white-small.png");
+  float: left;
+  height: 11px;
+  left: 20px;
+  position: relative;
+  top: 59px;
+  width: 7px;
+}
+/* line 454, ../sass/global.scss */
+#cart-flyout .cart-top-btn#checkout {
+  background-color: #fb0005;
+}
+/* line 457, ../sass/global.scss */
+#cart-flyout .cart-top-btn#checkout:after {
+  content: '';
+  display: block;
+  background: url("arrow-white-small.png");
+  float: right;
+  height: 11px;
+  right: 43px;
+  position: relative;
+  top: 59px;
+  width: 7px;
+  -webkit-transform: rotate(180deg);
+}
+/* line 470, ../sass/global.scss */
+#cart-flyout .cart-top-btn#checkout:before {
+  display: none;
+}
+/* line 476, ../sass/global.scss */
+#cart-flyout .empty-cart {
+  text-align: center;
+}
+/* line 480, ../sass/global.scss */
+#cart-flyout .subtotal {
+  background-color: #eaeaeb;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
+  clear: both;
+  padding: 20px;
+  width: 100%;
+}
+/* line 487, ../sass/global.scss */
+#cart-flyout .subtotal h2 {
+  font-size: 1.2em;
+}
+/* line 490, ../sass/global.scss */
+#cart-flyout .subtotal h2 .subtotal-price {
+  float: right;
+}
+/* line 494, ../sass/global.scss */
+#cart-flyout .subtotal h2 small {
+  clear: both;
+  display: block;
+  font-size: 0.6em;
+}
+/* line 502, ../sass/global.scss */
+#cart-flyout .number-of-items {
+  clear: both;
+  background-color: #d6d6d6;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
+  padding: 3px 0;
+  text-align: center;
+}
+/* line 511, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaeb;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  font-size: 0.9em;
+  color: #6c6c6c;
+}
+/* line 519, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .image {
+  width: 30%;
+  float: left;
+  padding: 20px 10px 20px 20px;
+}
+/* line 524, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .image img {
+  width: 100%;
+}
+/* line 529, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info {
+  float: right;
+  width: 70%;
+  padding: 20px 20px 20px 10px;
+}
+/* line 534, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .remove-item {
+  float: right;
+  width: 16px;
+  height: 16px;
+}
+/* line 540, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info h3 {
+  font-size: 1em;
+  margin: 0 0 5px;
+}
+/* line 545, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty {
+  margin: 0 0 5px;
+}
+/* line 548, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty input {
+  width: 30px;
+  text-align: center;
+}
+/* line 553, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty .update-cart {
+  font-size: 0.75em;
+}

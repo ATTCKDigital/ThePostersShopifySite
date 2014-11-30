@@ -1,0 +1,97 @@
+/* line 3, ../sass/typography.scss */
+.section-header {
+  border-top: 1px solid #afaeaf;
+  border-bottom: 1px solid #afaeaf;
+  color: #666666;
+  display: inline-block;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.85em;
+  margin: 0 40px 40px 40px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* line 17, ../sass/typography.scss */
+.section-header.full-width {
+  display: block;
+  padding: 15px 0;
+}
+/* line 22, ../sass/typography.scss */
+.section-header small {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.3em;
+  text-transform: none;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* line 33, ../sass/typography.scss */
+.btn {
+  border-radius: 0;
+  border: 1px solid #fff;
+  outline: 1px solid #f00;
+}
+/* line 38, ../sass/typography.scss */
+.btn.btn-default {
+  border: 1px solid #fff;
+  outline: 1px solid #414141;
+}
+
+/* line 44, ../sass/typography.scss */
+#social {
+  float: right;
+  line-height: 30px;
+  padding-top: 15px;
+}
+/* line 49, ../sass/typography.scss */
+#social > h2 {
+  color: #999999;
+  float: left;
+  font-size: .8em;
+  letter-spacing: normal;
+  margin: 3px 10px 0 0;
+  text-transform: uppercase;
+}
+/* line 58, ../sass/typography.scss */
+#social > a {
+  border: 1px solid #878787;
+  display: block;
+  float: left;
+  height: 21px;
+  margin: 0 5px;
+  width: 20px;
+  position: relative;
+}
+/* line 67, ../sass/typography.scss */
+#social > a img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  margin: 0;
+}
+/* line 73, ../sass/typography.scss */
+#social > a img.hover-on {
+  display: none;
+}
+/* line 77, ../sass/typography.scss */
+#social > a img.hover-off {
+  display: block;
+}
+/* line 84, ../sass/typography.scss */
+#social > a:hover img.hover-on {
+  display: block;
+}
+/* line 88, ../sass/typography.scss */
+#social > a:hover img.hover-off {
+  display: none;
+}
+
+/* line 96, ../sass/typography.scss */
+h1, h2, h3, h4 {
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}

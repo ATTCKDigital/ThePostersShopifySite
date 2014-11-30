@@ -2044,15 +2044,13 @@ body {
   width: 442px;
 }
 
-div#login{
+#login, #create {
 width:442px;
 }
 
-div#create{
-width:442px;
-
+#login-sign-up{
+  padding-bottom: 120px;
 }
-
 
 /* line 10, ../sass/login.scss */
 #login-signup .label {
@@ -2096,8 +2094,39 @@ a#login-recover:hover {
   color:#666;
 }
 
-div#login-signup, div#customer-register {
+#customer-register {
 padding-bottom: 120px;
+}
+
+#customer-register .label {
+  color: #666;
+  display: block;
+  font-size: 13pt;
+  letter-spacing: 0em;
+  padding: 5px 0 0 0;
+  text-align: left;
+}
+
+#customer-register input {
+  margin-bottom: 15px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+#customer-register input[type="submit"] {
+  width: 150px;
+}
+
+#customer-register .btn-primary {
+  background-color: #f00;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  float: right;
+}
+
+#customer-register .btn-primary:hover {
+  border: 1px solid #000;
+  outline: 2px solid #f00;
 }
 
 /* line 3, ../sass/press.scss */

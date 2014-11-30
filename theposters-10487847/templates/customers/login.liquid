@@ -6,13 +6,13 @@
         {% form 'customer_login' %}
               {{ form.errors | default_errors }}
 
-              <div>
+              <div id="email" class="clearfix large_form col-sm-offset-1">
                 <label for="customer_email" class="label">Email Address</label>
                 <input type="email" value="" name="customer[email]" id="customer_email" class="text" />
               </div>
 
               {% if form.password_needed %}
-              <div>
+              <div id="customer_password" class="clearfix large_form col-sm-offset-1">
                 <label for="customer_password" class="label">Password</label>
                 <input type="password" value="" name="customer[password]" id="customer_password" class="text" size="16" />
                 <input class="btn btn-primary" type="submit" value="Sign In" />
@@ -36,7 +36,7 @@
           </div>
           {% endif %}
       </div>
-      <div id="recover-password" style="display:none;" class="col-sm-6">
+      <div id="recover-password" style="display:none;" class="col-sm-5">
           <h2 class="shadow-header section-header">Reset Password</h2>
           <p class="note">We will send you an email to reset your password.</p>
 
@@ -50,29 +50,29 @@
           <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></span>
           {% endform %}
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-sm-offset-1">
         <h2 class="shadow-header section-header">Create Account</h2>
         {% form 'create_customer' %}
               {{ form.errors | default_errors }}
 
               <div class="row">
-              <div id="first_name" class="clearfix large_form col-sm-6">
+              <div id="first_name" class="clearfix large_form col-sm-6 col-sm-offset-1">
                 <label for="first_name" class="label">First Name</label>
                 <input type="text" value="" name="customer[first_name]" id="first_name" class="text" size="16" />
               </div>
 
-              <div id="last_name" class="clearfix large_form col-sm-6">
+              <div id="last_name" class="clearfix large_form col-sm-6 col-sm-offset-1">
                 <label for="last_name" class="label">Last Name</label>
                 <input type="text" value="" name="customer[last_name]" id="last_name" class="text" size="16" />
               </div>
               </div>
 
-              <div id="email" class="clearfix large_form">
+              <div id="email" class="clearfix large_form col-sm-offset-1">
                 <label for="email" class="label">Email Address</label>
                 <input type="email" value="" name="customer[email]" id="email" class="text" size="16" />
               </div>
 
-              <div id="password" class="clearfix large_form">
+              <div id="password" class="clearfix large_form col-sm-offset-1">
                 <label for="password" class="label">Password</label>
                 <input type="password" value="" name="customer[password]" id="password" class="password text" size="16" />
               </div>

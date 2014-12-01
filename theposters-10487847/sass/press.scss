@@ -12,6 +12,16 @@
 		margin: $gap 0;
 		padding: 0;
 
+		@media screen and (max-width: 1200px) {
+			width: 556px;
+			margin: $gap auto;
+		}
+
+		@media screen and (max-width: 700px) {
+			width: 290px;
+			margin: $gap auto;
+		}
+
 		li {
 			float: left;
 			margin-bottom: $gap/2;

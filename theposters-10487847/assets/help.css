@@ -18,54 +18,57 @@
   padding: 5px 10px;
   text-transform: uppercase;
   white-space: nowrap;
+  color: #666;
 }
-/* line 20, ../sass/help.scss */
+/* line 21, ../sass/help.scss */
 .help-tabs ul li a.current, .help-tabs ul li a:hover {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-/* line 28, ../sass/help.scss */
+/* line 29, ../sass/help.scss */
 .help-section {
   margin-bottom: 40px;
 }
-/* line 31, ../sass/help.scss */
+/* line 32, ../sass/help.scss */
 .help-section img {
   margin: 25px;
   float: right;
 }
-/* line 36, ../sass/help.scss */
+/* line 37, ../sass/help.scss */
 .help-section p {
   color: #666;
   font-size: 0.8em;
   letter-spacing: 0.03em;
   line-height: 1.4em;
 }
-/* line 43, ../sass/help.scss */
+/* line 44, ../sass/help.scss */
 .help-section .section-header {
   margin: 40px 0;
 }
 
-/* line 48, ../sass/help.scss */
+/* line 49, ../sass/help.scss */
 .help-arrow {
-  width: 50px;
-  height: 120px;
+  width: 45px;
+  height: 105px;
   display: block;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.4);
 }
-/* line 54, ../sass/help.scss */
+/* line 55, ../sass/help.scss */
 .help-arrow.arrow-right {
   float: right;
-  background-position: -50px 0;
+  background-position: -52px -8px;
 }
-/* line 59, ../sass/help.scss */
+/* line 60, ../sass/help.scss */
 .help-arrow.arrow-left {
-  background-position: 0 0;
+  background-position: -5px -8px;
 }
-/* line 64, ../sass/help.scss */
+/* line 65, ../sass/help.scss */
 .help-arrow:hover.arrow-right {
-  background-position: -50px -120px;
+  background-position: -52px -128px;
+  background-color: white;
 }
-/* line 68, ../sass/help.scss */
+/* line 70, ../sass/help.scss */
 .help-arrow:hover.arrow-left {
-  background-position: 0 -120px;
+  background-position: -5px -128px;
+  background-color: white;
 }

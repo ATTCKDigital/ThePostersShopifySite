@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<h1 class="shadow-header section-header">The Artists<small>Every artist featured on The Posters is special.</small></h1>
+			<h1 class="shadow-header section-header">The Artists</h1>
 			<ul class="artist-list">
 				{% for vendor in shop.vendors %}
 					{% for collection in collections %}
@@ -10,7 +10,7 @@
 						{% endif %}
 					{% endfor %}
 				{% endfor %}
-				<li id="join-posters"><a href="#"><img src="{{ 'joinposters.png' | asset_url }}" /></a></li>
+				<li id="join-posters"><a href="/pages/submissions"><img src="{{ 'joinposters.png' | asset_url }}" /></a></li>
 			</ul>
 		</div>
 	</div>

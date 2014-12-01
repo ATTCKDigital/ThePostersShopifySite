@@ -36,6 +36,7 @@
   </div>
 
   <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
+  <div style="display:none">
   <div class="artist-video">
     <div class="container">
       <div class="row">
@@ -46,12 +47,24 @@
           <div class="artist-video-content">{{ collection.metafields.artist.video }}</div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="social-grid-icons">
+            <div class="people-are-talking-icon"><img src="{{ 'peoplearetalking.png' | asset_url }}" /></div>
+            <div class="cambird"><img src="{{ 'cambird.png' | asset_url }}" /></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="social-grid">
+    <script type="text/javascript">
+      var socialGridHashtags = '%23wyattkahn,%23natelowman,%23owenschmit,%23paulwackers,%23theposters,%23theposters';
+    </script>
     <div class="socialGrid_wrapper">
-      <div class="socialGrid_container"></div>
+      <div class="socialGrid_innerShadow"></div>
+      <div class="socialGrid_container"><div class="loading"><img src="{{ 'loading-animation.gif' | asset_url }}" /></div></div>
     </div>
     {% raw %}
       <script type="text/html" id="grid_container_template">
@@ -76,6 +89,8 @@
   <p>We always love to see where the posters find a home.</p>
   <p>Tag yours on Instagram with #ThePosters, or <a href="mailto:info@theposters.co">email us</a> a picture so we can share in the excitement!</p>
 </div>
+
+</div><!---->
 
 </div>
 

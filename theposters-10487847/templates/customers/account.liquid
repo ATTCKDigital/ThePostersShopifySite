@@ -1,16 +1,14 @@
 {% layout settings.customer_layout %}
 <div id="customer-account">
-  
+  <div class="container">
   <div class="row">
-    <div class="span12">
-      <h1 class="title clearfix">Account Details
-        <span class="note">{{ 'Logout' | customer_logout_link }}</span>
-      </h1>
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1 class="section-header">Account Details</h1>
     </div>
   </div>
 
   <div class="row">
-    <div id="customer_orders" class="span8">
+    <div id="customer_orders" class="col-sm-12">
       {% if customer.orders.size != 0 %}
       <table>
         <thead>
@@ -39,7 +37,7 @@
       {% endif %}
     </div>
     
-    <div id="customer_sidebar" class="span4">
+    <div id="customer_sidebar">
       <h2>{{ customer.name }}</h2>
       <p class="email note">{{ customer.email }}</p>
       <div class="address note">
@@ -52,9 +50,10 @@
         <p>{{ customer.default_address.zip}}</p>
         <p>{{ customer.default_address.phone }}</p>
         {% endif %}
-        <a id="view_address" href="/account/addresses">View Addresses</a>
+        <span class="note">{{ 'Logout' | customer_logout_link }}</span>
       </div>
     </div>
     
   </div> 
+  </div>
 </div>

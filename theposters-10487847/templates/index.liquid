@@ -2,8 +2,20 @@
   <div class="row">
     <div class="col-sm-12">
     <div class="product-slideshow">
-      <div class="left control" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></div>
-      <div class="right control" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></div>
+      <div class="left control active">
+        <div class="arrow" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></div>
+        <div class="poster-preview">
+          <div class="image"><img src="{{collections[settings.frontpage_collection].products.last.featured_image | product_img_url: 'small'}}" /></div>
+          <div class="artist">{{collections[settings.frontpage_collection].products.last.vendor}}</div>
+        </div>
+      </div>
+      <div class="right control active">
+        <div class="poster-preview">
+          <div class="image"><img src="{{collections[settings.frontpage_collection].products[1].featured_image | product_img_url: 'small'}}" /></div>
+          <div class="artist">{{collections[settings.frontpage_collection].products[1].vendor}}</div>
+        </div>
+        <div class="arrow" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></div>
+      </div>
 
       {% for product in collections[settings.frontpage_collection].products %}
       {% assign featuredproduct = product %}
@@ -38,7 +50,7 @@
       <div class="col-sm-12">
         <ul>
           {% for article in blogs["press"].articles limit: 7 %}
-            <li><a href="{{ article.title }}" target="_blank">{{ article.content }}</a></li>
+            <li><a href="{{ article.title }}" target="_blank" onclick="return false;">{{ article.content }}</a></li>
           {% endfor %}
         </ul>
       </div>

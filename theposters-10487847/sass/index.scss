@@ -5,32 +5,111 @@
  */
 
 .control {
-  background-color: #fff;
+  background-color: rgba(#fff, 0);
   position: absolute;
+  z-index: 100;
   top: 50%;
   margin-top: -60px;
-  width: 50px;
-  height: 120px;
+  width: 35px;
+  height: 105px;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: none;
+  border-radius: 2px;
+
+  &.active {
+    width: 135px;
+  }
+
+  .poster-preview {
+    text-align: center;
+    width: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    .image {
+      width: 70px;
+      padding: 5px;
+      text-align: center;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .artist {
+    margin-top: -5px;
+    font-size: 10pt;
+    white-space: nowrap;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 100px;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 105px;
+  }
 
   &.left {
     right: auto;
     left: 0;
-    background-position: 0 0;
+
+    .poster-preview {
+      float: left;
+    }
+    
+    .arrow {
+      background-position: -10px -10px;
+      float: left;
+    }
 
     &:hover {
-      background-position: 0 -120px;
+      background-color: rgba(#fff, 1);
+      box-shadow: 0 0 10px rgba(#000, 0.5);
+
+      .poster-preview {
+        opacity: 1;
+        width: 100px;
+      }
+
+      .arrow {
+        background-position: -10px -130px;
+      }
     }
   }
 
   &.right {
     right: 0;
     left: auto;
-    background-position: -50px 0;
+
+    .poster-preview {
+      float: left;
+      position: absolute;
+      right: 35px;
+    }
+
+    .arrow {
+      background-position: -60px -10px;
+      float: right;
+    }
 
      &:hover {
-      background-position: -50px -120px;
+      background-color: rgba(#fff, 1);
+      box-shadow: 0 0 10px rgba(#000, 0.5);
+
+      .poster-preview {
+        opacity: 1;
+        width: 100px;
+      }
+
+      .arrow {
+        background-position: -60px -130px;
+      }
     }
   }
 
@@ -138,6 +217,7 @@
     
     &.title {
       font-size: 2em;
+      white-space: nowrap;
     }
     
     -webkit-transition: all .5s;
@@ -390,6 +470,10 @@
     .we-are-the-posters-header {
         margin: 0 auto;
         width: 663px;
+
+        h2 {
+          color: #000;
+        }
     }
 }
 
@@ -402,12 +486,34 @@
 
 	.video-container {
     background: white;
-		border: 1px solid #000;
 		margin: 0 auto;
-    padding: 10px;
+    padding: 0px;
     position: relative;
     top: -75px;
 		width: 580px;
+
+    .about-image {
+      width: 580px;
+      height: 340px;
+      padding: 20px 20px 20px 265px;
+      border: 1px solid #000;
+
+      p {
+        font-size: 11pt;
+        text-align: justify;
+        margin: 0 0 20px 0;
+        line-height: 19pt;
+
+        &:last-child {
+          text-align: center;
+        }
+
+        strong {
+          color: #000;
+
+        }
+      }
+    }
 
 		iframe {
 			margin: 0;
@@ -493,10 +599,11 @@
     -moz-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
+    border: 1px solid #535353;
+    outline: 1px solid #535353;
     
     &:hover {
-        color: #333;
-        background: #fff;
+        border: 1px solid #fff;
     }
 	}
 
@@ -550,13 +657,14 @@
 		list-style: none;
 		margin: 145px 0 0 0;
 		padding: 0;
+    text-align: center;
 
     @media screen and (max-width: 1200px) {
       margin: 375px 0 0 0;
     }
 
 		li {
-			float: left;
+			display: inline-block;
 			width: 200px;
 			min-height: 200px;
 			margin-bottom: $gap/2;
@@ -576,6 +684,7 @@
 			&:nth-child(2) {
 				margin-left: 730px - 47px;
         margin-right: 0;
+        margin-bottom: 40px;
 			}
 
       @media screen and (max-width: 1200px) {

@@ -9,6 +9,12 @@
 	height: 73px;
 }
 
+#active-products, #archived-products {
+	.poster-clips {
+		display: none;
+	}
+}
+
 #archived-products {
 	background-color: #eeeeef;
 	padding-bottom: 70px;
@@ -69,6 +75,16 @@
 	letter-spacing: 0.01em;
 	width: 287px;
 	margin: 20px;
+	position: relative;
+
+	.poster-clips {
+		position: absolute;
+		width: 168px;
+		height: 25px;
+		left: 50%;
+		top: -15px;
+		margin-left: -84px;
+	}
 
 	.image {
 		height: 287px;
@@ -178,8 +194,8 @@
 				width: 200px;
 				height: 200px;
 				overflow: hidden;
-				float: left;
-				margin: 26px 26px 0 0;
+				float: right;
+				margin: 26px 0 0 26px;
 
 				&:last-child {
 					margin: 26px 0 0 0;
@@ -247,7 +263,7 @@
 		}
 
 		.description {
-			font-size: 16pt;
+			font-size: 13pt;
 			line-height: 22pt;
 			margin: $gap 0;
 		}
@@ -292,7 +308,13 @@
 				#add-to-cart {
 					display: inline-block;
 					background-color: #f00;
+					border-color: #f00;
 					text-transform: uppercase;
+					width: 150px;
+
+					&:hover {
+						border-color: #fff;
+					}
 				}
 			}			
 		}
@@ -302,6 +324,29 @@
 #about-the-artist {
 	background-color: #eeeeef;
 	padding-top: 60px;
+	position: relative;
+
+	h1 {
+		margin-bottom: 120px;
+	}
+
+	.people-are-talking-icon {
+		width: 186px;
+		height: 55px;
+		position: absolute;
+		bottom: -9px;
+		left: 50%;
+		margin-left: -93px;
+		z-index: 100;
+	}
+
+	.cambird {
+		width: 82px;
+		height: 109px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
 }
 
 .people-are-talking {

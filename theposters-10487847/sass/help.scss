@@ -16,6 +16,7 @@
 				padding: 5px 10px;
 				text-transform: uppercase;
 				white-space: nowrap;
+				color: #666;
 
 				&.current, &:hover {
 					background-color: rgba(#fff, 0.75);
@@ -46,27 +47,29 @@
 }
 
 .help-arrow {
-	width: 50px;
-	height: 120px;
+	width: 45px;
+	height: 105px;
 	display: block;
-	background-color: rgba(#fff, 0.75);
+	background-color: rgba(#fff, 0.40);
 
 	&.arrow-right {
 		float: right;
-		background-position: -50px 0;
+		background-position: -52px -8px;
 	}
 
 	&.arrow-left {
-		background-position: 0 0;
+		background-position: -5px -8px;
 	}
 
 	&:hover {
 		&.arrow-right {
-			background-position: -50px -120px;
+			background-position: -52px -128px;
+			background-color: rgba(#fff, 1);
 		}
 
 		&.arrow-left {
-			background-position: 0 -120px;
+			background-position: -5px -128px;
+			background-color: rgba(#fff, 1);
 		}
 	}
 }

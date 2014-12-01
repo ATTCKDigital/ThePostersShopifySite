@@ -1,12 +1,13 @@
 @import "vars";
 
-#login {
-	.section-header {
-		margin: 40px 0;
-	}
-}
-
 #login-signup {
+	padding-bottom: 120px;
+
+	.section-header {
+		margin: 0 0 40px 25px;
+		width: 442px;
+	}
+
 	.label {
 		color: #888;
 		display: block;
@@ -29,8 +30,63 @@
 
 	.btn-primary {
 		background-color: #000;
+		outline: 1px solid #000;
+		border: 1px solid #f00;
 		text-transform: uppercase;
 		float: right;
+
+		&:hover {
+			border: 1px solid #fff;
+		}
 	}
 
+}
+
+/** TE **/
+#login .section-header {
+  /*margin: 40px 0;*/
+  width: 442px;
+}
+
+#login, #create {
+	width:442px;
+}
+
+#login-sign-up{
+  padding-bottom: 120px;
+}
+
+
+a#login-recover {
+  color:#999;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight:300;
+  font-size: 13pt;
+}
+
+a#login-recover:hover {
+  color:#666;
+}
+
+#customer-register {
+padding-bottom: 120px;
+}
+
+#customer-register .label {
+  color: #666;
+  display: block;
+  font-size: 13pt;
+  letter-spacing: 0em;
+  padding: 5px 0 0 0;
+  text-align: left;
+}
+
+#customer-register input {
+  margin-bottom: 15px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+#customer-register input[type="submit"] {
+  width: 150px;
 }

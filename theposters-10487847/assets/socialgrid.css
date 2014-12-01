@@ -120,3 +120,15 @@ body {
   overflow-y: hidden;
   width: 100%;
 }
+/* line 122, ../sass/socialgrid.scss */
+.socialGrid_wrapper .socialGrid_innerShadow {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  -webkit-box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  z-index: 99;
+  pointer-events: none;
+  border-bottom: 1px solid #cccccc;
+}

@@ -9,8 +9,8 @@
         <div id="product-images">
           {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
           <div id="featured-image">
-            <a href="{{ featured_image | img_url: '1024x1024' }}">
-              <img src="{{ featured_image | img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
+            <a href="{{ featured_image | product_img_url: 'original' }}">
+              <img src="{{ featured_image | product_img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
             </a>
           </div>
 
@@ -18,7 +18,7 @@
           <div id="thumbs">
             {% for image in product.images %}
              <div class="image">
-                <a href="{{ image | product_img_url: '1024x1024' }}">
+                <a href="{{ image | product_img_url: 'original' }}">
                   <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
                 </a>
               </div>
@@ -71,17 +71,26 @@
 </div>
 
 <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
+<div style="display:none">
 <section id="about-the-artist">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
         <h1 class="shadow-header-grey section-header">About The Artist</h1>
+        
+        <div class="people-are-talking-icon"><img src="{{ 'peoplearetalking.png' | asset_url }}" /></div>
+        <div class="cambird"><img src="{{ 'cambird.png' | asset_url }}" /></div>
+
       </div>
     </div>
   </div>
 
   <div class="social-grid">
+  <script type="text/javascript">
+    var socialGridHashtags = '{% for tag in product.tags %}%23{{ tag }},{% endfor %}';
+  </script>
   <div class="socialGrid_wrapper">
+    <div class="socialGrid_innerShadow"></div>
     <div class="socialGrid_container"><div class="loading"><img src="{{ 'loading-animation.gif' | asset_url }}" /></div></div>
   </div>
   {% raw %}
@@ -107,4 +116,5 @@
   <p>We always love to see where the posters find a home.</p>
   <p>Tag yours on Instagram with #ThePosters, or <a href="mailto:info@theposters.co">email us</a> a picture so we can share in the excitement!</p>
 </div>
+</div> <!-- end hide -->
 </section>

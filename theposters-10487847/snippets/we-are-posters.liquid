@@ -8,7 +8,10 @@
   </div>
   <div id="we-are-the-posters-video" style="background-image: url({{ 'wearetheposters.png' | asset_url }})">
     <div class="video-container">
-       <img src="{{ 'homepageintro.jpg' | asset_url }}" />
+       <div class="about-image" style="background-image: url({{ 'homepageintro.jpg' | asset_url }})">
+         <p>{{settings.about_text1}}</p>
+         <p><strong>{{settings.about_text2}}</strong></p>
+       </div>
     </div>
     <div class="small-social">
       <!-- {% include 'share' %} -->

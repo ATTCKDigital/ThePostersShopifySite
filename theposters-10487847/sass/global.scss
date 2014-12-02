@@ -123,6 +123,7 @@ header#main-header {
 			line-height: 45px;
 			position: relative;
 			text-align: center;
+			text-decoration: none;
 			top: -3px;
 			width: 29px;
 			background-position: 0 0;
@@ -198,6 +199,10 @@ footer#main-footer {
 		height: 45px;
 		position: relative;
 		
+		@media screen and (max-width: 960px) {
+			margin-bottom: 10px;
+		}
+		
 		input {
 			background-color: #EEE;
 			border: 0;
@@ -257,9 +262,16 @@ footer#main-footer {
 			position: relative;
 			z-index: 1;
 			
-			&.arrow-white-right {
-				background-color: #999;
-				background-position: 15px 11px;
+			&:after {
+				background: url('arrow-white.png');
+				content: '';
+				display: block;
+				float: right;
+				height: 22px;
+				left: 16px;
+				position: absolute;
+				top: 12px;
+				width: 15px;
 			}
 		}
 	}
@@ -267,10 +279,12 @@ footer#main-footer {
 	.social-follow-us {
 		position: relative;
 		float: right;
-		top: -4px;
+		// top: -4px;
 
-		@media screen and (max-width: 1200px) {
-			top: -30px;
+		@media screen and (max-width: 960px) {
+			float: none;
+			margin: 0 auto;
+			width: 240px;
 		}
 
 		h2 {
@@ -286,9 +300,9 @@ footer#main-footer {
 			text-transform: uppercase;
 
 			@media screen and (max-width: 1200px) {
-				clear: both;
-				height: 30px;
-				line-height: 30px;
+				// clear: both;
+				// height: 30px;
+				// line-height: 30px;
 			}
 		}
 
@@ -302,10 +316,13 @@ footer#main-footer {
 			width: 45px;
 			height: 45px;
 
+			&:last-child {
+				margin-right: 0;
+			}
 
 			@media screen and (max-width: 1200px) {
 				&:nth-child(2n) {
-					clear: both;
+					// clear: both;
 				}
 			}
 

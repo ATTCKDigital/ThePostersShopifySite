@@ -22,7 +22,11 @@
 .artist-list li:nth-child(3n+3) {
   margin-right: 0;
 }
-/* line 30, ../sass/artist.scss */
+/* line 28, ../sass/artist.scss */
+.artist-list li a {
+  -webkit-transition: all .2s;
+}
+/* line 41, ../sass/artist.scss */
 .artist-list .artist {
   background-position: center center;
   background-size: cover;
@@ -42,7 +46,7 @@
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-/* line 49, ../sass/artist.scss */
+/* line 60, ../sass/artist.scss */
 .artist-list .artist a {
   background-color: rgba(255, 255, 255, 0.75);
   color: #000;
@@ -51,7 +55,7 @@
   margin: 0;
   text-transform: uppercase;
 }
-/* line 58, ../sass/artist.scss */
+/* line 69, ../sass/artist.scss */
 .artist-list .artist:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -59,11 +63,11 @@
   -o-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 65, ../sass/artist.scss */
+/* line 76, ../sass/artist.scss */
 .artist-list .artist:hover a {
   background-color: rgba(255, 255, 255, 0.65);
 }
-/* line 72, ../sass/artist.scss */
+/* line 83, ../sass/artist.scss */
 .artist-list #join-posters a {
   float: left;
   left: 0;
@@ -75,7 +79,7 @@
 /**
  * Artist Profile
  */
-/* line 87, ../sass/artist.scss */
+/* line 98, ../sass/artist.scss */
 .artist-profile .artist-header {
   background-color: #eeeeef;
   border-bottom: 10px solid #fff;
@@ -83,13 +87,13 @@
   height: 400px;
   overflow: hidden;
 }
-/* line 94, ../sass/artist.scss */
+/* line 105, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image {
   background-size: cover;
   min-height: 100%;
   min-width: 100%;
 }
-/* line 100, ../sass/artist.scss */
+/* line 111, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image-wrapper {
   float: left;
   height: 100%;
@@ -97,7 +101,7 @@
   position: relative;
   width: 50%;
 }
-/* line 108, ../sass/artist.scss */
+/* line 119, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title {
   float: left;
   height: 100%;
@@ -105,7 +109,7 @@
   position: relative;
   width: 50%;
 }
-/* line 115, ../sass/artist.scss */
+/* line 126, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title h1 {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -118,27 +122,27 @@
   text-transform: uppercase;
   top: 50%;
 }
-/* line 130, ../sass/artist.scss */
+/* line 141, ../sass/artist.scss */
 .artist-profile .artist-description {
   font-size: .8em;
   line-height: 1.4em;
   margin: 50px 0;
   padding: 15px 0;
 }
-/* line 137, ../sass/artist.scss */
+/* line 148, ../sass/artist.scss */
 .artist-profile .artist-products {
   margin-top: 25px;
 }
-/* line 140, ../sass/artist.scss */
+/* line 151, ../sass/artist.scss */
 .artist-profile .artist-products:nth-child(4) {
   clear: right;
 }
-/* line 145, ../sass/artist.scss */
+/* line 156, ../sass/artist.scss */
 .artist-profile .artist-video {
   clear: both;
   background-color: #eeeeef;
 }
-/* line 149, ../sass/artist.scss */
+/* line 160, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-description {
   padding: 110px 0;
   text-align: right;
@@ -146,13 +150,13 @@
   float: right;
   font-size: 0.9em;
 }
-/* line 157, ../sass/artist.scss */
+/* line 168, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content {
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-/* line 162, ../sass/artist.scss */
+/* line 173, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: left;
@@ -161,11 +165,11 @@
   width: 400px;
   height: 240px;
 }
-/* line 172, ../sass/artist.scss */
+/* line 183, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons {
   position: relative;
 }
-/* line 175, ../sass/artist.scss */
+/* line 186, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -175,7 +179,7 @@
   margin-left: -93px;
   z-index: 100;
 }
-/* line 185, ../sass/artist.scss */
+/* line 196, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .cambird {
   width: 82px;
   height: 109px;
@@ -183,11 +187,11 @@
   right: 0;
   bottom: 0;
 }
-/* line 195, ../sass/artist.scss */
+/* line 206, ../sass/artist.scss */
 .artist-profile .social-grid {
   background-color: #eeeeef;
 }
-/* line 199, ../sass/artist.scss */
+/* line 210, ../sass/artist.scss */
 .artist-profile .people-are-talking {
   background-color: #eeeeef;
 }

@@ -118,9 +118,9 @@
 .previewImage_container {
   margin: 0 auto $gap*2 auto;
   max-width: 500px;
-  width: 100%;
   overflow: hidden;
   position: relative;
+  width: 100%;
   
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -157,7 +157,7 @@
   .action.button {
     background: #fc0d1b;
     bottom: 30%;
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     color: white;
     display: block;
     text-decoration: none;
@@ -167,7 +167,7 @@
     margin-left: -100px;
     opacity: 0;
     outline: 1px solid #f00;
-    padding: 10px 10px;
+    padding: 7px 10px;
     position: absolute;
     width: 200px;
     z-index: 2;
@@ -177,6 +177,10 @@
     -ms-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
+    
+    &:hover {
+      border: 1px solid #fff;
+    }
   }
   
   .blackscreen {
@@ -380,7 +384,7 @@
                 -webkit-animation-name: buttonfade;
 
                 &:hover {
-                    background: #d9000d;
+                    // background: #d9000d;
                 }
             }
         }
@@ -470,10 +474,6 @@
     .we-are-the-posters-header {
         margin: 0 auto;
         width: 663px;
-
-        h2 {
-          color: #000;
-        }
     }
 }
 
@@ -659,6 +659,10 @@
 	background-repeat: no-repeat;
 	background-position: center top;
   margin-bottom: 10px;
+
+  a, a * {
+    text-decoration: none;
+  }
 
 	ul {
 		list-style: none;

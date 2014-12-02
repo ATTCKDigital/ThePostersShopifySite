@@ -65,7 +65,6 @@ $(document).ready(function () {
 /**
  * Footer Functions
  */
-
 $(document).ready(function () {
   var windowHeightMinusFooterHieght = ($(window).height() - $('#main-wrapper').height()) + $('#main-footer').height();
   $('#main-footer').css({minHeight: windowHeightMinusFooterHieght + 58});
@@ -228,19 +227,23 @@ $(document).ready(function () {
       $image.height($image.width() * (1 / ratio));
     }
   }
-
+  
   // Run on page load
   homepageFeatureProductSize();
 });
 
 /**
-* Homepage slideshow
-*/
-
-$(document).ready(function(){
-
-  if($('.product-slideshow').length > 0) {
-    $('.product-slideshow').each(function(index, value){
+ * Homepage slideshow
+ */
+$(document).ready(function () {
+  // Enable clicks to the main container
+  $('.product-slideshow').on('click', '.previewImage_container', function () {
+    // Go to child link href
+    document.location = $(this).find('a').attr('href');
+  });
+  
+  if ($('.product-slideshow').length > 0) {
+    $('.product-slideshow').each(function (index, value) {
       var leftControl = $(this).find('.left.control');
       var rightControl = $(this).find('.right.control');
       var slideshow = $(this);
@@ -253,29 +256,29 @@ $(document).ready(function(){
         var prevPrev = slideshow.find('.active-product').prev().prev().filter('.previewImage_container');
         var nextNext = current;
 
-        if(next.length <= 0) {        
+        if (next.length <= 0) {
           next = slideshow.find('.previewImage_container').last();
         }
 
-        if(prevPrev.length <= 0) {
+        if (prevPrev.length <= 0) {
           prevPrev = slideshow.find('.previewImage_container').last().prev().filter('.previewImage_container');
         }
 
-        if(next.length > 0) {
+        if (next.length > 0) {
           current.removeClass('active-product').fadeOut(300, function(){
             next.addClass('active-product').fadeIn(300);
 
-            if(prevPrev.length > 0) {
+            if (prevPrev.length > 0) {
               leftControl.addClass('active');
               leftControl.find('.poster-preview').find('.image').html(prevPrev.find('img').clone());
               leftControl.find('.poster-preview').find('.artist').text(prevPrev.find('.date').text());
             }
 
-            if(nextNext.length > 0) {
+            if (nextNext.length > 0) {
               rightControl.addClass('active');
               rightControl.find('.poster-preview').find('.image').html(nextNext.find('img').clone());
               rightControl.find('.poster-preview').find('.artist').text(nextNext.find('.date').text());
-            } 
+            }
           });
         }
         
@@ -287,24 +290,23 @@ $(document).ready(function(){
         var prevPrev = current;
         var nextNext = slideshow.find('.active-product').next().next().filter('.previewImage_container');
 
-        if(next.length <= 0) {        
+        if (next.length <= 0) {
           next = slideshow.find('.previewImage_container').first();
         }
 
-        if(nextNext.length <= 0) {
+        if (nextNext.length <= 0) {
           prevPrev = slideshow.find('.previewImage_container').first().next().filter('.previewImage_container');
         }
 
-        if(next.length > 0) {
-
+        if (next.length > 0) {
           current.removeClass('active-product').fadeOut(300, function(){
             next.addClass('active-product').fadeIn(300);
 
-            if(prevPrev.length > 0) {
+            if (prevPrev.length > 0) {
               leftControl.addClass('active');
               leftControl.find('.poster-preview').find('.image').html(prevPrev.find('img').clone());
               leftControl.find('.poster-preview').find('.artist').text(prevPrev.find('.date').text());
-            } 
+            }
 
             if(nextNext.length > 0) {
               rightControl.addClass('active');
@@ -324,7 +326,6 @@ $(document).ready(function(){
  * Product Expiration Dates
  * Expected expDate format "YYYY-MM-DD"
  */
-
 function daysRemaining(expDate) {
   var _daysRemaining;
   var ms;

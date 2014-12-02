@@ -25,6 +25,17 @@
 			margin-right: 0;
 		}
 		
+		a {
+			-webkit-transition: all .2s;
+		}
+		
+		&:hover {
+			// -webkit-transform: scale(1.05, 1.05);
+			
+			a {
+				// font-size: .8em;
+			}
+		}
 	}
 
 	.artist {

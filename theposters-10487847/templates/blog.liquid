@@ -15,7 +15,7 @@
                 </li>
                 {% for article in blog.articles %}
                     <li>
-                        <a href="{{ article.title }}" target="_blank" onclick="return false;">{{ article.content }}</a>
+                        <a href="{{ article.title }}" target="_blank">{{ article.content }}</a>
                     </li>
                 {% endfor %}
             </ul>

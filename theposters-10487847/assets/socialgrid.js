@@ -6,16 +6,13 @@ $(function () {
 	// var API = '//white-harbor-rails-77074.use1.nitrousbox.com:8080/theposters/socialmedia/%23nyc,%23sanfancisco?callback=?';
 	
 	//socialGridHashtags is set on the product or artist liquid pages
-	if(typeof socialGridHashtags !== 'undefined' && (socialGridHashtags !== '' || socialGridHashtags !== ',')) {
+	if (typeof socialGridHashtags !== 'undefined' && socialGridHashtags !== '' && socialGridHashtags !== ',') {
 		socialGridHashtags = socialGridHashtags.substring(0, socialGridHashtags.length - 1);
 	} else {
-		socialGridHashtags = '%23wyattkahn,%23natelowman,%23owenschmit,%23paulwackers,%23theposters,%23theposters.co';
+		socialGridHashtags = '%23wyattkahn,%23natelowman,%23owenschmit,%23paulwackers,%23theposters,%23thepostersco';
 	}
 
-	socialGridHashtags = '%23panda,%23grafitti';
-
-	// console.log('socialGridHashtags', socialGridHashtags);
-	var API = '//theposters-socialgridapi.herokuapp.com/theposters/socialmedia/'+socialGridHashtags+'?callback=?'
+	var API = '//theposters-socialgridapi.herokuapp.com/theposters/socialmedia/' + socialGridHashtags + '?callback=?';
 	
 	// Grab container
 	var $el = $('.socialGrid_container');

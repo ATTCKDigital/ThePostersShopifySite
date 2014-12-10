@@ -10,7 +10,7 @@
           {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
           <div id="featured-image">
             <a href="{{ featured_image | product_img_url: 'original' }}">
-              <img src="{{ featured_image | product_img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
+              <img src="{{ featured_image | product_img_url: 'original' }}" alt="{{ featured_image.alt | escape }}" />
             </a>
           </div>
 

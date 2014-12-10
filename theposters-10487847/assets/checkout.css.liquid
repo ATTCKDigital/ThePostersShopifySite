@@ -503,8 +503,19 @@ span.sign-in-message { line-height:28px; }
 	text-align: center;
 }
 
-#discount_code { display: block; margin-bottom: 5px; }
+#discount_code {
+	display: block;
+	margin: 0 15px 5px 0;
+	float: left;
+	height: 30px;
+	width: 160px;
+}
+
 #discounts-body { margin-bottom: 20px; }
+
+#discounts h3 {
+	display: none;
+}
 
 #tagline { display: none; }
 #tagline .title { text-decoration:none; color:{{ settings.header_color }}; font-weight:400; margin:0; padding:0; border:0; }

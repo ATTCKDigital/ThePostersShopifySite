@@ -633,10 +633,10 @@
  */
 /* line 657, ../sass/index.scss */
 #press-section {
-  overflow: hidden;
-  background-repeat: no-repeat;
   background-position: center top;
+  background-repeat: no-repeat;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 /* line 663, ../sass/index.scss */
 #press-section a, #press-section a * {
@@ -661,7 +661,7 @@
   width: 200px;
   min-height: 200px;
   margin-bottom: 20px;
-  margin-right: 28px;
+  margin-right: 25px;
 }
 /* line 685, ../sass/index.scss */
 #press-section ul li:hover img {

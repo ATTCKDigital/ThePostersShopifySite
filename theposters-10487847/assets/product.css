@@ -99,23 +99,27 @@
   max-width: 287px;
   max-height: 287px;
   -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
 }
-/* line 105, ../sass/product.scss */
+/* line 109, ../sass/product.scss */
 .product .image img:hover {
   -webkit-transform: scale(1.05);
 }
-/* line 111, ../sass/product.scss */
+/* line 115, ../sass/product.scss */
 .product .details {
   text-align: center;
 }
-/* line 114, ../sass/product.scss */
+/* line 118, ../sass/product.scss */
 .product .details a {
   color: #666;
   font-size: 1.45em;
   text-transform: uppercase;
   display: block;
 }
-/* line 121, ../sass/product.scss */
+/* line 125, ../sass/product.scss */
 .product .details .availability {
   background-color: white;
   clear: both;
@@ -131,20 +135,20 @@
   text-transform: uppercase;
   top: -8px;
 }
-/* line 136, ../sass/product.scss */
+/* line 140, ../sass/product.scss */
 .product .details .availability .days-remaining {
   color: #f00;
 }
-/* line 144, ../sass/product.scss */
+/* line 148, ../sass/product.scss */
 .product:hover .details a {
   color: #000;
 }
 
-/* line 152, ../sass/product.scss */
+/* line 156, ../sass/product.scss */
 #active-products .for-sale-collection {
   text-align: center;
 }
-/* line 160, ../sass/product.scss */
+/* line 164, ../sass/product.scss */
 #active-products .for-sale-header {
   margin: 0 auto;
   width: 463px;
@@ -153,7 +157,7 @@
 /**
  * Product Detail Page
  */
-/* line 169, ../sass/product.scss */
+/* line 173, ../sass/product.scss */
 #zoom-image {
   position: fixed;
   z-index: 100;
@@ -169,19 +173,19 @@
   background-repeat: no-repeat;
 }
 
-/* line 186, ../sass/product.scss */
+/* line 190, ../sass/product.scss */
 #product #product-images #featured-image {
   text-align: center;
 }
-/* line 189, ../sass/product.scss */
+/* line 193, ../sass/product.scss */
 #product #product-images #featured-image img {
   width: 100%;
 }
-/* line 194, ../sass/product.scss */
+/* line 198, ../sass/product.scss */
 #product #product-images #thumbs {
   clear: both;
 }
-/* line 197, ../sass/product.scss */
+/* line 201, ../sass/product.scss */
 #product #product-images #thumbs .image {
   border: 10px solid white;
   width: 200px;
@@ -190,28 +194,28 @@
   float: right;
   margin: 26px 0 0 26px;
 }
-/* line 205, ../sass/product.scss */
+/* line 209, ../sass/product.scss */
 #product #product-images #thumbs .image:last-child {
   margin: 26px 0 0 0;
 }
-/* line 209, ../sass/product.scss */
+/* line 213, ../sass/product.scss */
 #product #product-images #thumbs .image img {
   min-width: 200px;
   min-height: 200px;
 }
-/* line 216, ../sass/product.scss */
+/* line 220, ../sass/product.scss */
 #product #product-images .social {
   clear: both;
 }
-/* line 219, ../sass/product.scss */
+/* line 223, ../sass/product.scss */
 #product #product-images .social .social-share {
   margin: 0 6px 0 0;
 }
-/* line 226, ../sass/product.scss */
+/* line 230, ../sass/product.scss */
 #product #details hr {
   border-top: 1px solid #AFAEAF;
 }
-/* line 231, ../sass/product.scss */
+/* line 235, ../sass/product.scss */
 #product #details h1.title {
   color: #999;
   font-size: 1.2em;
@@ -219,7 +223,7 @@
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 239, ../sass/product.scss */
+/* line 243, ../sass/product.scss */
 #product #details #artist {
   font-size: 2em;
   font-weight: 700;
@@ -228,7 +232,7 @@
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 248, ../sass/product.scss */
+/* line 252, ../sass/product.scss */
 #product #details #availability {
   background-color: white;
   clear: both;
@@ -244,33 +248,33 @@
   padding: 0 4px;
   text-transform: uppercase;
 }
-/* line 263, ../sass/product.scss */
+/* line 267, ../sass/product.scss */
 #product #details #availability .days-remaining {
   color: #f00;
   position: relative;
   top: 0;
 }
-/* line 270, ../sass/product.scss */
+/* line 274, ../sass/product.scss */
 #product #details .description {
   font-size: 13pt;
   line-height: 22pt;
   margin: 40px 0;
 }
-/* line 277, ../sass/product.scss */
+/* line 281, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 281, ../sass/product.scss */
+/* line 285, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
   text-align: center;
   width: 34px;
 }
-/* line 285, ../sass/product.scss */
+/* line 289, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input:focus {
   color: #000;
 }
-/* line 290, ../sass/product.scss */
+/* line 294, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper label {
   color: #666;
   font-size: 14pt;
@@ -278,13 +282,13 @@
   position: relative;
   top: -2px;
 }
-/* line 299, ../sass/product.scss */
+/* line 303, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
   text-align: right;
   width: 60%;
 }
-/* line 304, ../sass/product.scss */
+/* line 308, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price {
   display: inline-block;
   font-size: 22pt;
@@ -293,7 +297,7 @@
   line-height: 22pt;
   margin-right: 15px;
 }
-/* line 313, ../sass/product.scss */
+/* line 317, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
@@ -301,22 +305,22 @@
   text-transform: uppercase;
   width: 150px;
 }
-/* line 320, ../sass/product.scss */
+/* line 324, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart:hover {
   border-color: #fff;
 }
 
-/* line 329, ../sass/product.scss */
+/* line 333, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
   padding-top: 120px;
   position: relative;
 }
-/* line 334, ../sass/product.scss */
+/* line 338, ../sass/product.scss */
 #about-the-artist h1 {
   margin-bottom: 120px;
 }
-/* line 338, ../sass/product.scss */
+/* line 342, ../sass/product.scss */
 #about-the-artist .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -326,7 +330,7 @@
   margin-left: -93px;
   z-index: 100;
 }
-/* line 348, ../sass/product.scss */
+/* line 352, ../sass/product.scss */
 #about-the-artist .cambird {
   width: 82px;
   height: 109px;
@@ -335,13 +339,13 @@
   bottom: 0;
 }
 
-/* line 357, ../sass/product.scss */
+/* line 361, ../sass/product.scss */
 .people-are-talking {
   padding-top: 40px;
   padding-bottom: 120px;
   text-align: center;
 }
-/* line 362, ../sass/product.scss */
+/* line 366, ../sass/product.scss */
 .people-are-talking p {
   margin: 0 0 5px;
 }

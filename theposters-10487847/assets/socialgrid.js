@@ -245,5 +245,14 @@ $(function () {
 		
 		// Append grid to page
 		$el.append($elFrag);
+		
+		// Set width of grid
+		var gridWidth = 0;
+		
+		$el.find("div[class*='grid-']").each(function () {
+			gridWidth += $(this).outerWidth();
+		});
+		
+		$el.width(gridWidth);
 	}
 });

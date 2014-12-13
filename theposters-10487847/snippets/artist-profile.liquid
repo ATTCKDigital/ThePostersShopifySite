@@ -79,7 +79,7 @@
     {% raw %}
       <script type="text/html" id="grid_container_template">
         <section 
-          class="grid_container"{{#media.0.large_image_url}} 
+          class="grid_container{{#media.0.large_image_url}} hasMedia{{/media.0.large_image_url}}"{{#media.0.large_image_url}} 
           style="background-image: url({{media.0.large_image_url}})"{{/media.0.large_image_url}}
           data-gen-url="{{gen_url}}">
           <h1>{{text_str}}</h1>

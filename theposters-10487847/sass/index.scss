@@ -667,6 +667,7 @@
     ul {
         list-style: none;
         margin: 145px 0 0 0;
+
         padding: 0;
         text-align: center;
 
@@ -675,9 +676,10 @@
         }
 
         li {
+            overflow: hidden;
             display: inline-block;
             width: 200px;
-            min-height: 200px;
+            min-height: 290px;
             margin-bottom: $gap/2;
             margin-right: 25px;
             

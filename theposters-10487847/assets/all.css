@@ -119,13 +119,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -295,7 +295,7 @@ header#main-header #cart-info .toggle-cart:hover, header#main-header #cart-info 
 /* line 191, ../sass/global.scss */
 footer#main-footer {
   padding-top: 60px;
-  background-color: white;
+  background-color: #fff;
   margin-top: 0;
   overflow: hidden;
 }
@@ -494,7 +494,7 @@ footer#main-footer nav ul li a {
 }
 /* line 396, ../sass/global.scss */
 footer#main-footer nav ul li a:hover {
-  color: black;
+  color: #000;
 }
 /* line 401, ../sass/global.scss */
 footer#main-footer nav ul li span {
@@ -1118,60 +1118,44 @@ footer#main-footer nav ul li:last-child a {
 }
 
 @-webkit-keyframes availabilityslide {
-  /* line 424, ../sass/index.scss */
   from {
     opacity: 0;
     top: 43.5%;
   }
-
-  /* line 429, ../sass/index.scss */
   to {
     opacity: 1;
     top: 46.5%;
   }
 }
-
 @-webkit-keyframes buttonfade {
-  /* line 436, ../sass/index.scss */
   from {
     opacity: 0;
   }
-
-  /* line 440, ../sass/index.scss */
   to {
     bottom: 40%;
     opacity: 1;
   }
 }
-
 @-webkit-keyframes dateslide {
-  /* line 447, ../sass/index.scss */
   from {
     opacity: 0;
     top: 34%;
   }
-
-  /* line 452, ../sass/index.scss */
   to {
     opacity: 1;
     top: 37%;
   }
 }
-
 @-webkit-keyframes titleslide {
-  /* line 459, ../sass/index.scss */
   from {
     opacity: 0;
     top: 37%;
   }
-
-  /* line 464, ../sass/index.scss */
   to {
     opacity: 1;
     top: 41.5%;
   }
 }
-
 /**
  * We Are The Posters Section
  */
@@ -1283,7 +1267,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 579, ../sass/index.scss */
 #mission-section h3 {
-  color: white;
+  color: #fff;
   font-size: 2.75em;
   margin: -3px 0 -2px;
   text-transform: uppercase;
@@ -1306,7 +1290,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 601, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
@@ -1338,7 +1322,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 633, ../sass/index.scss */
 #mission-section.mission-white-bg h3 {
-  color: black;
+  color: #000;
 }
 
 /* line 639, ../sass/index.scss */
@@ -1383,37 +1367,38 @@ footer#main-footer nav ul li:last-child a {
     margin: 375px 0 0 0;
   }
 }
-/* line 677, ../sass/index.scss */
+/* line 678, ../sass/index.scss */
 #press-section ul li {
+  overflow: hidden;
   display: inline-block;
   width: 200px;
-  min-height: 200px;
+  min-height: 290px;
   margin-bottom: 20px;
   margin-right: 25px;
 }
-/* line 685, ../sass/index.scss */
+/* line 687, ../sass/index.scss */
 #press-section ul li:hover img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 690, ../sass/index.scss */
+/* line 692, ../sass/index.scss */
 #press-section ul li:hover p {
   color: black;
 }
-/* line 695, ../sass/index.scss */
+/* line 697, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 702, ../sass/index.scss */
+  /* line 704, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 708, ../sass/index.scss */
+/* line 710, ../sass/index.scss */
 #press-section ul li p {
   color: #999;
   display: block;
@@ -1427,10 +1412,10 @@ footer#main-footer nav ul li:last-child a {
   -webkit-transition: color .2s;
   transition: color .2s;
 }
-/* line 722, ../sass/index.scss */
+/* line 724, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 10px;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
@@ -1475,7 +1460,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 36, ../sass/product.scss */
 #archived-products .archive-section-header {
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 3em;
   width: 255px;
   height: 372px;
@@ -1562,7 +1547,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 125, ../sass/product.scss */
 .product .details .availability {
-  background-color: white;
+  background-color: #fff;
   clear: both;
   color: #666;
   display: inline-block;
@@ -1628,7 +1613,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 201, ../sass/product.scss */
 #product #product-images #thumbs .image {
-  border: 10px solid white;
+  border: 10px solid #fff;
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -1675,7 +1660,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 252, ../sass/product.scss */
 #product #details #availability {
-  background-color: white;
+  background-color: #fff;
   clear: both;
   color: #666666;
   display: inline-block;
@@ -2506,7 +2491,7 @@ a#login-recover:hover {
 }
 /* line 50, ../sass/press.scss */
 #press-blog ul li img {
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 5px;
   width: 100%;
   -webkit-transition: all .2s;

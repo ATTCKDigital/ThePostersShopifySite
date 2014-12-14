@@ -248,25 +248,31 @@ $(document).ready(function () {
       var rightControl = $(this).find('.right.control');
       var slideshow = $(this);
 
+      var controlOffset = Math.min(320, ($(window).first().height()/2 - 110));
+      leftControl.css({top: controlOffset });
+      rightControl.css({top: controlOffset });
+
       slideshow.find('.previewImage_container').hide().first().show().addClass('active-product');
 
       leftControl.on('click', function(){
         var current = slideshow.find('.active-product');
-        var next = slideshow.find('.active-product').prev().filter('.previewImage_container');
+        var prev = slideshow.find('.active-product').prev().filter('.previewImage_container');
         var prevPrev = slideshow.find('.active-product').prev().prev().filter('.previewImage_container');
         var nextNext = current;
 
-        if (next.length <= 0) {
-          next = slideshow.find('.previewImage_container').last();
+        if (prev.length <= 0) {
+          prev = slideshow.find('.previewImage_container').last();
         }
 
-        if (prevPrev.length <= 0) {
+        if (prevPrev.length <= 0 && slideshow.find('.previewImage_container').first().hasClass('active-product')) {
           prevPrev = slideshow.find('.previewImage_container').last().prev().filter('.previewImage_container');
+        } else if (prevPrev.length <= 0) {
+          prevPrev = slideshow.find('.previewImage_container').last().filter('.previewImage_container');
         }
 
-        if (next.length > 0) {
+        if (prev.length > 0) {
           current.removeClass('active-product').fadeOut(300, function(){
-            next.addClass('active-product').fadeIn(300);
+            prev.addClass('active-product').fadeIn(300);
 
             if (prevPrev.length > 0) {
               leftControl.addClass('active');
@@ -294,8 +300,10 @@ $(document).ready(function () {
           next = slideshow.find('.previewImage_container').first();
         }
 
-        if (nextNext.length <= 0) {
-          prevPrev = slideshow.find('.previewImage_container').first().next().filter('.previewImage_container');
+        if (nextNext.length <= 0 && slideshow.find('.previewImage_container').last().hasClass('active-product')) {
+          nextNext = slideshow.find('.previewImage_container').first().next().filter('.previewImage_container');
+        } else if(nextNext.length <= 0) {
+          nextNext = slideshow.find('.previewImage_container').first().filter('.previewImage_container');
         }
 
         if (next.length > 0) {

@@ -60,10 +60,18 @@
 		a {
 			background-color: rgba(#fff, 0.75);
 			color: #000;
-			display: block;
+			display: table;
 			font-size: 0.8em;
 			margin: 0;
 			text-transform: uppercase;
+			width: 100%;
+
+			span {
+				line-height: 35px;
+				display: table-cell;
+				height: 266px;
+				vertical-align: middle;
+			}
 		}
 
 		&:hover {

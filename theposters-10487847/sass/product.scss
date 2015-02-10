@@ -4,6 +4,13 @@
  * Collection page
  */
 
+#active-products {
+	.new-line {
+		display: block;
+		clear: both;
+	}
+}
+
 .archive-border {
 	width: 100%;
 	height: 73px;
@@ -21,6 +28,12 @@
 
 	h1.section-header {
 		margin-bottom: 48px;
+		width: 100%;
+		white-space: normal;
+
+		small {
+
+		}
 		
 		a {
 			color: inherit;

@@ -55,14 +55,36 @@
               <label>QTY</label>
             </div>
 
-            <div class="add-to-cart-info">
-              {% assign variant = product.selected_or_first_available_variant %}
-              <p id="price">
-                <span itemprop="price">{{ variant.price | money }}</span>
-              </p>
+            <div class="add-to-cart-info" data-expdate="{{product.metafields.visibility.expirationdate}}">
+            {% assign variant = product.selected_or_first_available_variant %}
+            {% if variant.available %}
+              <div class="product-available">
+                <p id="price">
+                  <span itemprop="price">{{ variant.price | money }}</span>
+                </p>
 
-              <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
+                <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
+              </div>
+              <div class="product-unavailable">
+                Sold Out
+              </div>
+            {% else %}
+              <div class="product-unavailable">
+                Sold Out
+              </div>
+            {% endif %}
             </div>
+            <script type="text/javascript">
+              $(document).ready(function(){
+                if(moment().isBefore(moment($('.add-to-cart-info').data('expdate'), 'YYYY-MM-DD'))) {
+                  $('.add-to-cart-info').find('.product-available').show();
+                  $('.add-to-cart-info').find('.product-unavailable').hide();
+                } else {
+                  $('.add-to-cart-info').find('.product-available').hide();
+                  $('.add-to-cart-info').find('.product-unavailable').show();
+                }
+              }); 
+            </script>
           </form>
         </div>
       </div>

@@ -6,7 +6,7 @@
 				{% for vendor in shop.vendors %}
 					{% for collection in collections %}
 						{% if collection.title == vendor %}
-						  <li class="artist" style="background-image: url({{ collection | img_url: 'large' }})"><a href="/collections/{{ vendor | handleize }}">{{ vendor }}</a></li>
+						  <li class="artist" style="background-image: url({{ collection | img_url: 'large' }})"><a href="/collections/{{ vendor | handleize }}"><span>{{ vendor }}</span></a></li>
 						{% endif %}
 					{% endfor %}
 				{% endfor %}

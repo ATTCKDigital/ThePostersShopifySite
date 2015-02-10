@@ -8,11 +8,10 @@ body {
   /* http://www.fontspring.com/fonts/fontsite/franklin-gothic-fs */
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 10px;
-  height: 400px;
-  width: 1000%;
+  height: 570px;
   position: relative;
 }
-/* line 13, ../sass/socialgrid.scss */
+/* line 12, ../sass/socialgrid.scss */
 .socialGrid_container .loading {
   width: 100vw;
   left: 50vw;
@@ -20,47 +19,46 @@ body {
   margin-left: -585px;
   position: absolute;
   height: inherit;
-  line-height: 400px;
+  line-height: 570px;
   text-align: center;
   font-size: 3em;
 }
-/* line 25, ../sass/socialgrid.scss */
+/* line 24, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container {
+  background-color: white;
   background-position: center center;
   background-size: cover;
   background-width: 100px;
   cursor: pointer;
   float: left;
-  height: 400px;
+  height: 570px;
   position: relative;
-  width: 400px;
+  width: 570px;
+  box-shadow: 10px 10px 10px -9px rgba(0, 0, 0, 0.3) inset;
 }
-/* line 35, ../sass/socialgrid.scss */
+/* line 36, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container h1 {
-  color: white;
+  color: #666;
   font-size: 19px;
-  line-height: 1.45em;
-  opacity: 0;
+  font-weight: normal;
+  opacity: 1;
   position: relative;
-  top: -5px;
+  top: 0;
   z-index: 1;
   -webkit-transition: all .2s;
-}
-/* line 46, ../sass/socialgrid.scss */
-.socialGrid_container .grid_container h1 {
   line-height: 1.25em;
   margin: 15px;
   max-height: 6em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 54, ../sass/socialgrid.scss */
+/* line 53, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container .avatar {
   float: left;
   margin-right: 8px;
   width: 37px;
 }
-/* line 60, ../sass/socialgrid.scss */
+/* line 59, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container .blackscreen {
   background: #000;
   bottom: 0;
@@ -71,52 +69,79 @@ body {
   top: 0;
   -webkit-transition: opacity .3s;
 }
-/* line 71, ../sass/socialgrid.scss */
+/* line 70, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container .userInfo_container {
   bottom: 0px;
-  color: white;
+  color: #666;
   font-size: 1.3em;
   left: 15px;
   line-height: 1.5em;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   right: 15px;
   z-index: 1;
   -webkit-transition: opacity .8s;
 }
-/* line 85, ../sass/socialgrid.scss */
+/* line 83, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container.hasMedia {
+  box-shadow: none;
+}
+/* line 86, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container.hasMedia h1 {
+  opacity: 0;
+  top: -5px;
+}
+/* line 91, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container.hasMedia .userInfo_container {
+  opacity: 0;
+}
+/* line 98, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container:hover h1 {
+  color: white;
   opacity: 1;
   top: 0;
 }
-/* line 90, ../sass/socialgrid.scss */
+/* line 104, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container:hover .blackscreen {
   opacity: 0.7;
 }
-/* line 94, ../sass/socialgrid.scss */
+/* line 108, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container:hover .userInfo_container {
+  color: white;
   opacity: 1;
 }
-/* line 100, ../sass/socialgrid.scss */
+/* line 115, ../sass/socialgrid.scss */
 .socialGrid_container .grid-1 {
   float: left;
 }
-/* line 104, ../sass/socialgrid.scss */
+/* line 119, ../sass/socialgrid.scss */
 .socialGrid_container .grid-2 {
   float: left;
 }
-/* line 107, ../sass/socialgrid.scss */
+/* line 122, ../sass/socialgrid.scss */
 .socialGrid_container .grid-2 section {
   clear: left;
   float: left;
-  height: 200px;
-  width: 200px;
+  height: 285px;
+  width: 285px;
 }
 
-/* line 116, ../sass/socialgrid.scss */
+/* line 131, ../sass/socialgrid.scss */
 .socialGrid_wrapper {
-  height: 400px;
+  height: 570px;
   overflow: scroll;
   overflow-y: hidden;
   width: 100%;
+}
+/* line 137, ../sass/socialgrid.scss */
+.socialGrid_wrapper .socialGrid_innerShadow {
+  width: 100%;
+  height: 570px;
+  position: absolute;
+  -webkit-box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  z-index: 99;
+  pointer-events: none;
+  border-bottom: 1px solid #cccccc;
 }

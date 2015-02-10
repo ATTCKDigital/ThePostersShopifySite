@@ -1427,37 +1427,45 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Collection page
  */
-/* line 7, ../sass/product.scss */
+/* line 8, ../sass/product.scss */
+#active-products .new-line {
+  display: block;
+  clear: both;
+}
+
+/* line 14, ../sass/product.scss */
 .archive-border {
   width: 100%;
   height: 73px;
 }
 
-/* line 13, ../sass/product.scss */
+/* line 20, ../sass/product.scss */
 #active-products .poster-clips, #archived-products .poster-clips {
   display: none;
 }
 
-/* line 18, ../sass/product.scss */
+/* line 25, ../sass/product.scss */
 #archived-products {
   background-color: #eeeeef;
   padding-bottom: 70px;
 }
-/* line 22, ../sass/product.scss */
+/* line 29, ../sass/product.scss */
 #archived-products h1.section-header {
   margin-bottom: 48px;
+  width: 100%;
+  white-space: normal;
 }
-/* line 25, ../sass/product.scss */
+/* line 38, ../sass/product.scss */
 #archived-products h1.section-header a {
   color: inherit;
   -webkit-transition: color .2s;
   transition: color .2s;
 }
-/* line 30, ../sass/product.scss */
+/* line 43, ../sass/product.scss */
 #archived-products h1.section-header a:hover {
   color: black;
 }
-/* line 36, ../sass/product.scss */
+/* line 49, ../sass/product.scss */
 #archived-products .archive-section-header {
   text-align: center;
   color: #fff;
@@ -1469,20 +1477,20 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 47, ../sass/product.scss */
+/* line 60, ../sass/product.scss */
 #archived-products .archive-section-header img {
   vertical-align: inherit;
 }
-/* line 52, ../sass/product.scss */
+/* line 65, ../sass/product.scss */
 #archived-products > .container {
   padding-top: 40px;
 }
-/* line 56, ../sass/product.scss */
+/* line 69, ../sass/product.scss */
 #archived-products .product {
   position: relative;
   top: -11px;
 }
-/* line 62, ../sass/product.scss */
+/* line 75, ../sass/product.scss */
 #archived-products .row.products {
   margin-bottom: 28px;
 }
@@ -1490,7 +1498,7 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Product Thumb View
  */
-/* line 72, ../sass/product.scss */
+/* line 85, ../sass/product.scss */
 .product {
   display: inline-block;
   float: none;
@@ -1499,7 +1507,7 @@ footer#main-footer nav ul li:last-child a {
   margin: 20px;
   position: relative;
 }
-/* line 80, ../sass/product.scss */
+/* line 93, ../sass/product.scss */
 .product .poster-clips {
   position: absolute;
   width: 168px;
@@ -1508,7 +1516,7 @@ footer#main-footer nav ul li:last-child a {
   top: -15px;
   margin-left: -84px;
 }
-/* line 89, ../sass/product.scss */
+/* line 102, ../sass/product.scss */
 .product .image {
   height: 287px;
   line-height: 287px;
@@ -1516,11 +1524,11 @@ footer#main-footer nav ul li:last-child a {
   margin-bottom: 24px;
   width: 287px;
 }
-/* line 96, ../sass/product.scss */
+/* line 109, ../sass/product.scss */
 .product .image a {
   display: block;
 }
-/* line 100, ../sass/product.scss */
+/* line 113, ../sass/product.scss */
 .product .image img {
   max-width: 287px;
   max-height: 287px;
@@ -1530,22 +1538,22 @@ footer#main-footer nav ul li:last-child a {
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 109, ../sass/product.scss */
+/* line 122, ../sass/product.scss */
 .product .image img:hover {
   -webkit-transform: scale(1.05);
 }
-/* line 115, ../sass/product.scss */
+/* line 128, ../sass/product.scss */
 .product .details {
   text-align: center;
 }
-/* line 118, ../sass/product.scss */
+/* line 131, ../sass/product.scss */
 .product .details a {
   color: #666;
   font-size: 1.45em;
   text-transform: uppercase;
   display: block;
 }
-/* line 125, ../sass/product.scss */
+/* line 138, ../sass/product.scss */
 .product .details .availability {
   background-color: #fff;
   clear: both;
@@ -1561,20 +1569,20 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   top: -8px;
 }
-/* line 140, ../sass/product.scss */
+/* line 153, ../sass/product.scss */
 .product .details .availability .days-remaining {
   color: #f00;
 }
-/* line 148, ../sass/product.scss */
+/* line 161, ../sass/product.scss */
 .product:hover .details a {
   color: #000;
 }
 
-/* line 156, ../sass/product.scss */
+/* line 169, ../sass/product.scss */
 #active-products .for-sale-collection {
   text-align: center;
 }
-/* line 164, ../sass/product.scss */
+/* line 177, ../sass/product.scss */
 #active-products .for-sale-header {
   margin: 0 auto;
   width: 463px;
@@ -1583,7 +1591,7 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Product Detail Page
  */
-/* line 173, ../sass/product.scss */
+/* line 186, ../sass/product.scss */
 #zoom-image {
   position: fixed;
   z-index: 100;
@@ -1599,19 +1607,19 @@ footer#main-footer nav ul li:last-child a {
   background-repeat: no-repeat;
 }
 
-/* line 190, ../sass/product.scss */
+/* line 203, ../sass/product.scss */
 #product #product-images #featured-image {
   text-align: center;
 }
-/* line 193, ../sass/product.scss */
+/* line 206, ../sass/product.scss */
 #product #product-images #featured-image img {
   width: 100%;
 }
-/* line 198, ../sass/product.scss */
+/* line 211, ../sass/product.scss */
 #product #product-images #thumbs {
   clear: both;
 }
-/* line 201, ../sass/product.scss */
+/* line 214, ../sass/product.scss */
 #product #product-images #thumbs .image {
   border: 10px solid #fff;
   width: 200px;
@@ -1620,28 +1628,28 @@ footer#main-footer nav ul li:last-child a {
   float: right;
   margin: 26px 0 0 26px;
 }
-/* line 209, ../sass/product.scss */
+/* line 222, ../sass/product.scss */
 #product #product-images #thumbs .image:last-child {
   margin: 26px 0 0 0;
 }
-/* line 213, ../sass/product.scss */
+/* line 226, ../sass/product.scss */
 #product #product-images #thumbs .image img {
   min-width: 200px;
   min-height: 200px;
 }
-/* line 220, ../sass/product.scss */
+/* line 233, ../sass/product.scss */
 #product #product-images .social {
   clear: both;
 }
-/* line 223, ../sass/product.scss */
+/* line 236, ../sass/product.scss */
 #product #product-images .social .social-share {
   margin: 0 6px 0 0;
 }
-/* line 230, ../sass/product.scss */
+/* line 243, ../sass/product.scss */
 #product #details hr {
   border-top: 1px solid #AFAEAF;
 }
-/* line 235, ../sass/product.scss */
+/* line 248, ../sass/product.scss */
 #product #details h1.title {
   color: #999;
   font-size: 1.2em;
@@ -1649,7 +1657,7 @@ footer#main-footer nav ul li:last-child a {
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 243, ../sass/product.scss */
+/* line 256, ../sass/product.scss */
 #product #details #artist {
   font-size: 2em;
   font-weight: 700;
@@ -1658,7 +1666,7 @@ footer#main-footer nav ul li:last-child a {
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 252, ../sass/product.scss */
+/* line 265, ../sass/product.scss */
 #product #details #availability {
   background-color: #fff;
   clear: both;
@@ -1674,33 +1682,33 @@ footer#main-footer nav ul li:last-child a {
   padding: 0 4px;
   text-transform: uppercase;
 }
-/* line 267, ../sass/product.scss */
+/* line 280, ../sass/product.scss */
 #product #details #availability .days-remaining {
   color: #f00;
   position: relative;
   top: 0;
 }
-/* line 274, ../sass/product.scss */
+/* line 287, ../sass/product.scss */
 #product #details .description {
   font-size: 13pt;
   line-height: 22pt;
   margin: 40px 0;
 }
-/* line 281, ../sass/product.scss */
+/* line 294, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 285, ../sass/product.scss */
+/* line 298, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
   text-align: center;
   width: 34px;
 }
-/* line 289, ../sass/product.scss */
+/* line 302, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input:focus {
   color: #000;
 }
-/* line 294, ../sass/product.scss */
+/* line 307, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper label {
   color: #666;
   font-size: 14pt;
@@ -1708,13 +1716,13 @@ footer#main-footer nav ul li:last-child a {
   position: relative;
   top: -2px;
 }
-/* line 303, ../sass/product.scss */
+/* line 316, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
   text-align: right;
   width: 60%;
 }
-/* line 308, ../sass/product.scss */
+/* line 321, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price {
   display: inline-block;
   font-size: 22pt;
@@ -1723,7 +1731,7 @@ footer#main-footer nav ul li:last-child a {
   line-height: 22pt;
   margin-right: 15px;
 }
-/* line 317, ../sass/product.scss */
+/* line 330, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
@@ -1731,22 +1739,22 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   width: 150px;
 }
-/* line 324, ../sass/product.scss */
+/* line 337, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart:hover {
   border-color: #fff;
 }
 
-/* line 333, ../sass/product.scss */
+/* line 346, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
   padding-top: 120px;
   position: relative;
 }
-/* line 338, ../sass/product.scss */
+/* line 351, ../sass/product.scss */
 #about-the-artist h1 {
   margin-bottom: 120px;
 }
-/* line 342, ../sass/product.scss */
+/* line 355, ../sass/product.scss */
 #about-the-artist .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -1756,7 +1764,7 @@ footer#main-footer nav ul li:last-child a {
   margin-left: -93px;
   z-index: 100;
 }
-/* line 352, ../sass/product.scss */
+/* line 365, ../sass/product.scss */
 #about-the-artist .cambird {
   width: 82px;
   height: 109px;
@@ -1765,13 +1773,13 @@ footer#main-footer nav ul li:last-child a {
   bottom: 0;
 }
 
-/* line 361, ../sass/product.scss */
+/* line 374, ../sass/product.scss */
 .people-are-talking {
   padding-top: 40px;
   padding-bottom: 120px;
   text-align: center;
 }
-/* line 366, ../sass/product.scss */
+/* line 379, ../sass/product.scss */
 .people-are-talking p {
   margin: 0 0 5px;
 }
@@ -1828,12 +1836,20 @@ footer#main-footer nav ul li:last-child a {
 .artist-list .artist a {
   background-color: rgba(255, 255, 255, 0.75);
   color: #000;
-  display: block;
+  display: table;
   font-size: 0.8em;
   margin: 0;
   text-transform: uppercase;
+  width: 100%;
 }
 /* line 69, ../sass/artist.scss */
+.artist-list .artist a span {
+  line-height: 35px;
+  display: table-cell;
+  height: 266px;
+  vertical-align: middle;
+}
+/* line 77, ../sass/artist.scss */
 .artist-list .artist:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -1841,11 +1857,11 @@ footer#main-footer nav ul li:last-child a {
   -o-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 76, ../sass/artist.scss */
+/* line 84, ../sass/artist.scss */
 .artist-list .artist:hover a {
   background-color: rgba(255, 255, 255, 0.65);
 }
-/* line 83, ../sass/artist.scss */
+/* line 91, ../sass/artist.scss */
 .artist-list #join-posters a {
   float: left;
   left: 0;
@@ -1857,7 +1873,7 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Artist Profile
  */
-/* line 98, ../sass/artist.scss */
+/* line 106, ../sass/artist.scss */
 .artist-profile .artist-header {
   background-color: #eeeeef;
   border-bottom: 10px solid #fff;
@@ -1865,13 +1881,13 @@ footer#main-footer nav ul li:last-child a {
   height: 400px;
   overflow: hidden;
 }
-/* line 105, ../sass/artist.scss */
+/* line 113, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image {
   background-size: cover;
   min-height: 100%;
   min-width: 100%;
 }
-/* line 111, ../sass/artist.scss */
+/* line 119, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image-wrapper {
   float: left;
   height: 100%;
@@ -1879,7 +1895,7 @@ footer#main-footer nav ul li:last-child a {
   position: relative;
   width: 50%;
 }
-/* line 119, ../sass/artist.scss */
+/* line 127, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title {
   float: left;
   height: 100%;
@@ -1887,7 +1903,7 @@ footer#main-footer nav ul li:last-child a {
   position: relative;
   width: 50%;
 }
-/* line 126, ../sass/artist.scss */
+/* line 134, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title h1 {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -1900,27 +1916,27 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   top: 50%;
 }
-/* line 141, ../sass/artist.scss */
+/* line 149, ../sass/artist.scss */
 .artist-profile .artist-description {
   font-size: .8em;
   line-height: 1.4em;
   margin: 50px 0;
   padding: 15px 0;
 }
-/* line 148, ../sass/artist.scss */
+/* line 156, ../sass/artist.scss */
 .artist-profile .artist-products {
   margin-top: 25px;
 }
-/* line 151, ../sass/artist.scss */
+/* line 159, ../sass/artist.scss */
 .artist-profile .artist-products:nth-child(4) {
   clear: right;
 }
-/* line 156, ../sass/artist.scss */
+/* line 164, ../sass/artist.scss */
 .artist-profile .artist-video {
   clear: both;
   background-color: #eeeeef;
 }
-/* line 160, ../sass/artist.scss */
+/* line 168, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-description {
   padding: 110px 0;
   text-align: right;
@@ -1928,13 +1944,13 @@ footer#main-footer nav ul li:last-child a {
   float: right;
   font-size: 0.9em;
 }
-/* line 168, ../sass/artist.scss */
+/* line 176, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content {
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-/* line 173, ../sass/artist.scss */
+/* line 181, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: left;
@@ -1943,11 +1959,11 @@ footer#main-footer nav ul li:last-child a {
   width: 400px;
   height: 240px;
 }
-/* line 183, ../sass/artist.scss */
+/* line 191, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons {
   position: relative;
 }
-/* line 186, ../sass/artist.scss */
+/* line 194, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -1957,7 +1973,7 @@ footer#main-footer nav ul li:last-child a {
   margin-left: -93px;
   z-index: 100;
 }
-/* line 196, ../sass/artist.scss */
+/* line 204, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .cambird {
   width: 82px;
   height: 109px;
@@ -1965,11 +1981,11 @@ footer#main-footer nav ul li:last-child a {
   right: 0;
   bottom: 0;
 }
-/* line 206, ../sass/artist.scss */
+/* line 214, ../sass/artist.scss */
 .artist-profile .social-grid {
   background-color: #eeeeef;
 }
-/* line 210, ../sass/artist.scss */
+/* line 218, ../sass/artist.scss */
 .artist-profile .people-are-talking {
   background-color: #eeeeef;
 }

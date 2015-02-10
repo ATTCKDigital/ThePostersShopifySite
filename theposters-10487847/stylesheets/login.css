@@ -1,9 +1,13 @@
-/* line 4, ../sass/login.scss */
-#login .section-header {
-  margin: 40px 0;
+/* line 3, ../sass/login.scss */
+#login-signup {
+  padding-bottom: 120px;
 }
-
-/* line 10, ../sass/login.scss */
+/* line 6, ../sass/login.scss */
+#login-signup .section-header {
+  margin: 0 0 40px 25px;
+  width: 442px;
+}
+/* line 11, ../sass/login.scss */
 #login-signup .label {
   color: #888;
   display: block;
@@ -12,20 +16,83 @@
   padding: 5px 0 0 0;
   text-align: left;
 }
-/* line 19, ../sass/login.scss */
+/* line 20, ../sass/login.scss */
 #login-signup input {
   border: 1px solid #888;
   margin-bottom: 15px;
   padding: 0 5px;
   width: 100%;
 }
-/* line 25, ../sass/login.scss */
+/* line 26, ../sass/login.scss */
 #login-signup input[type="submit"] {
   width: 150px;
 }
-/* line 30, ../sass/login.scss */
+/* line 31, ../sass/login.scss */
 #login-signup .btn-primary {
   background-color: #000;
+  outline: 1px solid #000;
+  border: 1px solid #f00;
   text-transform: uppercase;
   float: right;
+}
+/* line 38, ../sass/login.scss */
+#login-signup .btn-primary:hover {
+  border: 1px solid #fff;
+}
+
+/** TE **/
+/* line 46, ../sass/login.scss */
+#login .section-header {
+  /*margin: 40px 0;*/
+  width: 442px;
+}
+
+/* line 51, ../sass/login.scss */
+#login, #create {
+  width: 442px;
+}
+
+/* line 55, ../sass/login.scss */
+#login-sign-up {
+  padding-bottom: 120px;
+}
+
+/* line 60, ../sass/login.scss */
+a#login-recover {
+  color: #999;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 13pt;
+}
+
+/* line 67, ../sass/login.scss */
+a#login-recover:hover {
+  color: #666;
+}
+
+/* line 71, ../sass/login.scss */
+#customer-register {
+  padding-bottom: 120px;
+}
+
+/* line 75, ../sass/login.scss */
+#customer-register .label {
+  color: #666;
+  display: block;
+  font-size: 13pt;
+  letter-spacing: 0em;
+  padding: 5px 0 0 0;
+  text-align: left;
+}
+
+/* line 84, ../sass/login.scss */
+#customer-register input {
+  margin-bottom: 15px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+/* line 90, ../sass/login.scss */
+#customer-register input[type="submit"] {
+  width: 150px;
 }

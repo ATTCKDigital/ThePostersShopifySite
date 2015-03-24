@@ -18,7 +18,7 @@
 }
 /* line 21, ../sass/index.scss */
 .control.active {
-  width: 135px;
+  width: 155px;
 }
 /* line 25, ../sass/index.scss */
 .control .poster-preview {
@@ -75,7 +75,7 @@
 /* line 75, ../sass/index.scss */
 .control.left:hover .poster-preview {
   opacity: 1;
-  width: 100px;
+  width: 110px;
 }
 /* line 80, ../sass/index.scss */
 .control.left:hover .arrow {
@@ -105,7 +105,7 @@
 /* line 105, ../sass/index.scss */
 .control.right:hover .poster-preview {
   opacity: 1;
-  width: 100px;
+  width: 110px;
 }
 /* line 110, ../sass/index.scss */
 .control.right:hover .arrow {
@@ -233,7 +233,7 @@
 /* line 242, ../sass/index.scss */
 .previewImage_container.anim1 .copy.title {
   left: 100%;
-  top: 40%;
+  top: 42%;
 }
 /* line 248, ../sass/index.scss */
 .previewImage_container.anim1:hover {
@@ -245,7 +245,7 @@
 }
 /* line 254, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.bottom {
-  bottom: 35%;
+  bottom: 28%;
 }
 /* line 258, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.top {
@@ -257,7 +257,7 @@
 }
 /* line 268, ../sass/index.scss */
 .previewImage_container.anim1:hover .button.action {
-  bottom: 40%;
+  bottom: 34%;
   opacity: 1;
 }
 /* line 272, ../sass/index.scss */
@@ -270,7 +270,7 @@
 }
 /* line 281, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy.availability {
-  top: 45.5%;
+  top: 49.5%;
 }
 /* line 285, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy.date {
@@ -291,27 +291,6 @@
 /* line 300, ../sass/index.scss */
 .previewImage_container.anim1 hr.top {
   top: -10%;
-}
-/* line 307, ../sass/index.scss */
-.previewImage_container.anim1 .copy {
-  -webkit-transition: all .5s;
-}
-/* line 308, ../sass/index.scss */
-.previewImage_container.anim1 .copy.availability {
-  left: 10%;
-  top: 50%;
-}
-/* line 313, ../sass/index.scss */
-.previewImage_container.anim1 .copy.date {
-  color: #CCC;
-  left: -100%;
-  top: 35%;
-}
-/* line 319, ../sass/index.scss */
-.previewImage_container.anim1 .copy.title {
-  font-size: 2em;
-  left: 100%;
-  top: 40%;
 }
 /* line 331, ../sass/index.scss */
 .previewImage_container.anim2 hr.bottom {

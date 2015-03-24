@@ -21,7 +21,7 @@
       {% assign featuredproduct = product %}
       {% if featuredproduct.handle != blank  %}
 
-        <div class="previewImage_container anim2" data-expdate="{{featuredproduct.metafields.visibility.expirationdate}}">
+        <div class="previewImage_container anim1" data-expdate="{{featuredproduct.metafields.visibility.expirationdate}}">
           <img src="{{ featuredproduct.featured_image | product_img_url: 'grande' }}" alt="{{ featuredproduct.title }}" />
           <hr class="top" />
           <hr class="bottom" />
@@ -50,7 +50,7 @@
       <div class="col-sm-12">
         <ul>
           {% for article in blogs["press"].articles limit: 7 %}
-            <li><a href="{{ article.title }}" target="_blank">{{ article.content }}</a></li>
+            <li>{{ article.content }}</li>
           {% endfor %}
         </ul>
       </div>

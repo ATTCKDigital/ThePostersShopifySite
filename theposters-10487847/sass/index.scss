@@ -19,7 +19,7 @@
     border-radius: 2px;
 
     &.active {
-        width: 135px;
+        width: 155px;
     }
 
     .poster-preview {
@@ -74,7 +74,7 @@
 
             .poster-preview {
                 opacity: 1;
-                width: 100px;
+                width: 110px;
             }
 
             .arrow {
@@ -104,7 +104,7 @@
 
             .poster-preview {
                 opacity: 1;
-                width: 100px;
+                width: 110px;
             }
 
             .arrow {
@@ -241,7 +241,7 @@
             
             &.title {
                 left: 100%;
-                top: 40%;
+                top: 42%;
             }
         }
         
@@ -252,7 +252,7 @@
                 opacity: 1;
                 
                 &.bottom {
-                    bottom: 35%;
+                    bottom: 28%;
                 }
             
                 &.top {
@@ -266,7 +266,7 @@
             
             .button {
                 &.action {
-                    bottom: 40%;
+                    bottom: 34%;
                     opacity: 1;
                     
                     &:hover {
@@ -279,7 +279,7 @@
                 opacity: 1;
                 
                 &.availability {
-                    top: 45.5%;
+                    top: 49.5%;
                 }
                 
                 &.date {
@@ -304,26 +304,26 @@
             -webkit-transition: all .5s;
         }
         
-        .copy {
-            &.availability {
-                left: 10%;
-                top: 50%;
-            }
+        // .copy {
+        //     &.availability {
+        //         left: 10%;
+        //         top: 50%;
+        //     }
             
-            &.date {
-                color: #CCC;
-                left: -100%;
-                top: 35%;
-            }
+        //     &.date {
+        //         color: #CCC;
+        //         left: -100%;
+        //         top: 35%;
+        //     }
             
-            &.title {
-                font-size: 2em;
-                left: 100%;
-                top: 40%;
-            }
+        //     &.title {
+        //         font-size: 2em;
+        //         left: 100%;
+        //         top: 40%;
+        //     }
             
-            -webkit-transition: all .5s;
-        }
+        //     -webkit-transition: all .5s;
+        // }
     }
     
     &.anim2 {

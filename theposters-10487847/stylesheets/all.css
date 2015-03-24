@@ -961,7 +961,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 242, ../sass/index.scss */
 .previewImage_container.anim1 .copy.title {
   left: 100%;
-  top: 40%;
+  top: 43%;
 }
 /* line 248, ../sass/index.scss */
 .previewImage_container.anim1:hover {
@@ -973,7 +973,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 254, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.bottom {
-  bottom: 35%;
+  bottom: 28%;
 }
 /* line 258, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.top {
@@ -985,7 +985,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 268, ../sass/index.scss */
 .previewImage_container.anim1:hover .button.action {
-  bottom: 40%;
+  bottom: 34%;
   opacity: 1;
 }
 /* line 272, ../sass/index.scss */
@@ -1836,17 +1836,20 @@ footer#main-footer nav ul li:last-child a {
 .artist-list .artist a {
   background-color: rgba(255, 255, 255, 0.75);
   color: #000;
-  display: block;
+  display: table;
   font-size: 0.8em;
   margin: 0;
   text-transform: uppercase;
+  width: 100%;
 }
-/* line 68, ../sass/artist.scss */
+/* line 69, ../sass/artist.scss */
 .artist-list .artist a span {
   line-height: 35px;
-  display: inline-block;
+  display: table-cell;
+  height: 266px;
+  vertical-align: middle;
 }
-/* line 74, ../sass/artist.scss */
+/* line 77, ../sass/artist.scss */
 .artist-list .artist:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -1854,11 +1857,11 @@ footer#main-footer nav ul li:last-child a {
   -o-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 81, ../sass/artist.scss */
+/* line 84, ../sass/artist.scss */
 .artist-list .artist:hover a {
   background-color: rgba(255, 255, 255, 0.65);
 }
-/* line 88, ../sass/artist.scss */
+/* line 91, ../sass/artist.scss */
 .artist-list #join-posters a {
   float: left;
   left: 0;
@@ -1870,7 +1873,7 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Artist Profile
  */
-/* line 103, ../sass/artist.scss */
+/* line 106, ../sass/artist.scss */
 .artist-profile .artist-header {
   background-color: #eeeeef;
   border-bottom: 10px solid #fff;
@@ -1878,13 +1881,13 @@ footer#main-footer nav ul li:last-child a {
   height: 400px;
   overflow: hidden;
 }
-/* line 110, ../sass/artist.scss */
+/* line 113, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image {
   background-size: cover;
   min-height: 100%;
   min-width: 100%;
 }
-/* line 116, ../sass/artist.scss */
+/* line 119, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image-wrapper {
   float: left;
   height: 100%;
@@ -1892,7 +1895,7 @@ footer#main-footer nav ul li:last-child a {
   position: relative;
   width: 50%;
 }
-/* line 124, ../sass/artist.scss */
+/* line 127, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title {
   float: left;
   height: 100%;
@@ -1900,7 +1903,7 @@ footer#main-footer nav ul li:last-child a {
   position: relative;
   width: 50%;
 }
-/* line 131, ../sass/artist.scss */
+/* line 134, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title h1 {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -1913,27 +1916,27 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   top: 50%;
 }
-/* line 146, ../sass/artist.scss */
+/* line 149, ../sass/artist.scss */
 .artist-profile .artist-description {
   font-size: .8em;
   line-height: 1.4em;
   margin: 50px 0;
   padding: 15px 0;
 }
-/* line 153, ../sass/artist.scss */
+/* line 156, ../sass/artist.scss */
 .artist-profile .artist-products {
   margin-top: 25px;
 }
-/* line 156, ../sass/artist.scss */
+/* line 159, ../sass/artist.scss */
 .artist-profile .artist-products:nth-child(4) {
   clear: right;
 }
-/* line 161, ../sass/artist.scss */
+/* line 164, ../sass/artist.scss */
 .artist-profile .artist-video {
   clear: both;
   background-color: #eeeeef;
 }
-/* line 165, ../sass/artist.scss */
+/* line 168, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-description {
   padding: 110px 0;
   text-align: right;
@@ -1941,13 +1944,13 @@ footer#main-footer nav ul li:last-child a {
   float: right;
   font-size: 0.9em;
 }
-/* line 173, ../sass/artist.scss */
+/* line 176, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content {
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-/* line 178, ../sass/artist.scss */
+/* line 181, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: left;
@@ -1956,11 +1959,11 @@ footer#main-footer nav ul li:last-child a {
   width: 400px;
   height: 240px;
 }
-/* line 188, ../sass/artist.scss */
+/* line 191, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons {
   position: relative;
 }
-/* line 191, ../sass/artist.scss */
+/* line 194, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -1970,7 +1973,7 @@ footer#main-footer nav ul li:last-child a {
   margin-left: -93px;
   z-index: 100;
 }
-/* line 201, ../sass/artist.scss */
+/* line 204, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .cambird {
   width: 82px;
   height: 109px;
@@ -1978,11 +1981,11 @@ footer#main-footer nav ul li:last-child a {
   right: 0;
   bottom: 0;
 }
-/* line 211, ../sass/artist.scss */
+/* line 214, ../sass/artist.scss */
 .artist-profile .social-grid {
   background-color: #eeeeef;
 }
-/* line 215, ../sass/artist.scss */
+/* line 218, ../sass/artist.scss */
 .artist-profile .people-are-talking {
   background-color: #eeeeef;
 }

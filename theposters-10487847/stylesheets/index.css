@@ -233,7 +233,7 @@
 /* line 242, ../sass/index.scss */
 .previewImage_container.anim1 .copy.title {
   left: 100%;
-  top: 40%;
+  top: 43%;
 }
 /* line 248, ../sass/index.scss */
 .previewImage_container.anim1:hover {
@@ -245,7 +245,7 @@
 }
 /* line 254, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.bottom {
-  bottom: 35%;
+  bottom: 28%;
 }
 /* line 258, ../sass/index.scss */
 .previewImage_container.anim1:hover hr.top {
@@ -257,7 +257,7 @@
 }
 /* line 268, ../sass/index.scss */
 .previewImage_container.anim1:hover .button.action {
-  bottom: 40%;
+  bottom: 34%;
   opacity: 1;
 }
 /* line 272, ../sass/index.scss */

@@ -31,7 +31,7 @@
   float: left;
   margin-bottom: 20px;
   margin-right: 28px;
-  min-height: 370px;
+  min-height: 400px;
   width: 250px;
 }
 /* line 32, ../sass/press.scss */
@@ -54,7 +54,7 @@
 }
 /* line 50, ../sass/press.scss */
 #press-blog ul li img {
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 5px;
   width: 100%;
   -webkit-transition: all .2s;

@@ -254,12 +254,13 @@
 		}
 
 		#artist {
+			font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 			font-size: 2em;
 			font-weight: 700;
+			font-weight: 700;
+			line-height: 1em;
 			margin: 0 0 5px;
 			text-transform: uppercase;
-			font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-			font-weight: 700;
 		}
 
 		#availability {
@@ -379,4 +380,48 @@
 	p {
 		margin: 0 0 5px;
 	}
+}
+
+.frame-options {
+
+	.pop-up {
+		background-position:100px center;
+		display: inline-block;
+		text-align: right;
+		vertical-align: top;
+		width: 49%;
+	}
+
+	.frame-options-select {
+		display: inline-block;
+		width:49%;
+
+		.frame-type {
+
+			small {
+				display: block;
+			}
+
+			background:url('../assets/frame-sprite.png') 0 0 no-repeat transparent;
+			display: inline-block;
+			height: 34px;
+			overflow:hidden;
+			text-indent: -9999em;
+			width:34px;
+
+			&.Black.Gallery {
+				background-position: -43px 0;
+			}
+			&.White.Gallery {
+				background-position: -86px 0;
+			}
+			&.Black.Floating {
+				background-position: -172px 0;
+			}
+			&.White.Floating {
+				background-position: -129px 0;
+			}
+		}
+	}
+	
 }

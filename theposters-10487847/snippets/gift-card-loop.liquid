@@ -1,0 +1,23 @@
+{% capture collection_handle %}
+  {{ product-loop | handleize }}
+{% endcapture %}
+{% capture url %}
+  {% if collection_handle != "" %}
+    /collections/{{ product-loop }}{{ product.url }}
+  {% else %}
+    {{ product.url }}
+  {% endif %}
+{% endcapture %}
+
+<div class="product gift-card" data-expdate="{{product.metafields.visibility.expirationdate}}">
+  <div class="poster-clips" style="background-image: url({{'posterclips.png' | asset_url}})"></div>
+  <div class="image">
+    <a href="{{ url }}">
+      <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
+    </a>
+  </div>
+  <div class="details">
+    <a href="{{ product.url }}">{{ product.title }}</a>
+    <small>{{ product.description }}</small>
+  </div>
+</div>

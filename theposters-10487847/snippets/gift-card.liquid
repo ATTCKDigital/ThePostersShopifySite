@@ -1,0 +1,103 @@
+
+<div id="collection" class="gift-cards">
+  <div class="container">
+    <div class="we-are-the-posters-header text-center">
+      <h2 class="shadow-header section-header black">Gift Cards{{ collection.description }}</h2>
+    </div>
+    <div class="row"> 
+      <div class="col-sm-12">
+        <div class="gift-card-products">
+          {% for product in collection.products limit: settings.pagination_limit %}
+            {% include 'gift-card-loop' with collection.handle %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-sm-12 gift-card-details">
+        <div class="col-sm-6">
+          <small class="pop-up">Learn more about our frames</small>
+
+        </div>
+        <div class="col-sm-6">
+          <small>*Posters shipped within the state of California subject to an additional $4.95 tax.<br />
+†Custom gift card amounts must be between $25 and $999.</small>
+        </div>
+      </div>
+  </div>
+</div>
+{% include 'pop-up' %}
+  <div class="archive-border" style="background-image: url({{ 'archivebordergrey.png' | asset_url }})">
+  </div>
+  <div class="artist-profile">
+    <div class="artist-video">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="artist-video-description">{{ collection.metafields.artist.videodescription }}</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="artist-video-content">{{ collection.metafields.artist.video }}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="social-grid-icons">
+              <div class="people-are-talking-icon"><img src="{{ 'peoplearetalking.png' | asset_url }}" /></div>
+              <div class="cambird"><img src="{{ 'cambird.png' | asset_url }}" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="social-grid">
+    <script type="text/javascript">
+      // var socialGridHashtags = '{% for tag in collection.metafields.global.tags %}%23{{ tag }},{% endfor %}';
+      var socialGridHashtags = '{{collection.metafields.global.tags}}';
+      var sghArray = socialGridHashtags.split(',');
+      var newString = '';
+      
+      $.each(sghArray, function (i, value) {
+        newString += '%23' + value + ',';
+      });
+
+      socialGridHashtags = newString;
+    </script>
+    <div class="socialGrid_wrapper">
+      <div class="socialGrid_innerShadow"></div>
+      <div class="socialGrid_container"><div class="loading"><img src="{{ 'loading-animation.gif' | asset_url }}" /></div></div>
+    </div>
+    {% raw %}
+      <script type="text/html" id="grid_container_template">
+        <section 
+          class="grid_container{{#media.0.large_image_url}} hasMedia{{/media.0.large_image_url}}"{{#media.0.large_image_url}} 
+          style="background-image: url({{media.0.large_image_url}})"{{/media.0.large_image_url}}
+          data-gen-url="{{gen_url}}">
+          <h1>{{text_str}}</h1>
+          <p class="userInfo_container">
+            <img class="avatar {{user_id}}" />
+            <span class="likes media-{{id}}"></span>
+            <span class="name">{{name}}</span><br />
+            <span class="created_at">{{#parseDate}}{{created_at}}{{/parseDate}}</span>
+          </p>
+          <div class="blackscreen"></div>
+        </section>
+      </script>
+    {% endraw %}
+  </div>
+
+<div class="people-are-talking">
+  <p>We always love to see where the posters find a home.</p>
+  <p>Tag yours on Instagram with #ThePosters, or <a href="mailto:info@theposters.co">email us</a> a picture so we can share in the excitement!</p>
+</div>
+
+</div><!---->
+
+</div>
+
+<script type="text/javascript">
+  // Move Video from description to its own section. JS hack
+  $(document).ready(function(){
+    $('.artist-video-content').html($('#artist-video').html());
+    $('#artist-video').remove();
+  })
+</script>

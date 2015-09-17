@@ -1,0 +1,154 @@
+<div id="zoom-image"></div>
+<div id="product" class="{{ product.handle }}" itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+  <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}" />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <div id="product-images">
+          {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+          <div id="featured-image">
+            <a href="{{ featured_image | product_img_url: 'master' }}">
+              <img src="{{ featured_image | product_img_url: 'master' }}" alt="{{ featured_image.alt | escape }}" />
+            </a>
+          </div>
+
+          {% if product.images.size > 1%}
+          <div id="thumbs">
+            {% for image in product.images %}
+             <div class="image">
+                <a href="{{ image | product_img_url: 'master' }}">
+                  <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="social">
+            {% include 'share' %}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div id="details">
+          <hr style="margin-top: 0" />
+          <h1 class="title" itemprop="name">{{ product.vendor }}</h1>
+          <div id="artist" class="shadow-header">{{ product.title }}</div>
+          <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
+          <hr />
+          <div class="frame-options">
+            <div class="frame-options-select">
+              <small>Frame:</small>
+              <div class="options">
+                {% for variant in product.variants %}
+                  <span class="frame-type {{variant.option2}} {{variant.option3}}">{{variant.option2}} {{variant.option3}}</span>
+                {% endfor %}
+              </div>
+            </div>
+            <small class="pop-up">Frame Details</small>
+
+          </div>
+          <hr />
+          <div class="description" itemprop="description">
+            {{ product.description }}
+          </div>
+
+          <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
+            <select id="product-select" name="id" style="display:none">
+              {% for variant in product.variants %}
+              <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+              {% endfor %}
+            </select>
+
+            <div class="quantity-wrapper">
+              <input id="quantity" type="text" name="quantity" value="1" class="tc item-quantity" />
+              <label>QTY</label>
+            </div>
+
+            <div class="add-to-cart-info" data-expdate="{{product.metafields.visibility.expirationdate}}">
+            {% assign variant = product.selected_or_first_available_variant %}
+            {% if variant.available %}
+              <div class="product-available">
+                <p id="price">
+                  <span itemprop="price">{{ variant.price | money }}</span>
+                </p>
+
+                <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
+              </div>
+              <div class="product-unavailable">
+                Sold Out
+              </div>
+            {% else %}
+              <div class="product-unavailable">
+                Sold Out
+              </div>
+            {% endif %}
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function(){
+                if(moment().isBefore(moment($('.add-to-cart-info').data('expdate'), 'YYYY-MM-DD'))) {
+                  $('.add-to-cart-info').find('.product-available').show();
+                  $('.add-to-cart-info').find('.product-unavailable').hide();
+                } else {
+                  $('.add-to-cart-info').find('.product-available').hide();
+                  $('.add-to-cart-info').find('.product-unavailable').show();
+                }
+              }); 
+            </script>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="archive-border" style="background-image: url({{ 'archivebordergrey.png' | asset_url }})"></div>
+<div>
+<section id="about-the-artist">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <!-- <h1 class="shadow-header-grey section-header">About The Artist</h1> -->
+        
+        <div class="people-are-talking-icon"><img src="{{ 'peoplearetalking.png' | asset_url }}" /></div>
+        <div class="cambird"><img src="{{ 'cambird.png' | asset_url }}" /></div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="social-grid">
+  <script type="text/javascript">
+    var socialGridHashtags = '{% for tag in product.tags %}%23{{ tag }},{% endfor %}';
+  </script>
+  <div class="socialGrid_wrapper">
+    <div class="socialGrid_innerShadow"></div>
+    <div class="socialGrid_container"><div class="loading"><img src="{{ 'loading-animation.gif' | asset_url }}" /></div></div>
+  </div>
+  {% raw %}
+    <script type="text/html" id="grid_container_template">
+      <section 
+        class="grid_container{{#media.0.large_image_url}} hasMedia{{/media.0.large_image_url}}"{{#media.0.large_image_url}} 
+        style="background-image: url({{media.0.large_image_url}})"{{/media.0.large_image_url}}
+        data-gen-url="{{gen_url}}">
+        <h1>{{text_str}}</h1>
+        <p class="userInfo_container">
+          <img class="avatar {{user_id}}" />
+          <span class="likes media-{{id}}"></span>
+          <span class="name">{{name}}</span><br />
+          <span class="created_at">{{#parseDate}}{{created_at}}{{/parseDate}}</span>
+        </p>
+        <div class="blackscreen"></div>
+      </section>
+    </script>
+  {% endraw %}
+</div>
+
+<div class="people-are-talking">
+  <p>We always love to see where the posters find a home.</p>
+  <p>Tag yours on Instagram with #ThePosters, or <a href="mailto:info@theposters.co">email us</a> a picture so we can share in the excitement!</p>
+</div>
+</div> <!-- end hide -->
+</section>

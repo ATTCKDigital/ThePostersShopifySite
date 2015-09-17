@@ -1,0 +1,95 @@
+.pop-up {
+	background:url('../assets/eyeball.png') left center no-repeat transparent;
+	cursor: pointer;
+	padding-left: 20px;
+	text-align: left;
+	text-decoration:underline;
+}
+.pop-up-window {
+	@include align-content(center);
+	@include display-flex;
+	@include justify-content(center);
+	background-color:rgba(0,0,0, .4);
+	display:none;
+	height:100%;
+	left:0;
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:10000;
+
+	&.open {
+		display: block;
+	}
+
+	.pop-up-content {
+		background-color:#fff;
+		margin:100px auto;
+		padding: 60px 60px 5px 60px;
+		position:relative;
+
+		.close {
+			background-color:transparent;
+			height: 30px;
+			opacity: 1;
+			padding:0;
+			position:absolute;
+			right: -27px;
+			top:-43px;
+			width: 30px;
+
+			&:before, &:after {
+				@include transform(rotate(45deg));
+				background-color:#000;
+				content:'';
+				height: 1px;
+				left:0;
+				position:absolute;
+				top:14px;
+				width:100%;
+			}
+
+			&:after {
+				@include transform(rotate(-45deg));
+			}
+		}
+
+		header {
+			background:url('../assets/frame-pop.jpg') 0 0 no-repeat transparent;
+			margin-bottom: 30px;
+			padding:85px 0;
+			text-align:center;
+			width: 100%;
+
+			h2 {
+				border-top: 1px solid #fff;
+				color: #fff;
+				margin:0;
+				text-shadow: 1px 1px 0px #000, 2px 2px 0px #fff, 1px 2px 0px #fff,2px 1px 0px #fff;
+    			border-bottom: 1px solid #fff;
+
+    			span br {
+    				display: block;
+    			}
+			}
+		}
+
+		.descriptions {
+			
+			h2 {
+				color: #000;
+			    display: block;
+			    font-size: 1.45em;
+			    text-transform: uppercase;
+			}
+
+			p {
+				color: #000;
+				font-size: 16px;
+				line-height: 24px;
+				margin-bottom: 55px;
+			}
+
+		}
+	}
+}

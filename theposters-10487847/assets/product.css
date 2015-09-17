@@ -233,14 +233,15 @@
 }
 /* line 256, ../sass/product.scss */
 #product #details #artist {
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 2em;
   font-weight: 700;
+  font-weight: 700;
+  line-height: 1em;
   margin: 0 0 5px;
   text-transform: uppercase;
-  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-weight: 700;
 }
-/* line 265, ../sass/product.scss */
+/* line 266, ../sass/product.scss */
 #product #details #availability {
   background-color: #fff;
   clear: both;
@@ -256,33 +257,33 @@
   padding: 0 4px;
   text-transform: uppercase;
 }
-/* line 280, ../sass/product.scss */
+/* line 281, ../sass/product.scss */
 #product #details #availability .days-remaining {
   color: #f00;
   position: relative;
   top: 0;
 }
-/* line 287, ../sass/product.scss */
+/* line 288, ../sass/product.scss */
 #product #details .description {
   font-size: 13pt;
   line-height: 22pt;
   margin: 40px 0;
 }
-/* line 294, ../sass/product.scss */
+/* line 295, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 298, ../sass/product.scss */
+/* line 299, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
   text-align: center;
   width: 34px;
 }
-/* line 302, ../sass/product.scss */
+/* line 303, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input:focus {
   color: #000;
 }
-/* line 307, ../sass/product.scss */
+/* line 308, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper label {
   color: #666;
   font-size: 14pt;
@@ -290,13 +291,13 @@
   position: relative;
   top: -2px;
 }
-/* line 316, ../sass/product.scss */
+/* line 317, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
   text-align: right;
   width: 60%;
 }
-/* line 321, ../sass/product.scss */
+/* line 322, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price {
   display: inline-block;
   font-size: 22pt;
@@ -305,7 +306,7 @@
   line-height: 22pt;
   margin-right: 15px;
 }
-/* line 330, ../sass/product.scss */
+/* line 331, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
@@ -313,22 +314,22 @@
   text-transform: uppercase;
   width: 150px;
 }
-/* line 337, ../sass/product.scss */
+/* line 338, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart:hover {
   border-color: #fff;
 }
 
-/* line 346, ../sass/product.scss */
+/* line 347, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
   padding-top: 120px;
   position: relative;
 }
-/* line 351, ../sass/product.scss */
+/* line 352, ../sass/product.scss */
 #about-the-artist h1 {
   margin-bottom: 120px;
 }
-/* line 355, ../sass/product.scss */
+/* line 356, ../sass/product.scss */
 #about-the-artist .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -338,7 +339,7 @@
   margin-left: -93px;
   z-index: 100;
 }
-/* line 365, ../sass/product.scss */
+/* line 366, ../sass/product.scss */
 #about-the-artist .cambird {
   width: 82px;
   height: 109px;
@@ -347,13 +348,56 @@
   bottom: 0;
 }
 
-/* line 374, ../sass/product.scss */
+/* line 375, ../sass/product.scss */
 .people-are-talking {
   padding-top: 40px;
   padding-bottom: 120px;
   text-align: center;
 }
-/* line 379, ../sass/product.scss */
+/* line 380, ../sass/product.scss */
 .people-are-talking p {
   margin: 0 0 5px;
+}
+
+/* line 387, ../sass/product.scss */
+.frame-options .pop-up {
+  background-position: 100px center;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 49%;
+}
+/* line 395, ../sass/product.scss */
+.frame-options .frame-options-select {
+  display: inline-block;
+  width: 49%;
+}
+/* line 399, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type {
+  background: url("../assets/frame-sprite.png") 0 0 no-repeat transparent;
+  display: inline-block;
+  height: 34px;
+  overflow: hidden;
+  text-indent: -9999em;
+  width: 34px;
+}
+/* line 401, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type small {
+  display: block;
+}
+/* line 412, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.Black.Gallery {
+  background-position: -43px 0;
+}
+/* line 415, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.White.Gallery {
+  background-position: -86px 0;
+}
+/* line 418, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.Black.Floating {
+  background-position: -172px 0;
+}
+/* line 421, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.White.Floating {
+  background-position: -129px 0;
 }

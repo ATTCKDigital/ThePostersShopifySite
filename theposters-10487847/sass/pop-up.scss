@@ -68,9 +68,21 @@
 				text-shadow: 1px 1px 0px #000, 2px 2px 0px #fff, 1px 2px 0px #fff,2px 1px 0px #fff;
     			border-bottom: 1px solid #fff;
 
-    			span br {
-    				display: block;
-    			}
+    			span {
+					display: block;
+				    font-size: 0.28em;
+				    letter-spacing: 0.03em;
+				    line-height: 1.4em;
+					text-align: center;
+				    text-shadow: none;
+		    		text-transform: none;
+				
+					br {
+	    				display: block;
+	    			}
+	    			
+				}
+    			
 			}
 		}
 

@@ -1775,36 +1775,44 @@ footer#main-footer nav ul li:last-child a {
 /* line 395, ../sass/product.scss */
 .frame-options .frame-options-select {
   display: inline-block;
+  margin-bottom: 30px;
   width: 49%;
 }
-/* line 399, ../sass/product.scss */
+/* line 400, ../sass/product.scss */
+.frame-options .frame-options-select small {
+  display: block;
+  text-transform: uppercase;
+}
+/* line 405, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type {
-  background: url("../assets/frame-sprite.png") 0 0 no-repeat transparent;
+  background: url("../assets/frame-sprite.png") 1px 1px no-repeat transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
   display: inline-block;
-  height: 34px;
+  height: 37px;
   overflow: hidden;
   text-indent: -9999em;
-  width: 34px;
+  width: 37px;
 }
-/* line 401, ../sass/product.scss */
-.frame-options .frame-options-select .frame-type small {
-  display: block;
-}
-/* line 412, ../sass/product.scss */
+/* line 416, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.Black.Gallery {
-  background-position: -43px 0;
+  background-position: -42px 1px;
 }
-/* line 415, ../sass/product.scss */
+/* line 419, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.White.Gallery {
-  background-position: -86px 0;
+  background-position: -85px 1px;
 }
-/* line 418, ../sass/product.scss */
+/* line 422, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.Black.Floating {
-  background-position: -172px 0;
+  background-position: -171px 1px;
 }
-/* line 421, ../sass/product.scss */
+/* line 425, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.White.Floating {
-  background-position: -129px 0;
+  background-position: -128px 1px;
+}
+/* line 428, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.selected {
+  border: 1px solid #777;
 }
 
 /**
@@ -2595,9 +2603,8 @@ a#login-recover:hover {
 .gift-cards .gift-card-details small {
   display: block;
   font-size: 75%;
-  text-align: right;
 }
-/* line 36, ../sass/gift-cards.scss */
+/* line 35, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details, .gift-cards #product-images .details {
   height: 100%;
   left: 0;
@@ -2613,7 +2620,7 @@ a#login-recover:hover {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 47, ../sass/gift-cards.scss */
+/* line 46, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details a, .gift-cards #product-images .details a {
   color: #000;
   font-size: 3.25em;
@@ -2621,22 +2628,22 @@ a#login-recover:hover {
   margin-bottom: 30px;
   width: 100%;
 }
-/* line 54, ../sass/gift-cards.scss */
+/* line 53, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details a:hover, .gift-cards .gift-card .details a:focus, .gift-cards #product-images .details a:hover, .gift-cards #product-images .details a:focus {
   text-decoration: none;
 }
-/* line 59, ../sass/gift-cards.scss */
+/* line 58, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details small, .gift-cards #product-images .details small {
   display: block;
   line-height: 22px;
   text-transform: uppercase;
   width: 100%;
 }
-/* line 70, ../sass/gift-cards.scss */
+/* line 69, ../sass/gift-cards.scss */
 .gift-cards #product-images .details a {
   font-size: 6em;
 }
-/* line 74, ../sass/gift-cards.scss */
+/* line 73, ../sass/gift-cards.scss */
 .gift-cards #product-images .details small {
   font-size: 30px;
   line-height: 30px;
@@ -2729,17 +2736,27 @@ a#login-recover:hover {
   border-bottom: 1px solid #fff;
 }
 /* line 71, ../sass/pop-up.scss */
+.pop-up-window .pop-up-content header h2 span {
+  display: block;
+  font-size: 0.28em;
+  letter-spacing: 0.03em;
+  line-height: 1.4em;
+  text-align: center;
+  text-shadow: none;
+  text-transform: none;
+}
+/* line 80, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content header h2 span br {
   display: block;
 }
-/* line 79, ../sass/pop-up.scss */
+/* line 91, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content .descriptions h2 {
   color: #000;
   display: block;
   font-size: 1.45em;
   text-transform: uppercase;
 }
-/* line 86, ../sass/pop-up.scss */
+/* line 98, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content .descriptions p {
   color: #000;
   font-size: 16px;

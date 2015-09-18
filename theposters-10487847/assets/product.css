@@ -370,34 +370,42 @@
 /* line 395, ../sass/product.scss */
 .frame-options .frame-options-select {
   display: inline-block;
+  margin-bottom: 30px;
   width: 49%;
 }
-/* line 399, ../sass/product.scss */
+/* line 400, ../sass/product.scss */
+.frame-options .frame-options-select small {
+  display: block;
+  text-transform: uppercase;
+}
+/* line 405, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type {
-  background: url("../assets/frame-sprite.png") 0 0 no-repeat transparent;
+  background: url("../assets/frame-sprite.png") 1px 1px no-repeat transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
   display: inline-block;
-  height: 34px;
+  height: 37px;
   overflow: hidden;
   text-indent: -9999em;
-  width: 34px;
+  width: 37px;
 }
-/* line 401, ../sass/product.scss */
-.frame-options .frame-options-select .frame-type small {
-  display: block;
-}
-/* line 412, ../sass/product.scss */
+/* line 416, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.Black.Gallery {
-  background-position: -43px 0;
+  background-position: -42px 1px;
 }
-/* line 415, ../sass/product.scss */
+/* line 419, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.White.Gallery {
-  background-position: -86px 0;
+  background-position: -85px 1px;
 }
-/* line 418, ../sass/product.scss */
+/* line 422, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.Black.Floating {
-  background-position: -172px 0;
+  background-position: -171px 1px;
 }
-/* line 421, ../sass/product.scss */
+/* line 425, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.White.Floating {
-  background-position: -129px 0;
+  background-position: -128px 1px;
+}
+/* line 428, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.selected {
+  border: 1px solid #777;
 }

@@ -394,32 +394,39 @@
 
 	.frame-options-select {
 		display: inline-block;
+		margin-bottom: 30px;
 		width:49%;
 
+		small {
+			display: block;
+			text-transform: uppercase;
+		}
+
 		.frame-type {
-
-			small {
-				display: block;
-			}
-
-			background:url('../assets/frame-sprite.png') 0 0 no-repeat transparent;
+			background:url('../assets/frame-sprite.png') 1px 1px no-repeat transparent;
+			border:1px solid transparent;
+			cursor: pointer;
 			display: inline-block;
-			height: 34px;
+			height: 37px;
 			overflow:hidden;
 			text-indent: -9999em;
-			width:34px;
+			width:37px;
+
 
 			&.Black.Gallery {
-				background-position: -43px 0;
+				background-position: -42px 1px;
 			}
 			&.White.Gallery {
-				background-position: -86px 0;
+				background-position: -85px 1px;
 			}
 			&.Black.Floating {
-				background-position: -172px 0;
+				background-position: -171px 1px;
 			}
 			&.White.Floating {
-				background-position: -129px 0;
+				background-position: -128px 1px;
+			}
+			&.selected {
+				border:1px solid #777;
 			}
 		}
 	}

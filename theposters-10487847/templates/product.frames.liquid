@@ -38,25 +38,21 @@
           <div id="artist" class="shadow-header">{{ product.title }}</div>
           <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
           <hr />
-          <div class="frame-options">
-            <div class="frame-options-select">
-              <small>Frame:</small>
-              <div class="options">
-                {% for variant in product.variants %}
-                  <span class="frame-type {{variant.option2}} {{variant.option3}}">{{variant.option2}} {{variant.option3}}</span>
-                {% endfor %}
-              </div>
-            </div>
-            <small class="pop-up">Frame Details</small>
-
-          </div>
-          <hr />
-          <div class="description" itemprop="description">
-            {{ product.description }}
-          </div>
-
           <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
-            <select id="product-select" name="id" style="display:none">
+            
+            <div class="frame-options">
+              <div class="frame-options-select">
+                <small>Frame: <span>None</span></small>
+                <div class="options">
+                  {% for variant in product.variants %}
+                    <span class="frame-type {{variant.option2}} {{variant.option3}}" data-frame-type="{{variant.option2}} {{variant.option3}}" data-frame-image="{{variant.image}}">{{variant.option2}} {{variant.option3}}</span>
+                  {% endfor %}
+                </div>
+              </div>
+              <small class="pop-up">Frame details</small>
+
+            </div>
+            <select id="product-select" name="id">
               {% for variant in product.variants %}
               <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
               {% endfor %}
@@ -98,11 +94,34 @@
               }); 
             </script>
           </form>
+
+          <script type="text/javascript">
+            // toggle selected state on frame
+            $(document).ready(function(){
+              $('.frame-type').on('click', function(){
+                $(this).toggleClass('selected').siblings().removeClass('selected');
+                var frameType = $(this).data('frame-type');
+                var frameText = $('.frame-options-select small span');
+                var frameImage = $(this).data('frame-image');
+                console.log(frameImage);
+                if (frameType == 'None None') {
+                  $(frameText).text('None');
+                } else {
+                  $(frameText).text(frameType);
+                }
+              })
+            });
+          </script>
+          <hr />
+          <div class="description" itemprop="description">
+            {{ product.description }}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+{% include 'pop-up' %}
 
 <div class="archive-border" style="background-image: url({{ 'archivebordergrey.png' | asset_url }})"></div>
 <div>
@@ -152,3 +171,4 @@
 </div>
 </div> <!-- end hide -->
 </section>
+

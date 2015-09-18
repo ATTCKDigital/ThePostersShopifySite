@@ -1601,8 +1601,8 @@ footer#main-footer nav ul li:last-child a {
 /* line 214, ../sass/product.scss */
 #product #product-images #thumbs .image {
   border: 10px solid #fff;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   overflow: hidden;
   float: right;
   margin: 26px 0 0 26px;

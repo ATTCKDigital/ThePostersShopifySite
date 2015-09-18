@@ -45,16 +45,17 @@
                 <small>Frame: <span>None</span></small>
                 <div class="options">
                   {% for variant in product.variants %}
-                    <span class="frame-type {{variant.option2}} {{variant.option3}}" data-frame-type="{{variant.option2}} {{variant.option3}}" data-frame-image="{{variant.image}}" data-frame-id="">{{variant.option2}} {{variant.option3}}</span>
+                    <span class="frame-type {{variant.option2}} {{variant.option3}}" data-frame-type="{{variant.option2}} {{variant.option3}}" data-frame-image="{{ variant | img_url: 'master' }}
+" data-frame-price="{{ variant.price | money }}" data-frame-id="{{ variant.id }}">{{variant.option2}} {{variant.option3}}</span>
                   {% endfor %}
                 </div>
               </div>
               <small class="pop-up">Frame details</small>
 
             </div>
-            <select id="product-select" name="id">
+            <select id="product-select" name="id" style="display:none;">
               {% for variant in product.variants %}
-              <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+              <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
               {% endfor %}
             </select>
 
@@ -96,19 +97,39 @@
           </form>
 
           <script type="text/javascript">
-            // toggle selected state on frame
             $(document).ready(function(){
               $('.frame-type').on('click', function(){
-                $(this).toggleClass('selected').siblings().removeClass('selected');
+                               
                 var frameType = $(this).data('frame-type');
                 var frameText = $('.frame-options-select small span');
                 var frameImage = $(this).data('frame-image');
+                var frameID = $(this).data('frame-id');
+                var framePrice = $(this).data('frame-price');
+                var framePriceDisplay = $('#price span');
+
                 console.log(frameImage);
+
+                // toggle frame type text
                 if (frameType == 'None None') {
                   $(frameText).text('None');
                 } else {
                   $(frameText).text(frameType);
                 }
+
+                // toggle selected state on frame
+                $(this).toggleClass('selected').siblings().removeClass('selected');
+
+                //toggle price display
+                $(framePriceDisplay).text(framePrice);
+                
+                //toggle image
+                $('#featured-image a').attr('href', frameImage);
+                $('#featured-image a img').attr('src', frameImage);
+
+                //toggle product that gets added to cart
+                var optionValue  = frameID;
+                $('#product-select').val(optionValue).find('option[value=" + optionValue +"]').attr('selected', true);
+              
               })
             });
           </script>

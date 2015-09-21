@@ -2672,22 +2672,23 @@ a#login-recover:hover {
   height: 100%;
   left: 0;
   position: fixed;
+  overflow: auto;
   right: 0;
   top: 0;
   z-index: 10000;
 }
-/* line 21, ../sass/pop-up.scss */
+/* line 22, ../sass/pop-up.scss */
 .pop-up-window.open {
   display: block;
 }
-/* line 25, ../sass/pop-up.scss */
+/* line 26, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content {
   background-color: #fff;
   margin: 100px auto;
   padding: 60px 60px 5px 60px;
   position: relative;
 }
-/* line 31, ../sass/pop-up.scss */
+/* line 32, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content .close {
   background-color: transparent;
   height: 30px;
@@ -2698,7 +2699,7 @@ a#login-recover:hover {
   top: -43px;
   width: 30px;
 }
-/* line 41, ../sass/pop-up.scss */
+/* line 42, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content .close:before, .pop-up-window .pop-up-content .close:after {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2712,14 +2713,14 @@ a#login-recover:hover {
   top: 14px;
   width: 100%;
 }
-/* line 52, ../sass/pop-up.scss */
+/* line 53, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content .close:after {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 57, ../sass/pop-up.scss */
+/* line 58, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content header {
   background: url("../assets/frame-pop.jpg") 0 0 no-repeat transparent;
   margin-bottom: 30px;
@@ -2727,7 +2728,7 @@ a#login-recover:hover {
   text-align: center;
   width: 100%;
 }
-/* line 64, ../sass/pop-up.scss */
+/* line 65, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content header h2 {
   border-top: 1px solid #fff;
   color: #fff;
@@ -2735,7 +2736,7 @@ a#login-recover:hover {
   text-shadow: 1px 1px 0px #000, 2px 2px 0px #fff, 1px 2px 0px #fff,2px 1px 0px #fff;
   border-bottom: 1px solid #fff;
 }
-/* line 71, ../sass/pop-up.scss */
+/* line 72, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content header h2 span {
   display: block;
   font-size: 0.28em;
@@ -2745,18 +2746,18 @@ a#login-recover:hover {
   text-shadow: none;
   text-transform: none;
 }
-/* line 80, ../sass/pop-up.scss */
+/* line 81, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content header h2 span br {
   display: block;
 }
-/* line 91, ../sass/pop-up.scss */
+/* line 92, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content .descriptions h2 {
   color: #000;
   display: block;
   font-size: 1.45em;
   text-transform: uppercase;
 }
-/* line 98, ../sass/pop-up.scss */
+/* line 99, ../sass/pop-up.scss */
 .pop-up-window .pop-up-content .descriptions p {
   color: #000;
   font-size: 16px;

@@ -1,3 +1,5 @@
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
+
 <div id="zoom-image"></div>
 <div id="product" class="{{ product.handle }}" itemscope itemtype="http://schema.org/Product">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
@@ -38,7 +40,7 @@
           <div id="artist" class="shadow-header">{{ product.title }}</div>
           <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
           <hr />
-          <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
+<!--           <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
             
             <div class="frame-options">
               <div class="frame-options-select">
@@ -94,44 +96,113 @@
                 }
               }); 
             </script>
-          </form>
+          </form> -->
+          <form action="/cart/add" method="post">
+            <div id="product-variants">
+                <div class="frame-options">
+                  <div class="frame-options-select">
+                    <small>Frame: <span>None</span></small>
+                    <div class="options">
+                      
+                        <span class="frame-type None None selected" data-frame-type="None None" data-frame-image="" data-frame-price="" data-frame-id="">None None</span>
+                        <span class="frame-type Black Gallery" data-frame-type="Black Gallery" data-frame-image="" data-frame-price="" data-frame-id="">Black Gallery</span>
+                        <span class="frame-type Black Floating" data-frame-type="Black Floating" data-frame-image="" data-frame-price="" data-frame-id="">Black Floating</span>
+                        <span class="frame-type White Gallery" data-frame-type="White Gallery" data-frame-image="" data-frame-price="" data-frame-id="">White Gallery</span>
+                        <span class="frame-type White Floating" data-frame-type="White Floating" data-frame-image="" data-frame-price="" data-frame-id="">White Floating</span>
+                      
+                    </div>
 
-          <script type="text/javascript">
+                    <small class="size">Size: <span class="selected" data-frame-size='14"x11"'>14"x11"</span> <span data-frame-size='30"x24"'>30"x24"</span></small>
+
+                  </div>
+                  <small class="pop-up">Frame details</small>
+                </div>
+
+                <div id="price-field"></div>
+
+                <select id="product-select" name="id">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <input type="image" src="{{ 'purchase.png' | asset_url }}" name="add" value="Purchase" id="purchase" />
+          </form>
+          <script>
+          // <![CDATA[  
+          var selectCallback = function(variant, selector) {
+            if (variant) {
+              if (variant.available) {
+                // Selected a valid variant that is available.
+                $('#add').removeClass('disabled').removeAttr('disabled').val('Add to Cart').fadeTo(200,1);
+              } else {
+                // Variant is sold out.
+                $('#add').val('Sold Out').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);        
+              }
+              // Whether the variant is in stock or not, we can update the price and compare at price.
+              if ( variant.compare_at_price > variant.price ) {
+                $('#price-field').html('<span class="product-price on-sale">'+ Shopify.formatMoney(variant.price, "") +'</span>'+'&nbsp;<s class="product-compare-price">'+Shopify.formatMoney(variant.compare_at_price, "")+ '</s>');
+              } else {
+                $('#price-field').html('<span class="product-price">'+ Shopify.formatMoney(variant.price, "") + '</span>' );
+              }        
+            } else {
+              // variant doesn't exist.
+              $('#add').val('Unavailable').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);
+            }
+          }
+          // initialize multi selector for product
+          jQuery(function($) {
+            new Shopify.OptionSelectors("product-select", { product: {{ product | json }}, onVariantSelected: selectCallback });
+          });
+          // ]]>
             $(document).ready(function(){
               $('.frame-type').on('click', function(){
-                               
-                var frameType = $(this).data('frame-type');
-                var frameText = $('.frame-options-select small span');
-                var frameImage = $(this).data('frame-image');
-                var frameID = $(this).data('frame-id');
-                var framePrice = $(this).data('frame-price');
-                var framePriceDisplay = $('#price span');
-
-                console.log(frameImage);
-
-                // toggle frame type text
-                if (frameType == 'None None') {
-                  $(frameText).text('None');
-                } else {
-                  $(frameText).text(frameType);
-                }
-
-                // toggle selected state on frame
                 $(this).toggleClass('selected').siblings().removeClass('selected');
+              });
 
-                //toggle price display
-                $(framePriceDisplay).text(framePrice);
-                
-                //toggle image
-                $('#featured-image a').attr('href', frameImage);
-                $('#featured-image a img').attr('src', frameImage);
+              $('.size span').on('click', function(){
+                $(this).toggleClass('selected').siblings().removeClass('selected');
+              });
 
-                //toggle product that gets added to cart
-                var optionValue  = frameID;
-                $('#product-select').val(optionValue).find('option[value=" + optionValue +"]').attr('selected', true);
-              
-              })
             });
+          </script>
+
+          <script type="text/javascript">
+            // $(document).ready(function(){
+            //   $('.frame-type').on('click', function(){
+                               
+            //     var frameType = $(this).data('frame-type');
+            //     var frameText = $('.frame-options-select small span');
+            //     var frameImage = $(this).data('frame-image');
+            //     var frameID = $(this).data('frame-id');
+            //     var framePrice = $(this).data('frame-price');
+            //     var framePriceDisplay = $('#price span');
+
+            //     console.log(frameImage);
+
+            //     // toggle frame type text
+            //     if (frameType == 'None None') {
+            //       $(frameText).text('None');
+            //     } else {
+            //       $(frameText).text(frameType);
+            //     }
+
+            //     // toggle selected state on frame
+            //     $(this).toggleClass('selected').siblings().removeClass('selected');
+
+            //     //toggle price display
+            //     $(framePriceDisplay).text(framePrice);
+                
+            //     //toggle image
+            //     $('#featured-image a').attr('href', frameImage);
+            //     $('#featured-image a img').attr('src', frameImage);
+
+            //     //toggle product that gets added to cart
+            //     var optionValue  = frameID;
+            //     $('#product-select').val(optionValue).find('option[value=" + optionValue +"]').attr('selected', true);
+              
+            //   })
+            // });
           </script>
           <hr />
           <div class="description" itemprop="description">

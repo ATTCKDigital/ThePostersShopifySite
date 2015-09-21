@@ -402,6 +402,25 @@
 			text-transform: uppercase;
 		}
 
+		.size {
+			margin-top: 30px;
+			span {
+				border:1px solid transparent;
+				cursor: pointer;
+				display: inline-block;
+				margin-right: 10px;
+				padding:0 4px;
+				text-transform: none;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&.selected {
+					border:1px solid #777;
+				}
+			}
+		}
 		.frame-type {
 			background:url('../assets/frame-sprite.png') 1px 1px no-repeat transparent;
 			border:1px solid transparent;
@@ -417,13 +436,13 @@
 				background-position: -42px 1px;
 			}
 			&.White.Gallery {
-				background-position: -85px 1px;
+				background-position: -128px 1px;
 			}
 			&.Black.Floating {
-				background-position: -171px 1px;
+				background-position: -85px 1px;
 			}
 			&.White.Floating {
-				background-position: -128px 1px;
+				background-position: -171px 1px;
 			}
 			&.selected {
 				border:1px solid #777;

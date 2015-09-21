@@ -1784,6 +1784,27 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
 }
 /* line 405, ../sass/product.scss */
+.frame-options .frame-options-select .size {
+  margin-top: 30px;
+}
+/* line 407, ../sass/product.scss */
+.frame-options .frame-options-select .size span {
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 4px;
+  text-transform: none;
+}
+/* line 415, ../sass/product.scss */
+.frame-options .frame-options-select .size span:last-child {
+  margin-right: 0;
+}
+/* line 419, ../sass/product.scss */
+.frame-options .frame-options-select .size span.selected {
+  border: 1px solid #777;
+}
+/* line 424, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type {
   background: url("../assets/frame-sprite.png") 1px 1px no-repeat transparent;
   border: 1px solid transparent;
@@ -1794,23 +1815,23 @@ footer#main-footer nav ul li:last-child a {
   text-indent: -9999em;
   width: 37px;
 }
-/* line 416, ../sass/product.scss */
+/* line 435, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.Black.Gallery {
   background-position: -42px 1px;
 }
-/* line 419, ../sass/product.scss */
+/* line 438, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.White.Gallery {
-  background-position: -85px 1px;
-}
-/* line 422, ../sass/product.scss */
-.frame-options .frame-options-select .frame-type.Black.Floating {
-  background-position: -171px 1px;
-}
-/* line 425, ../sass/product.scss */
-.frame-options .frame-options-select .frame-type.White.Floating {
   background-position: -128px 1px;
 }
-/* line 428, ../sass/product.scss */
+/* line 441, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.Black.Floating {
+  background-position: -85px 1px;
+}
+/* line 444, ../sass/product.scss */
+.frame-options .frame-options-select .frame-type.White.Floating {
+  background-position: -171px 1px;
+}
+/* line 447, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.selected {
   border: 1px solid #777;
 }

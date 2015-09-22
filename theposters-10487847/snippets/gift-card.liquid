@@ -7,7 +7,7 @@
     <div class="row"> 
       <div class="col-sm-12">
         <div class="gift-card-products">
-          {% for product in collection.products limit: settings.pagination_limit %}
+          {% for product in collection.products %}
             {% include 'gift-card-loop' with collection.handle %}
           {% endfor %}
         </div>

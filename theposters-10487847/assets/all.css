@@ -2619,13 +2619,14 @@ a#login-recover:hover {
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
-/* line 27, ../sass/gift-cards.scss */
+/* line 28, ../sass/gift-cards.scss */
 .gift-cards .gift-card-details small {
   display: block;
   font-size: 75%;
 }
-/* line 35, ../sass/gift-cards.scss */
+/* line 36, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details, .gift-cards #product-images .details {
   height: 100%;
   left: 0;
@@ -2641,7 +2642,7 @@ a#login-recover:hover {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 46, ../sass/gift-cards.scss */
+/* line 47, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details a, .gift-cards #product-images .details a {
   color: #000;
   font-size: 3.25em;
@@ -2649,22 +2650,72 @@ a#login-recover:hover {
   margin-bottom: 30px;
   width: 100%;
 }
-/* line 53, ../sass/gift-cards.scss */
+/* line 54, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details a:hover, .gift-cards .gift-card .details a:focus, .gift-cards #product-images .details a:hover, .gift-cards #product-images .details a:focus {
   text-decoration: none;
 }
-/* line 58, ../sass/gift-cards.scss */
+/* line 59, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details small, .gift-cards #product-images .details small {
   display: block;
   line-height: 22px;
   text-transform: uppercase;
   width: 100%;
 }
-/* line 69, ../sass/gift-cards.scss */
+/* line 66, ../sass/gift-cards.scss */
+.gift-cards .gift-card .purchase, .gift-cards #product-images .purchase {
+  -webkit-align-content: center;
+  align-content: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+/* line 73, ../sass/gift-cards.scss */
+.gift-cards .gift-card .quantity-wrapper, .gift-cards #product-images .quantity-wrapper {
+  width: 29%;
+}
+/* line 76, ../sass/gift-cards.scss */
+.gift-cards .gift-card .quantity-wrapper input, .gift-cards #product-images .quantity-wrapper input {
+  text-align: center;
+  width: 34px;
+}
+/* line 80, ../sass/gift-cards.scss */
+.gift-cards .gift-card .quantity-wrapper input:focus, .gift-cards #product-images .quantity-wrapper input:focus {
+  color: #000;
+}
+/* line 85, ../sass/gift-cards.scss */
+.gift-cards .gift-card .quantity-wrapper label, .gift-cards #product-images .quantity-wrapper label {
+  color: #666;
+  font-size: 14pt;
+  left: 4px;
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+/* line 94, ../sass/gift-cards.scss */
+.gift-cards .gift-card .btn, .gift-cards #product-images .btn {
+  background-color: #f00;
+  border-color: #f00;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.33;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  width: 150px;
+}
+/* line 106, ../sass/gift-cards.scss */
+.gift-cards .gift-card .btn:hover, .gift-cards #product-images .btn:hover {
+  border-color: #fff;
+}
+/* line 114, ../sass/gift-cards.scss */
 .gift-cards #product-images .details a {
   font-size: 6em;
 }
-/* line 73, ../sass/gift-cards.scss */
+/* line 118, ../sass/gift-cards.scss */
 .gift-cards #product-images .details small {
   font-size: 30px;
   line-height: 30px;

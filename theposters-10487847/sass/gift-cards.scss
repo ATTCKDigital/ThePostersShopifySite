@@ -21,6 +21,7 @@
 	.gift-card-products {
 		@include display-flex;
 		@include justify-content(center);
+		margin-bottom: 50px;
 	}
 
 	.gift-card-details {
@@ -61,6 +62,50 @@
   				text-transform: uppercase;
   				width: 100%;
   			}
+		}
+		.purchase {
+			@include align-content(center);
+			@include display-flex;
+  			@include justify-content(center);
+  			position:relative;
+  			z-index: 10;
+		}
+		.quantity-wrapper {
+			width: 29%;
+
+			input {
+				text-align: center;
+				width: 34px;
+				
+				&:focus {
+					color: #000;
+				}
+			}
+			
+			label {
+				color: #666;
+				font-size: 14pt;
+				left: 4px;
+				margin-right: 5px;
+				position: relative;
+				top: -2px;
+			}
+		}
+		.btn {
+		    background-color: #f00;
+		    border-color: #f00;
+		    color: #fff;
+		    cursor: pointer;
+			display: inline-block;
+		    font-size: 18px;
+		    line-height: 1.33;
+		    padding: 10px 16px;
+		    text-transform: uppercase;
+		    width: 150px;
+
+		    &:hover {
+		    	border-color: #fff;
+		    }
 		}
 	}
 

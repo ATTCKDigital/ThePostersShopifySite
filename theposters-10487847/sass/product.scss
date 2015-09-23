@@ -201,10 +201,38 @@
 #product {
 	#product-images {
 		#featured-image {
+			background-size: contain;
 			text-align: center;
-			
+    		background-repeat: no-repeat;
+    		width: 100%;
+			@include box-shadow(0px -1px 14px 0px rgba(50, 50, 50, 0.5));
+
+			a {
+				display: block;
+			}
+
 			img {
 				width: 100%;
+			}
+
+			&.Black {
+				border: 20px solid black;
+			}
+
+			&.White {
+				border:20px solid #eef0f0;
+			}
+
+			&.Floating {
+				a {
+					@include box-shadow(inset 0px -1px 14px 0px rgba(50, 50, 50, 0.5));
+					background-color: #f1efed;
+					padding:20px;
+					
+					img {
+						@include box-shadow(0px -1px 14px 0px rgba(50, 50, 50, 0.5));
+					}
+				}
 			}
 		}
 
@@ -242,22 +270,24 @@
 	#details {
 		hr { 
 			border-top: 1px solid #AFAEAF;
+			clear: both;
 
 		}
 
 		h1.title {
 			color: #999;
+			font-family: 'FranklinGothic-Cd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 			font-size: 1.2em;
-			font-weight: 300;
+			font-weight: normal;
 			margin: 0 0 5px;
 			text-transform: uppercase;
+
 		}
 
 		#artist {
-			font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			font-family: 'FranklinGothic-Cd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 			font-size: 2em;
-			font-weight: 700;
-			font-weight: 700;
+			font-weight: normal;
 			line-height: 1em;
 			margin: 0 0 5px;
 			text-transform: uppercase;
@@ -316,10 +346,11 @@
 
 			.add-to-cart-info {
 				float: right;
+				margin-bottom: 20px;
 				text-align: right;
 				width: 60%;
 
-				#price {
+				#price, #price-field {
 					display: inline-block;
 					font-size: 22pt;
 					font-weight: 700;
@@ -380,6 +411,9 @@
 	p {
 		margin: 0 0 5px;
 	}
+}
+.selector-wrapper {
+	// display: none;
 }
 
 .frame-options {

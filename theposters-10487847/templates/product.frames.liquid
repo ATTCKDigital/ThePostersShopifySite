@@ -1,5 +1,3 @@
-{{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
 <div id="zoom-image"></div>
 <div id="product" class="{{ product.handle }}" itemscope itemtype="http://schema.org/Product">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
@@ -37,173 +35,108 @@
         <div id="details">
           <hr style="margin-top: 0" />
           <h1 class="title" itemprop="name">{{ product.vendor }}</h1>
-          <div id="artist" class="shadow-header">{{ product.title }}</div>
+          <div id="artist">{{ product.title }}</div>
           <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
           <hr />
-<!--           <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
-            
-            <div class="frame-options">
-              <div class="frame-options-select">
-                <small>Frame: <span>None</span></small>
-                <div class="options">
-                  {% for variant in product.variants %}
-                    <span class="frame-type {{variant.option2}} {{variant.option3}}" data-frame-type="{{variant.option2}} {{variant.option3}}" data-frame-image="{{ variant | img_url: 'master' }}
-" data-frame-price="{{ variant.price | money }}" data-frame-id="{{ variant.id }}">{{variant.option2}} {{variant.option3}}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <small class="pop-up">Frame details</small>
 
-            </div>
-            <select id="product-select" name="id" style="display:none;">
-              {% for variant in product.variants %}
-              <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
-              {% endfor %}
-            </select>
-
-            <div class="quantity-wrapper">
-              <input id="quantity" type="text" name="quantity" value="1" class="tc item-quantity" />
-              <label>QTY</label>
-            </div>
-
-            <div class="add-to-cart-info" data-expdate="{{product.metafields.visibility.expirationdate}}">
-            {% assign variant = product.selected_or_first_available_variant %}
-            {% if variant.available %}
-              <div class="product-available">
-                <p id="price">
-                  <span itemprop="price">{{ variant.price | money }}</span>
-                </p>
-
-                <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
-              </div>
-              <div class="product-unavailable">
-                Sold Out
-              </div>
-            {% else %}
-              <div class="product-unavailable">
-                Sold Out
-              </div>
-            {% endif %}
-            </div>
-            <script type="text/javascript">
-              $(document).ready(function(){
-                if(moment().isBefore(moment($('.add-to-cart-info').data('expdate'), 'YYYY-MM-DD'))) {
-                  $('.add-to-cart-info').find('.product-available').show();
-                  $('.add-to-cart-info').find('.product-unavailable').hide();
-                } else {
-                  $('.add-to-cart-info').find('.product-available').hide();
-                  $('.add-to-cart-info').find('.product-unavailable').show();
-                }
-              }); 
-            </script>
-          </form> -->
-          <form action="/cart/add" method="post">
+          <form action="/cart/add" method="post" id="add-item-form">
             <div id="product-variants">
                 <div class="frame-options">
                   <div class="frame-options-select">
-                    <small>Frame: <span>None</span></small>
+                    <small class="frame-type-color">Frame: <span>None</span></small>
                     <div class="options">
-                      
-                        <span class="frame-type None None selected" data-frame-type="None None" data-frame-image="" data-frame-price="" data-frame-id="">None None</span>
-                        <span class="frame-type Black Gallery" data-frame-type="Black Gallery" data-frame-image="" data-frame-price="" data-frame-id="">Black Gallery</span>
-                        <span class="frame-type Black Floating" data-frame-type="Black Floating" data-frame-image="" data-frame-price="" data-frame-id="">Black Floating</span>
-                        <span class="frame-type White Gallery" data-frame-type="White Gallery" data-frame-image="" data-frame-price="" data-frame-id="">White Gallery</span>
-                        <span class="frame-type White Floating" data-frame-type="White Floating" data-frame-image="" data-frame-price="" data-frame-id="">White Floating</span>
-                      
+                        {% for variant in product.variants %}
+                          <span class="frame-type {{variant.option1}}" data-frame-type="{{variant.option1}}" data-frame-price="{{ variant.price | money }}" data-frame-id="{{ variant.id }}">None None</span>
+                        {% endfor %}
                     </div>
-
-                    <small class="size">Size: <span class="selected" data-frame-size='14"x11"'>14"x11"</span> <span data-frame-size='30"x24"'>30"x24"</span></small>
-
+                    
                   </div>
                   <small class="pop-up">Frame details</small>
                 </div>
 
-                <div id="price-field"></div>
+                
 
-                <select id="product-select" name="id">
+                <select id="product-select" name="id" style="display:none;">
                   {% for variant in product.variants %}
-                    <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                    <option value="{{ variant.id }}" data-frame-type='{{variant.option1}}'>{{ variant.title }} - {{ variant.price | money }}</option>
                   {% endfor %}
                 </select>
+                <div class="quantity-wrapper">
+                  <input id="quantity" type="text" name="quantity" value="1" class="tc item-quantity" />
+                  <label>QTY</label>
+                </div>
+                <div class="add-to-cart-info" data-expdate="{{product.metafields.visibility.expirationdate}}">
+                  {% assign variant = product.selected_or_first_available_variant %}
+                  {% if variant.available %}
+                    <div class="product-available">
+                      <div id="price-field">{{ variant.price | money }}</div>
+                      <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
+                    </div>
+                    <div class="product-unavailable">
+                      Sold Out
+                    </div>
+                  {% else %}
+                    <div class="product-unavailable">
+                      Sold Out
+                    </div>
+                  {% endif %}
+                </div>
+                  <script type="text/javascript">
+                    $(document).ready(function(){
+                      if(moment().isBefore(moment($('.add-to-cart-info').data('expdate'), 'YYYY-MM-DD'))) {
+                        $('.add-to-cart-info').find('.product-available').show();
+                        $('.add-to-cart-info').find('.product-unavailable').hide();
+                      } else {
+                        $('.add-to-cart-info').find('.product-available').hide();
+                        $('.add-to-cart-info').find('.product-unavailable').show();
+                      }
+                    }); 
+                  </script>
             </div>
-            <input type="image" src="{{ 'purchase.png' | asset_url }}" name="add" value="Purchase" id="purchase" />
           </form>
           <script>
-          // <![CDATA[  
-          var selectCallback = function(variant, selector) {
-            if (variant) {
-              if (variant.available) {
-                // Selected a valid variant that is available.
-                $('#add').removeClass('disabled').removeAttr('disabled').val('Add to Cart').fadeTo(200,1);
-              } else {
-                // Variant is sold out.
-                $('#add').val('Sold Out').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);        
-              }
-              // Whether the variant is in stock or not, we can update the price and compare at price.
-              if ( variant.compare_at_price > variant.price ) {
-                $('#price-field').html('<span class="product-price on-sale">'+ Shopify.formatMoney(variant.price, "") +'</span>'+'&nbsp;<s class="product-compare-price">'+Shopify.formatMoney(variant.compare_at_price, "")+ '</s>');
-              } else {
-                $('#price-field').html('<span class="product-price">'+ Shopify.formatMoney(variant.price, "") + '</span>' );
-              }        
-            } else {
-              // variant doesn't exist.
-              $('#add').val('Unavailable').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);
-            }
-          }
-          // initialize multi selector for product
-          jQuery(function($) {
-            new Shopify.OptionSelectors("product-select", { product: {{ product | json }}, onVariantSelected: selectCallback });
-          });
-          // ]]>
-            $(document).ready(function(){
-              $('.frame-type').on('click', function(){
-                $(this).toggleClass('selected').siblings().removeClass('selected');
-              });
+          
+            jQuery(document).ready(function($){
 
-              $('.size span').on('click', function(){
+              $('.frame-type:first-child').addClass('selected');
+              
+              $('.frame-type').on('click', function(){
+
+                var frameType = $(this).data('frame-type');
+                var frameText = $('.frame-options-select small.frame-type-color span');
+                var frameID = $(this).data('frame-id');
+                var framePrice = $(this).data('frame-price');
+                var framePriceDisplay = $('#price-field');
+
+
                 $(this).toggleClass('selected').siblings().removeClass('selected');
-              });
+
+                // toggle frame type text and frame boder
+                if (frameType == 'None') {
+                  $(frameText).text('None');
+                  $('#featured-image').removeClass();
+                } else {
+                  $(frameText).text(frameType);
+                  $('#featured-image').removeClass().addClass(frameType);
+                }
+
+                // toggle price display
+
+                $(framePriceDisplay).text(framePrice);
+
+
+                //toggle product that gets added to cart
+                var optionFrameType  = frameType;
+                 
+                $('#product-select option[data-frame-type="'+optionFrameType+'"]').each(function(index){
+                    $(this).attr('selected', true).siblings().removeAttr('selected')
+                }); 
+
+              });          
 
             });
           </script>
 
-          <script type="text/javascript">
-            // $(document).ready(function(){
-            //   $('.frame-type').on('click', function(){
-                               
-            //     var frameType = $(this).data('frame-type');
-            //     var frameText = $('.frame-options-select small span');
-            //     var frameImage = $(this).data('frame-image');
-            //     var frameID = $(this).data('frame-id');
-            //     var framePrice = $(this).data('frame-price');
-            //     var framePriceDisplay = $('#price span');
-
-            //     console.log(frameImage);
-
-            //     // toggle frame type text
-            //     if (frameType == 'None None') {
-            //       $(frameText).text('None');
-            //     } else {
-            //       $(frameText).text(frameType);
-            //     }
-
-            //     // toggle selected state on frame
-            //     $(this).toggleClass('selected').siblings().removeClass('selected');
-
-            //     //toggle price display
-            //     $(framePriceDisplay).text(framePrice);
-                
-            //     //toggle image
-            //     $('#featured-image a').attr('href', frameImage);
-            //     $('#featured-image a img').attr('src', frameImage);
-
-            //     //toggle product that gets added to cart
-            //     var optionValue  = frameID;
-            //     $('#product-select').val(optionValue).find('option[value=" + optionValue +"]').attr('selected', true);
-              
-            //   })
-            // });
-          </script>
           <hr />
           <div class="description" itemprop="description">
             {{ product.description }}

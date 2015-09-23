@@ -20,17 +20,25 @@
 
 	.gift-card-products {
 		@include display-flex;
+		@include flex-wrap(wrap);
 		@include justify-content(center);
-		margin-bottom: 50px;
 	}
 
 	.gift-card-details {
 		small {
 			display: block;
 			font-size: 75%;
+
+			&.note {
+				text-align: right;
+			}
 		}
 	}
 
+	.gift-card {
+		margin-bottom: 60px;
+	}
+	
 	.gift-card, #product-images {
 
 		.details {
@@ -61,6 +69,8 @@
   				line-height: 22px;
   				text-transform: uppercase;
   				width: 100%;
+
+
   			}
 		}
 		.purchase {

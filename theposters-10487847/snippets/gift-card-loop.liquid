@@ -8,35 +8,33 @@
     {{ product.url }}
   {% endif %}
 {% endcapture %}
-<div class="product gift-card" id="{{ product.variants.first.id }}">
-  <div class="poster-clips" style="background-image: url({{'posterclips.png' | asset_url}})"></div>
-  <div class="image">
-    <a href="{{ url }}">
-      <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
-    </a>
-  </div>
-  <div class="details">
-    <a href="{{ product.url }}">{{ product.price | money_without_trailing_zeros }}</a>
-    <small>{{ product.description }}</small>
-  </div>
-  <div class="purchase">
-      
-      <div class="quantity-wrapper">
-        <label>QTY</label>
-        <input id="quantity" type="text" name="quantity" value="1" class="tc item-quantity" />
-      </div>
-      <div class="add-to-cart-info">
-        <div class="product-available">
-            <form method="post" action="/cart/add" id="add-item-form">
-              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-              <!-- <input type="hidden" name="return_to" value="back" /> -->
-              <input type="submit" id="add-to-cart" value="Add to Bag" class="btn addtocart" />
-            </form>    
+<form method="post" action="/cart/add" id="{{ product.variants.first.id }}">
+  <div class="product gift-card" id="{{ product.variants.first.id }}">
+    <div class="poster-clips" style="background-image: url({{'posterclips.png' | asset_url}})"></div>
+    <div class="image">
+      <a href="{{ url }}">
+        <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
+      </a>
+    </div>
 
-            <!-- <input type="hidden" name="{{ product.variants.first.id }}" value="{{ product.variants.first.id }}" />
-            <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" /> -->
+   
+    <div class="details">
+      <a href="{{ product.url }}">{{ product.price | money_without_trailing_zeros }}</a>
+      <small>{{ product.description }}</small>
+    </div>
+    <div class="purchase">
+        
+        <div class="quantity-wrapper">
+          <label>QTY</label>
+          <input id="quantity" type="text" name="quantity" value="1" class="tc item-quantity" />
         </div>
-      </div>
+        <div class="add-to-cart-info">
+          <div class="product-available">
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+              <input type="submit" id="add-to-cart" value="Add to Bag" class="btn addtocart-collection" />
+          </div>
+        </div>
 
+    </div>
   </div>
-</div>
+</form>    

@@ -69,7 +69,7 @@
     }
 
     @font-face {
-        font-family: 'FranklinGothicMdCd';
+        font-family: 'FranklinGothic-Cd';
         src: url({{ 'FranklinGothic-Cd-webfont.eot' | asset_url }});
         src: url({{ 'FranklinGothic-Cd-webfont.eot?#iefix' | asset_url }}) format('embedded-opentype'),
              url({{ 'FranklinGothic-Cd-webfont.woff2' | asset_url }}) format('woff2'),
@@ -81,7 +81,7 @@
     }
 
     @font-face {
-        font-family: 'FranklinGothicMdCd';
+        font-family: 'FranklinGothicCd';
         src: url({{ 'FranklinGothic-CdIt-webfont.eot' | asset_url }});
         src: url({{ 'FranklinGothic-CdIt-webfont.eot?#iefix' | asset_url }}) format('embedded-opentype'),
              url({{ 'FranklinGothic-CdIt-webfont.woff2' | asset_url }}) format('woff2'),
@@ -244,7 +244,7 @@
     <a href="/checkout" class="cart-top-btn" id="checkout">Checkout</a>
 
     <div class="subtotal">
-      <h2>Subtotal <div class="subtotal-price">{{cart.total_price | money}}</div><small>(Tax + Shipping Not Included)</small></h2>
+      <h2>Subtotal <div class="subtotal-price">{{cart.total_price | money}}</div><small>(Tax Not Included)</small></h2>
 
       <div class="gift-card">
       </div>
@@ -270,6 +270,7 @@
           <div class="info">
             <a href="/cart/change?line={{ forloop.index }}&quantity=0" data-lid="{{ forloop.index + 1 }}" class="remove-item"><div class="remove-cart-item-icon" style="background-image: url({{ 'closeicon.png' | asset_url }})"></div></a>
             <h3>{{ item.product.title }}</h3>
+            
             <div class="qty">
               QTY <input type="text" size="2" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="tc item-quantity" /> <a href="#" class="update-cart" data-lid="{{ forloop.index + 1 }}">Update</a>
             </div>

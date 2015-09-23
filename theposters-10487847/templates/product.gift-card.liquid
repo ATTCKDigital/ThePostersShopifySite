@@ -13,7 +13,7 @@
               <img src="{{ featured_image | product_img_url: 'master' }}" alt="{{ featured_image.alt | escape }}" />
             </a>
             <div class="details">
-              <a href="{{ product.url }}">{{ product.title }}</a>
+              <a href="{{ product.url }}">{{ product.price | money_without_trailing_zeros }}</a>
               <small>{{ product.description }}</small>
             </div>
           </div>

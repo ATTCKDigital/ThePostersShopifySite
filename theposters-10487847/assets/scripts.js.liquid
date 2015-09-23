@@ -17,10 +17,23 @@ $(document).ready(function () {
         e.preventDefault();
         addItem('add-item-form');
     });
+
+    // for adding to cart from a collection page
+    $(".addtocart-collection").click(function (e) {
+        var elem = $(this);
+        $(elem).prop("disabled", true);
+        var productID = $(this).closest('form').attr('id');
+        console.log(productID)
+        e.preventDefault();
+        addItem(productID);
+    });
   
     Shopify.onSuccess = function (addedProduct, response) {
         var elem = $('.addtocart');
         elem.removeAttr("disabled");
+
+        var elemCollection = $('.addtocart-collection');
+        elemCollection.removeAttr("disabled");
 
         $.ajax({
             'type': 'GET',
@@ -47,6 +60,7 @@ $(document).ready(function () {
         }
 
         $('.addtocart').removeAttr("disabled");
+        $('.addtocart-collection').removeAttr("disabled");
     };
 
     Shopify.fullMessagesFromErrors = function(errors) {

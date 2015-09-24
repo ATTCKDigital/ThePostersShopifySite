@@ -107,7 +107,7 @@ html, body {
   background-color: #e5e2e4;
   color: #666666;
   font-size: 20px;
-  letter-spacing: 1px;
+  letter-spacing: .02em;
   line-height: 28px;
   font-family: 'FranklinGothic-Cd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -1660,22 +1660,23 @@ footer#main-footer nav ul li:last-child a {
 #product #details hr {
   border-top: 1px solid #AFAEAF;
   clear: both;
+  margin-bottom: 40px;
 }
 /* line 277, ../sass/product.scss */
 #product #details h1.title {
   color: #999;
   font-family: 'FranklinGothic-Cd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
+  font-size: 20px;
   font-weight: normal;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
 /* line 287, ../sass/product.scss */
 #product #details #artist {
-  font-family: 'FranklinGothic-Cd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  font-weight: normal;
-  line-height: 1em;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 26px;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
@@ -1703,25 +1704,26 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 318, ../sass/product.scss */
 #product #details .description {
-  font-size: 13pt;
-  line-height: 22pt;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .02em;
   margin: 40px 0;
 }
-/* line 325, ../sass/product.scss */
+/* line 326, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 329, ../sass/product.scss */
+/* line 330, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
   text-align: center;
   width: 34px;
 }
-/* line 333, ../sass/product.scss */
+/* line 334, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input:focus {
   color: #000;
 }
-/* line 338, ../sass/product.scss */
+/* line 339, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper label {
   color: #666;
   font-size: 14pt;
@@ -1729,23 +1731,24 @@ footer#main-footer nav ul li:last-child a {
   position: relative;
   top: -2px;
 }
-/* line 347, ../sass/product.scss */
+/* line 348, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: right;
   width: 60%;
 }
-/* line 353, ../sass/product.scss */
+/* line 354, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price, #product #details #add-item-form .add-to-cart-info #price-field {
   display: inline-block;
   font-size: 22pt;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
   letter-spacing: normal;
   line-height: 22pt;
   margin-right: 15px;
 }
-/* line 362, ../sass/product.scss */
+/* line 364, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
@@ -1753,22 +1756,22 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   width: 150px;
 }
-/* line 369, ../sass/product.scss */
+/* line 371, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart:hover {
   border-color: #fff;
 }
 
-/* line 378, ../sass/product.scss */
+/* line 380, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
   padding-top: 120px;
   position: relative;
 }
-/* line 383, ../sass/product.scss */
+/* line 385, ../sass/product.scss */
 #about-the-artist h1 {
   margin-bottom: 120px;
 }
-/* line 387, ../sass/product.scss */
+/* line 389, ../sass/product.scss */
 #about-the-artist .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -1778,7 +1781,7 @@ footer#main-footer nav ul li:last-child a {
   margin-left: -93px;
   z-index: 100;
 }
-/* line 397, ../sass/product.scss */
+/* line 399, ../sass/product.scss */
 #about-the-artist .cambird {
   width: 82px;
   height: 109px;
@@ -1787,18 +1790,18 @@ footer#main-footer nav ul li:last-child a {
   bottom: 0;
 }
 
-/* line 406, ../sass/product.scss */
+/* line 408, ../sass/product.scss */
 .people-are-talking {
   padding-top: 40px;
   padding-bottom: 120px;
   text-align: center;
 }
-/* line 411, ../sass/product.scss */
+/* line 413, ../sass/product.scss */
 .people-are-talking p {
   margin: 0 0 5px;
 }
 
-/* line 421, ../sass/product.scss */
+/* line 423, ../sass/product.scss */
 .frame-options .pop-up {
   background-position: 100px center;
   display: inline-block;
@@ -1806,22 +1809,27 @@ footer#main-footer nav ul li:last-child a {
   vertical-align: top;
   width: 49%;
 }
-/* line 429, ../sass/product.scss */
+/* line 431, ../sass/product.scss */
 .frame-options .frame-options-select {
   display: inline-block;
   margin-bottom: 30px;
   width: 49%;
 }
-/* line 434, ../sass/product.scss */
+/* line 436, ../sass/product.scss */
 .frame-options .frame-options-select small {
   display: block;
   text-transform: uppercase;
 }
-/* line 439, ../sass/product.scss */
+/* line 440, ../sass/product.scss */
+.frame-options .frame-options-select small span {
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+/* line 446, ../sass/product.scss */
 .frame-options .frame-options-select .size {
   margin-top: 30px;
 }
-/* line 441, ../sass/product.scss */
+/* line 448, ../sass/product.scss */
 .frame-options .frame-options-select .size span {
   border: 1px solid transparent;
   cursor: pointer;
@@ -1830,44 +1838,44 @@ footer#main-footer nav ul li:last-child a {
   padding: 0 4px;
   text-transform: none;
 }
-/* line 449, ../sass/product.scss */
+/* line 456, ../sass/product.scss */
 .frame-options .frame-options-select .size span:last-child {
   margin-right: 0;
 }
-/* line 453, ../sass/product.scss */
+/* line 460, ../sass/product.scss */
 .frame-options .frame-options-select .size span.selected {
   border: 1px solid #777;
 }
-/* line 458, ../sass/product.scss */
+/* line 465, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type {
   background: url("../assets/frame-sprite.png") 1px 1px no-repeat transparent;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   cursor: pointer;
   display: inline-block;
-  height: 37px;
+  height: 39px;
   overflow: hidden;
   text-indent: -9999em;
-  width: 37px;
+  width: 39px;
 }
-/* line 469, ../sass/product.scss */
+/* line 476, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.Black.Gallery {
   background-position: -42px 1px;
 }
-/* line 472, ../sass/product.scss */
+/* line 479, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.White.Gallery {
   background-position: -128px 1px;
 }
-/* line 475, ../sass/product.scss */
+/* line 482, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.Black.Floating {
   background-position: -85px 1px;
 }
-/* line 478, ../sass/product.scss */
+/* line 485, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.White.Floating {
   background-position: -171px 1px;
 }
-/* line 481, ../sass/product.scss */
+/* line 488, ../sass/product.scss */
 .frame-options .frame-options-select .frame-type.selected {
-  border: 1px solid #777;
+  border: 2px solid #777;
 }
 
 /**
@@ -2688,23 +2696,24 @@ a#login-recover:hover {
 /* line 55, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details a, .gift-cards #product-images .details a {
   color: #000;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 3.25em;
   font-weight: 700;
   margin-bottom: 30px;
   width: 100%;
 }
-/* line 62, ../sass/gift-cards.scss */
+/* line 63, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details a:hover, .gift-cards .gift-card .details a:focus, .gift-cards #product-images .details a:hover, .gift-cards #product-images .details a:focus {
   text-decoration: none;
 }
-/* line 67, ../sass/gift-cards.scss */
+/* line 68, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details small, .gift-cards #product-images .details small {
   display: block;
   line-height: 22px;
   text-transform: uppercase;
   width: 100%;
 }
-/* line 76, ../sass/gift-cards.scss */
+/* line 77, ../sass/gift-cards.scss */
 .gift-cards .gift-card .purchase, .gift-cards #product-images .purchase {
   -webkit-align-content: center;
   align-content: center;
@@ -2715,20 +2724,20 @@ a#login-recover:hover {
   position: relative;
   z-index: 10;
 }
-/* line 83, ../sass/gift-cards.scss */
+/* line 84, ../sass/gift-cards.scss */
 .gift-cards .gift-card .quantity-wrapper, .gift-cards #product-images .quantity-wrapper {
   width: 29%;
 }
-/* line 86, ../sass/gift-cards.scss */
+/* line 87, ../sass/gift-cards.scss */
 .gift-cards .gift-card .quantity-wrapper input, .gift-cards #product-images .quantity-wrapper input {
   text-align: center;
   width: 34px;
 }
-/* line 90, ../sass/gift-cards.scss */
+/* line 91, ../sass/gift-cards.scss */
 .gift-cards .gift-card .quantity-wrapper input:focus, .gift-cards #product-images .quantity-wrapper input:focus {
   color: #000;
 }
-/* line 95, ../sass/gift-cards.scss */
+/* line 96, ../sass/gift-cards.scss */
 .gift-cards .gift-card .quantity-wrapper label, .gift-cards #product-images .quantity-wrapper label {
   color: #666;
   font-size: 14pt;
@@ -2737,7 +2746,7 @@ a#login-recover:hover {
   position: relative;
   top: -2px;
 }
-/* line 104, ../sass/gift-cards.scss */
+/* line 105, ../sass/gift-cards.scss */
 .gift-cards .gift-card .btn, .gift-cards #product-images .btn {
   background-color: #f00;
   border-color: #f00;
@@ -2750,15 +2759,15 @@ a#login-recover:hover {
   text-transform: uppercase;
   width: 150px;
 }
-/* line 116, ../sass/gift-cards.scss */
+/* line 117, ../sass/gift-cards.scss */
 .gift-cards .gift-card .btn:hover, .gift-cards #product-images .btn:hover {
   border-color: #fff;
 }
-/* line 124, ../sass/gift-cards.scss */
+/* line 125, ../sass/gift-cards.scss */
 .gift-cards #product-images .details a {
   font-size: 6em;
 }
-/* line 128, ../sass/gift-cards.scss */
+/* line 129, ../sass/gift-cards.scss */
 .gift-cards #product-images .details small {
   font-size: 30px;
   line-height: 30px;

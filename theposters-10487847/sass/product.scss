@@ -271,13 +271,13 @@
 		hr { 
 			border-top: 1px solid #AFAEAF;
 			clear: both;
-
+			margin-bottom: 40px;
 		}
 
 		h1.title {
 			color: #999;
 			font-family: 'FranklinGothic-Cd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-			font-size: 1.2em;
+			font-size: 20px;
 			font-weight: normal;
 			margin: 0 0 5px;
 			text-transform: uppercase;
@@ -285,10 +285,10 @@
 		}
 
 		#artist {
-			font-family: 'FranklinGothic-Cd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-			font-size: 2em;
-			font-weight: normal;
-			line-height: 1em;
+			font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 26px;
 			margin: 0 0 5px;
 			text-transform: uppercase;
 		}
@@ -316,8 +316,9 @@
 		}
 
 		.description {
-			font-size: 13pt;
-			line-height: 22pt;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: .02em;
 			margin: $gap 0;
 		}
 
@@ -346,13 +347,14 @@
 
 			.add-to-cart-info {
 				float: right;
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 				text-align: right;
 				width: 60%;
 
 				#price, #price-field {
 					display: inline-block;
 					font-size: 22pt;
+					font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 					font-weight: 700;
 					letter-spacing: normal;
 					line-height: 22pt;
@@ -434,6 +436,11 @@
 		small {
 			display: block;
 			text-transform: uppercase;
+
+			span {
+				font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				font-weight: 700;
+			}
 		}
 
 		.size {
@@ -457,13 +464,13 @@
 		}
 		.frame-type {
 			background:url('../assets/frame-sprite.png') 1px 1px no-repeat transparent;
-			border:1px solid transparent;
+			border:2px solid transparent;
 			cursor: pointer;
 			display: inline-block;
-			height: 37px;
+			height: 39px;
 			overflow:hidden;
 			text-indent: -9999em;
-			width:37px;
+			width:39px;
 
 
 			&.Black.Gallery {
@@ -479,7 +486,7 @@
 				background-position: -171px 1px;
 			}
 			&.selected {
-				border:1px solid #777;
+				border:2px solid #777;
 			}
 		}
 	}

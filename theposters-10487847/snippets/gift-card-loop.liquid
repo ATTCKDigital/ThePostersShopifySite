@@ -19,7 +19,7 @@
 
    
     <div class="details">
-      <a href="{{ product.url }}">{{ product.price | money_without_trailing_zeros }}</a>
+      <a href="{{ product.url }}" class="shadow-header">{{ product.price | money_without_trailing_zeros }}</a>
       <small>{{ product.description }}</small>
     </div>
     <div class="purchase">

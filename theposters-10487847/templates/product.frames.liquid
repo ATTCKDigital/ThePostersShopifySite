@@ -46,7 +46,7 @@
                     <small class="frame-type-color">Frame: <span>None</span></small>
                     <div class="options">
                         {% for variant in product.variants %}
-                          <span class="frame-type {{variant.option1}}" data-frame-type="{{variant.option1}}" data-frame-price="{{ variant.price | money }}" data-frame-id="{{ variant.id }}">None None</span>
+                          <span class="frame-type {{variant.option1}}" data-frame-type="{{variant.option1}} {{variant.barcode}}" data-frame-price="{{ variant.price | money }}" data-frame-id="{{ variant.id }}">None None</span>
                         {% endfor %}
                     </div>
                     

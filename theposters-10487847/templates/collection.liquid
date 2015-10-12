@@ -8,11 +8,11 @@
         <div class="for-sale-header">
           <h1 class="shadow-header section-header">For Sale Now</h1>
         </div>
-        <div class="col-sm-12 for-sale-collection">
+        <div class="col-sm-8 for-sale-collection">
           {% for product in collection.products %}
             {% if product.metafields.visibility.expirationdate %}
               {% include 'product-loop' with collection.handle %}
-              {% cycle '', '<span class="new-line"></span>' %}
+              <!-- {% cycle '', '<span class="new-line"></span>' %} -->
             {% endif %}
           {% endfor %}
         </div>
@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
-          <h1 class="shadow-header-grey section-header">The Archive<small>These posters are no longer available for sale. Every once in a while we may release some from our vault. Follow us on <a href="https://www.facebook.com/ThePosters.co" target="_blank">Facebook</a> and <a href="http://instagram.com/theposters.co">Instagram</a> for more info!</small></h1>
+          <!-- <h1 class="shadow-header-grey section-header">The Archive<small>These posters are no longer available for sale. Every once in a while we may release some from our vault. Follow us on <a href="https://www.facebook.com/ThePosters.co" target="_blank">Facebook</a> and <a href="http://instagram.com/theposters.co">Instagram</a> for more info!</small></h1> -->
         </div>
       </div>
 
@@ -45,47 +45,47 @@
 {% endif %}
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    var productsArray = [];
-    var datesArray = [];
-    var products = $('#archived-pallet .product');
+  // $(document).ready(function() {
+  //   var productsArray = [];
+  //   var datesArray = [];
+  //   var products = $('#archived-pallet .product');
 
-    products.each(function(index, productDOM){
-      var expirationDate = $(this).data('expdate');
-      var expMonthYear = moment(expirationDate, 'YYYY-MM-DD').format('YYYY-MM');
-      var dateIndex;
+  //   products.each(function(index, productDOM){
+  //     var expirationDate = $(this).data('expdate');
+  //     var expMonthYear = moment(expirationDate, 'YYYY-MM-DD').format('YYYY-MM');
+  //     var dateIndex;
       
-      if(datesArray.indexOf(expMonthYear) === -1) {
-        datesArray.push(expMonthYear);
-      }
+  //     if(datesArray.indexOf(expMonthYear) === -1) {
+  //       datesArray.push(expMonthYear);
+  //     }
 
-      dateIndex = datesArray.indexOf(expMonthYear);
+  //     dateIndex = datesArray.indexOf(expMonthYear);
 
-      if(typeof productsArray[dateIndex] !== 'object') {
-        productsArray[dateIndex] = [];
-      }
+  //     if(typeof productsArray[dateIndex] !== 'object') {
+  //       productsArray[dateIndex] = [];
+  //     }
 
-      productsArray[dateIndex].push($(this));
-    });
+  //     productsArray[dateIndex].push($(this));
+  //   });
 
-    for(var i=0; i<datesArray.length; i++) {
-      if(moment().isAfter(moment(datesArray[i], 'YYYY-MM'))) {
-        var row = $('<div class="row products"><div class="col-sm-3"><div class="archive-section-header" style="background-image: url({{ 'archivesectionheader.png' | asset_url }})">'+moment(datesArray[i], 'YYYY-MM').format('MMM')+'<br />'+moment(datesArray[i], 'YYYY-MM').format('YYYY')+'<img src="{{ 'subscribe.gif' | asset_url }}" /></div></div><div class="col-sm-9"></div></div>');
+  //   for(var i=0; i<datesArray.length; i++) {
+  //     if(moment().isAfter(moment(datesArray[i], 'YYYY-MM'))) {
+  //       var row = $('<div class="row products"><div class="col-sm-3"><div class="archive-section-header" style="background-image: url({{ 'archivesectionheader.png' | asset_url }})">'+moment(datesArray[i], 'YYYY-MM').format('MMM')+'<br />'+moment(datesArray[i], 'YYYY-MM').format('YYYY')+'<img src="{{ 'subscribe.gif' | asset_url }}" /></div></div><div class="col-sm-9"></div></div>');
 
-        for(var j=0; j<productsArray[i].length; j++) {
-          if(moment().isAfter(moment(productsArray[i][j].data('expdate'), 'YYYY-MM-DD'))) {
-            row.find('.col-sm-9').append(productsArray[i][j]);
-          }
-        }
+  //       for(var j=0; j<productsArray[i].length; j++) {
+  //         if(moment().isAfter(moment(productsArray[i][j].data('expdate'), 'YYYY-MM-DD'))) {
+  //           row.find('.col-sm-9').append(productsArray[i][j]);
+  //         }
+  //       }
 
-        $('#archived').append(row);
-      }
-    }
+  //       $('#archived').append(row);
+  //     }
+  //   }
 
-    $('#archived-products .availability').hide();
-    // $('#archived-pallet').remove();
-    if($('#archived .products').length <= 0) {
-      $('#archived-products').hide();
-    }
-  });
+  //   $('#archived-products .availability').hide();
+  //   // $('#archived-pallet').remove();
+  //   if($('#archived .products').length <= 0) {
+  //     $('#archived-products').hide();
+  //   }
+  // });
 </script>

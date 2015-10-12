@@ -17,11 +17,13 @@
           {% if product.images.size > 1%}
           <div id="thumbs">
             {% for image in product.images %}
-             <div class="image">
-                <a href="{{ image | product_img_url: 'master' }}">
-                  <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
-                </a>
-              </div>
+              {% unless image.attached_to_variant? %}
+               <div class="image">
+                  <a href="{{ image | product_img_url: 'master' }}">
+                    <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
+                  </a>
+                </div>
+              {% endunless %}
             {% endfor %}
           </div>
           {% endif %}
@@ -36,7 +38,7 @@
           <hr style="margin-top: 0" />
           <h1 class="title" itemprop="name">{{ product.vendor }}</h1>
           <div id="artist">{{ product.title }}</div>
-          <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
+<!--           <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div> -->
           <hr />
 
           <form action="/cart/add" method="post" id="add-item-form">
@@ -46,7 +48,7 @@
                     <small class="frame-type-color">Frame: <span>None</span></small>
                     <div class="options">
                         {% for variant in product.variants %}
-                          <span class="frame-type {{variant.option1}}" data-frame-type="{{variant.option1}} {{variant.barcode}}" data-frame-price="{{ variant.price | money }}" data-frame-id="{{ variant.id }}">None None</span>
+                          <span class="frame-type {{variant.option2}}" data-frame-type="{{variant.option2}} {{variant.barcode}}" data-frame-price="{{ variant.price | money }}" data-frame-id="{{ variant.id }}" data-frame-image="{{variant.image | img_url: 'master'}}">None None</span>
                         {% endfor %}
                     </div>
                     
@@ -71,6 +73,7 @@
                     <div class="product-available">
                       <div id="price-field">{{ variant.price | money }}</div>
                       <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
+                      <small>Price includes shipping</small>
                     </div>
                     <div class="product-unavailable">
                       Sold Out
@@ -107,7 +110,7 @@
                 var frameID = $(this).data('frame-id');
                 var framePrice = $(this).data('frame-price');
                 var framePriceDisplay = $('#price-field');
-
+                var frameImage = $(this).data('frame-image');
 
                 $(this).toggleClass('selected').siblings().removeClass('selected');
 
@@ -124,13 +127,17 @@
 
                 $(framePriceDisplay).text(framePrice);
 
+                // toggle image 
+                $('#featured-image img').attr('src', frameImage);
 
                 //toggle product that gets added to cart
-                var optionFrameType  = frameType;
-                 
-                $('#product-select option[data-frame-type="'+optionFrameType+'"]').each(function(index){
-                    $(this).attr('selected', true).siblings().removeAttr('selected')
-                }); 
+                var optionFrameID  = frameID;
+                var optionSelectFrameValue = $("#product-select option[value='"+optionFrameID+"']");
+                console.log(optionSelectFrameValue);
+
+                $("#product-select option[value='"+optionFrameID+"']").attr('selected', 'selected').siblings().removeAttr('selected');
+
+                
 
               });          
 

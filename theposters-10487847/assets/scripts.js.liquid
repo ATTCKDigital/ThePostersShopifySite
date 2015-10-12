@@ -128,7 +128,6 @@ function updateCartItem(lineID, qty) {
     dataType: 'json',
     data: data,
     success: function(response) {
-      
       renderCart(response);
     },
     error: Shopify.onError

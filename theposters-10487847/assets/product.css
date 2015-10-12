@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'box-shadow'.
-        on line 218 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss, in `box-shadow'
-        from line 218 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss
+        on line 219 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss, in `box-shadow'
+        from line 219 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss
 
-213: 		#featured-image {
-214: 			background-size: contain;
-215: 			text-align: center;
-216:     		background-repeat: no-repeat;
-217:     		width: 100%;
-218: 			@include box-shadow(0px -1px 14px 0px rgba(50, 50, 50, 0.5));
-219: 
-220: 			a {
-221: 				display: block;
-222: 			}
-223: 
+214: 		#featured-image {
+215: 			background-size: contain;
+216: 			text-align: center;
+217:     		background-repeat: no-repeat;
+218:     		width: 100%;
+219: 			@include box-shadow(0px -1px 14px 0px rgba(50, 50, 50, 0.5));
+220: 
+221: 			a {
+222: 				display: block;
+223: 			}
+224: 
 
 Backtrace:
-/Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss:218:in `box-shadow'
-/Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss:218
+/Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss:219:in `box-shadow'
+/Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss:219
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:98:in `block in with_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
@@ -93,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'box-shadow'.\A         on line 218 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss, in `box-shadow'\A         from line 218 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss\A \A 213: 		#featured-image {\A 214: 			background-size: contain;\A 215: 			text-align: center;\A 216:     		background-repeat: no-repeat;\A 217:     		width: 100%;\A 218: 			@include box-shadow(0px -1px 14px 0px rgba(50, 50, 50, 0.5));\A 219: \A 220: 			a {\A 221: 				display: block;\A 222: 			}\A 223: "; }
+  content: "Error: Undefined mixin 'box-shadow'.\A         on line 219 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss, in `box-shadow'\A         from line 219 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./product.scss\A \A 214: 		#featured-image {\A 215: 			background-size: contain;\A 216: 			text-align: center;\A 217:     		background-repeat: no-repeat;\A 218:     		width: 100%;\A 219: 			@include box-shadow(0px -1px 14px 0px rgba(50, 50, 50, 0.5));\A 220: \A 221: 			a {\A 222: 				display: block;\A 223: 			}\A 224: "; }

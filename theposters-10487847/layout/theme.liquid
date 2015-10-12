@@ -271,6 +271,7 @@
             <a href="/cart/change?line={{ forloop.index }}&quantity=0" data-lid="{{ forloop.index + 1 }}" class="remove-item"><div class="remove-cart-item-icon" style="background-image: url({{ 'closeicon.png' | asset_url }})"></div></a>
             <h3>{{ item.product.title }}</h3>
             
+            
             <div class="qty">
               QTY <input type="text" size="2" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="tc item-quantity" /> <a href="#" class="update-cart" data-lid="{{ forloop.index + 1 }}">Update</a>
             </div>

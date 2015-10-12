@@ -11,9 +11,9 @@ Error: Undefined mixin 'display-flex'.
 22: 		@include display-flex;
 23: 		@include flex-wrap(wrap);
 24: 		@include justify-content(center);
-25: 	}
-26: 
-27: 	.gift-card-details {
+25: 		form {
+26: 			.image {
+27: 				height: 286px;
 
 Backtrace:
 /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./gift-cards.scss:22:in `display-flex'
@@ -82,4 +82,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'display-flex'.\A         on line 22 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./gift-cards.scss, in `display-flex'\A         from line 22 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./gift-cards.scss\A \A 17: 			display: none;\A 18: 		}\A 19: 	}\A 20: \A 21: 	.gift-card-products {\A 22: 		@include display-flex;\A 23: 		@include flex-wrap(wrap);\A 24: 		@include justify-content(center);\A 25: 	}\A 26: \A 27: 	.gift-card-details {"; }
+  content: "Error: Undefined mixin 'display-flex'.\A         on line 22 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./gift-cards.scss, in `display-flex'\A         from line 22 of /Users/okatailee/Sites/ATTCK/ThePostersShopifySite/theposters-10487847/sass/./gift-cards.scss\A \A 17: 			display: none;\A 18: 		}\A 19: 	}\A 20: \A 21: 	.gift-card-products {\A 22: 		@include display-flex;\A 23: 		@include flex-wrap(wrap);\A 24: 		@include justify-content(center);\A 25: 		form {\A 26: 			.image {\A 27: 				height: 286px;"; }

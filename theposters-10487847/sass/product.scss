@@ -83,12 +83,14 @@
  */
 
 .product {
-	display: inline-block;
+	display: flex;
+	flex-wrap:wrap;
 	float: none;
 	letter-spacing: 0.01em;
-	width: 287px;
-	margin: 20px;
+	width: 50%;
+	margin: 20px 0;
 	position: relative;
+	justify-content:center;
 
 	.poster-clips {
 		position: absolute;
@@ -180,6 +182,11 @@
 		text-align: center;
 		float: none;
 		margin: 0 auto;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: flex;
+		flex-wrap:wrap;
+
 		.product:nth-child(2n) {
 			
 		}

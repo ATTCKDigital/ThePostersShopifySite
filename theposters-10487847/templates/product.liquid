@@ -39,7 +39,7 @@
           <hr style="margin-top: 0" />
           <h1 class="title" itemprop="name">{{ product.vendor }}</h1>
           <div id="artist">{{ product.title }}</div>
-          <!-- <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div> -->
+          <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
           <hr />
 
           <div class="description" itemprop="description">
@@ -68,25 +68,25 @@
 
                 <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
               </div>
-              <!-- <div class="product-unavailable">
+              <div class="product-unavailable">
                 Sold Out
-              </div> -->
+              </div>
             {% else %}
-              <!-- <div class="product-unavailable">
+              <div class="product-unavailable">
                 Sold Out
-              </div> -->
+              </div>
             {% endif %}
             </div>
             <script type="text/javascript">
-              // $(document).ready(function(){
-              //   if(moment().isBefore(moment($('.add-to-cart-info').data('expdate'), 'YYYY-MM-DD'))) {
-              //     $('.add-to-cart-info').find('.product-available').show();
-              //     $('.add-to-cart-info').find('.product-unavailable').hide();
-              //   } else {
-              //     $('.add-to-cart-info').find('.product-available').hide();
-              //     $('.add-to-cart-info').find('.product-unavailable').show();
-              //   }
-              // }); 
+              $(document).ready(function(){
+                if(moment().isBefore(moment($('.add-to-cart-info').data('expdate'), 'YYYY-MM-DD'))) {
+                  $('.add-to-cart-info').find('.product-available').show();
+                  $('.add-to-cart-info').find('.product-unavailable').hide();
+                } else {
+                  $('.add-to-cart-info').find('.product-available').hide();
+                  $('.add-to-cart-info').find('.product-unavailable').show();
+                }
+              }); 
             </script>
           </form>
         </div>

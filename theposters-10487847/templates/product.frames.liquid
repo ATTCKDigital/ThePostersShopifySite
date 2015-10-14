@@ -20,7 +20,7 @@
               {% unless image.attached_to_variant? %}
                <div class="image">
                   <a href="{{ image | product_img_url: 'master' }}">
-                    <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
+                    <img src="{{ image | product_img_url: 'master' }}" alt="{{ image.alt | escape }}" />
                   </a>
                 </div>
               {% endunless %}
@@ -73,7 +73,7 @@
                     <div class="product-available">
                       <div id="price-field">{{ variant.price | money }}</div>
                       <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
-                      <small>Price includes shipping</small>
+                      <small></small>
                     </div>
                     <div class="product-unavailable">
                       Sold Out
@@ -114,13 +114,16 @@
 
                 $(this).toggleClass('selected').siblings().removeClass('selected');
 
-                // toggle frame type text and frame boder
-                if (frameType == 'None') {
+                // toggle frame type text and frame border
+                if (frameType == 'None ') {
                   $(frameText).text('None');
                   $('#featured-image').removeClass();
+                  console.log('none');
+                  $('.product-available small').empty();
                 } else {
                   $(frameText).text(frameType);
                   $('#featured-image').removeClass().addClass(frameType);
+                  $('.product-available small').text('Price includes shipping');
                 }
 
                 // toggle price display

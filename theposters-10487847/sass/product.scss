@@ -71,6 +71,7 @@
 		top: -11px;
 		display: inline-block;
     	width: 287px;
+    	margin:0 20px;
 	}
 	
 	.row {
@@ -85,16 +86,8 @@
  */
 
 .product {
-   -webkit-justify-content: center;
-   justify-content: center;
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-wrap: wrap;
-   flex-wrap: wrap;
 	float: none;
 	letter-spacing: 0.01em;
-	width: 50%;
-	margin: 20px 0;
 	position: relative;
 
 	.poster-clips {
@@ -107,19 +100,19 @@
 	}
 
 	.image {
-		height: 287px;
-		line-height: 287px;
+		height: auto;
 		text-align: center;
 		margin-bottom: 24px;
-		width: 287px;
+		width: 100%;
+		min-height: 287px;
 
 		a {
 			display: block;
 		}
 
 		img {
-			max-width: 287px;
-			max-height: 287px;
+			height: auto;
+			width: 100%;
 			-webkit-transition: all .2s;
 			-moz-transition: all .2s;
 			-ms-transition: all .2s;
@@ -192,6 +185,32 @@
 		display: flex;
 		flex-wrap:wrap;
 		-webkit-flex-wrap:wrap;
+		justify-content: center;
+   		-webkit-justify-content: center;
+
+   		.product {
+   			-webkit-justify-content: center;
+		   justify-content: center;
+		   display: -webkit-flex;
+		   display: flex;
+		   -webkit-flex-wrap: wrap;
+		   flex-wrap: wrap;
+		   	width: 23%;
+			margin: 20px 1%;
+
+			.image {
+				
+				display: -webkit-flex;
+		   		display: flex;
+		   		-webkit-align-items: center;
+		   		align-items:center;
+		   		height: 287px;
+			}
+
+			.details {
+				min-height: 106px;
+			}
+   		}
 
 		.product:nth-child(2n) {
 			

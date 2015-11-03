@@ -97,18 +97,18 @@ header#main-header #cart-info {
   text-align: right;
 }
 /* line 107, ../sass/global.scss */
-header#main-header #cart-info .login {
+header#main-header #cart-info .login, header#main-header #cart-info span {
   border-bottom: 1px transparent;
   color: #999;
   font-size: 14px;
   font-style: italic;
   letter-spacing: 0.05em;
-  margin-right: 28px;
+  margin-right: 10px;
   position: relative;
   top: -3px;
 }
 /* line 117, ../sass/global.scss */
-header#main-header #cart-info .login:hover {
+header#main-header #cart-info .login:hover, header#main-header #cart-info span:hover {
   border-bottom: 1px solid #999;
 }
 /* line 122, ../sass/global.scss */

@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
 
-  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+  <link rel="shortcut icon" href="{{ 'posters-favicon-square.png' | file_url }}" type="image/png" />
   <meta charset="utf-8" />
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
 
@@ -161,6 +161,7 @@
           <div class="col-sm-3">
             <div id="cart-info">
               <!-- <a href="/account/login" class="login">Sign In / Register</a> -->
+              <span>My Bag</span>
               <a href="/cart" class="toggle-cart" style="background-image: url({{ 'icon-bag.png' | asset_url }})">{{ cart.item_count }}</a>
             </div>
           </div>
@@ -229,7 +230,6 @@
               <ul>
                 <li><span>&copy; 2014 The Posters</span></li>
                 <li><a href="/blogs/press">Press Coverage</a></li>
-                <li><a href="/pages/submissions">Poster Submissions</a></li>
                 <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
                 <li><a href="/pages/terms-of-use">Terms of Use</a></li>
                 <li><a href="/pages/contact-us">Contact Us</a></li>

@@ -18,7 +18,7 @@
 }
 /* line 21, ../sass/index.scss */
 .control.active {
-  width: 135px;
+  width: 155px;
 }
 /* line 25, ../sass/index.scss */
 .control .poster-preview {
@@ -75,7 +75,7 @@
 /* line 75, ../sass/index.scss */
 .control.left:hover .poster-preview {
   opacity: 1;
-  width: 100px;
+  width: 110px;
 }
 /* line 80, ../sass/index.scss */
 .control.left:hover .arrow {
@@ -105,7 +105,7 @@
 /* line 105, ../sass/index.scss */
 .control.right:hover .poster-preview {
   opacity: 1;
-  width: 100px;
+  width: 110px;
 }
 /* line 110, ../sass/index.scss */
 .control.right:hover .arrow {
@@ -233,7 +233,7 @@
 /* line 242, ../sass/index.scss */
 .previewImage_container.anim1 .copy.title {
   left: 100%;
-  top: 43%;
+  top: 42%;
 }
 /* line 248, ../sass/index.scss */
 .previewImage_container.anim1:hover {
@@ -270,7 +270,7 @@
 }
 /* line 281, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy.availability {
-  top: 45.5%;
+  top: 49.5%;
 }
 /* line 285, ../sass/index.scss */
 .previewImage_container.anim1:hover .copy.date {
@@ -291,27 +291,6 @@
 /* line 300, ../sass/index.scss */
 .previewImage_container.anim1 hr.top {
   top: -10%;
-}
-/* line 307, ../sass/index.scss */
-.previewImage_container.anim1 .copy {
-  -webkit-transition: all .5s;
-}
-/* line 308, ../sass/index.scss */
-.previewImage_container.anim1 .copy.availability {
-  left: 10%;
-  top: 50%;
-}
-/* line 313, ../sass/index.scss */
-.previewImage_container.anim1 .copy.date {
-  color: #CCC;
-  left: -100%;
-  top: 35%;
-}
-/* line 319, ../sass/index.scss */
-.previewImage_container.anim1 .copy.title {
-  font-size: 2em;
-  left: 100%;
-  top: 40%;
 }
 /* line 331, ../sass/index.scss */
 .previewImage_container.anim2 hr.bottom {
@@ -612,21 +591,19 @@
   border: 10px solid #fff;
 }
 
-/**
- * Press Section
- */
-/* line 657, ../sass/index.scss */
+/** Press Section */
+/* line 655, ../sass/index.scss */
 #press-section {
-  background-position: center top;
+  background-position: center 200px;
   background-repeat: no-repeat;
   margin-bottom: 10px;
   overflow: hidden;
 }
-/* line 663, ../sass/index.scss */
+/* line 661, ../sass/index.scss */
 #press-section a, #press-section a * {
   text-decoration: none;
 }
-/* line 667, ../sass/index.scss */
+/* line 665, ../sass/index.scss */
 #press-section ul {
   list-style: none;
   margin: 145px 0 0 0;
@@ -634,12 +611,12 @@
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
-  /* line 667, ../sass/index.scss */
+  /* line 665, ../sass/index.scss */
   #press-section ul {
     margin: 375px 0 0 0;
   }
 }
-/* line 678, ../sass/index.scss */
+/* line 676, ../sass/index.scss */
 #press-section ul li {
   overflow: hidden;
   display: inline-block;
@@ -648,29 +625,29 @@
   margin-bottom: 20px;
   margin-right: 25px;
 }
-/* line 687, ../sass/index.scss */
+/* line 685, ../sass/index.scss */
 #press-section ul li:hover img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 692, ../sass/index.scss */
+/* line 690, ../sass/index.scss */
 #press-section ul li:hover p {
   color: black;
 }
-/* line 697, ../sass/index.scss */
+/* line 695, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 704, ../sass/index.scss */
+  /* line 702, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 710, ../sass/index.scss */
+/* line 708, ../sass/index.scss */
 #press-section ul li p {
   color: #999;
   display: block;
@@ -684,7 +661,7 @@
   -webkit-transition: color .2s;
   transition: color .2s;
 }
-/* line 724, ../sass/index.scss */
+/* line 722, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
   border: 10px solid #fff;

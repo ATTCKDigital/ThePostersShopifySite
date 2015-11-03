@@ -145,12 +145,16 @@
 .artist-profile .artist-products:nth-child(4) {
   clear: right;
 }
-/* line 164, ../sass/artist.scss */
+/* line 163, ../sass/artist.scss */
+.artist-profile .artist-products .product {
+  width: 287px;
+}
+/* line 168, ../sass/artist.scss */
 .artist-profile .artist-video {
   clear: both;
   background-color: #eeeeef;
 }
-/* line 168, ../sass/artist.scss */
+/* line 172, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-description {
   padding: 110px 0;
   text-align: right;
@@ -158,13 +162,13 @@
   float: right;
   font-size: 0.9em;
 }
-/* line 176, ../sass/artist.scss */
+/* line 180, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content {
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-/* line 181, ../sass/artist.scss */
+/* line 185, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: left;
@@ -173,11 +177,11 @@
   width: 400px;
   height: 240px;
 }
-/* line 191, ../sass/artist.scss */
+/* line 195, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons {
   position: relative;
 }
-/* line 194, ../sass/artist.scss */
+/* line 198, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .people-are-talking-icon {
   width: 186px;
   height: 55px;
@@ -187,7 +191,7 @@
   margin-left: -93px;
   z-index: 100;
 }
-/* line 204, ../sass/artist.scss */
+/* line 208, ../sass/artist.scss */
 .artist-profile .artist-video .social-grid-icons .cambird {
   width: 82px;
   height: 109px;
@@ -195,11 +199,11 @@
   right: 0;
   bottom: 0;
 }
-/* line 214, ../sass/artist.scss */
+/* line 218, ../sass/artist.scss */
 .artist-profile .social-grid {
   background-color: #eeeeef;
 }
-/* line 218, ../sass/artist.scss */
+/* line 222, ../sass/artist.scss */
 .artist-profile .people-are-talking {
   background-color: #eeeeef;
 }

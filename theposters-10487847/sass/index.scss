@@ -121,13 +121,21 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    
+    height: 625px;
+    display: -webkit-flex;
+    -webkit-align-items:center;
+    display: flex;
+    align-items:center;
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
     
+    .sizer {
+        position:relative;
+    }
+
     hr {
         background: white;
         border: 0;
@@ -168,7 +176,7 @@
         opacity: 0;
         outline: 1px solid #f00;
         padding: 7px 10px;
-        position: absolute;
+        position: relative;
         width: 200px;
         z-index: 2;
         
@@ -200,16 +208,75 @@
         -o-transition: all .2s;
         transition: all .2s;
     }
-    
+    .copy-holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        bottom:0;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        display: flex;
+        align-items: center;
+
+        .text-holder {
+            position:relative;
+            padding:20px 0;
+            width: 100%;
+
+            &:before, &:after {
+                -webkit-transition: all .5s;
+                content: '';
+                height: 1px;
+                background-color: #fff;
+                left:0;
+                margin:0 auto;
+                opacity: 1;
+                position:absolute;
+                right: 0;
+                transition: all .5s;
+                width: 80%;
+                z-index: 1;
+            }
+            &:before {
+                top:-10%;
+            }
+            &:after {
+                bottom:-10%;
+
+            }
+
+            &.availability {
+                color: #CCC;
+                font-size: .7em;
+            }
+            
+            &.date {
+                color: #CCC;
+            }
+            
+            &.title {
+                font-size: 2em;
+                line-height: 1em;
+            }
+
+        }
+        
+    }
     .copy {
         color: white;
         opacity: 0;
-        position: absolute;
+        position: relative;
         text-align: center;
         text-transform: uppercase;
         width: 80%;
+        margin:0 auto;
         z-index: 2;
         
+
         &.availability {
             color: #CCC;
             font-size: .7em;
@@ -221,7 +288,7 @@
         
         &.title {
             font-size: 2em;
-            white-space: nowrap;
+            line-height: 1em;
         }
         
         -webkit-transition: all .5s;
@@ -231,17 +298,17 @@
         .copy {
             &.availability {
                 left: 10%;
-                top: 50%;
+                //top: 50%;
             }
             
             &.date {
                 left: -100%;
-                top: 35%;
+                //top: 35%;
             }
             
             &.title {
                 left: 100%;
-                top: 42%;
+                //top: 42%;
             }
         }
         
@@ -279,16 +346,30 @@
                 opacity: 1;
                 
                 &.availability {
-                    top: 49.5%;
+                    //top: 49.5%;
+                    left: 0%;
                 }
                 
                 &.date {
-                    left: 10%;
+                    left: 0%;
                 }
                 
                 &.title {
-                    left: 10%;
+                    left: 0%;
                 }
+            }
+            .copy-holder {
+                opacity: 1;
+                .text-holder {
+                    &:before {
+                        top: 0;
+                    }
+
+                    &:after {
+                        bottom:0;
+                    }                    
+                }
+
             }
         }
         
@@ -650,12 +731,10 @@
     }
 }
 
-/**
- * Press Section
- */
+/** Press Section */
 
 #press-section {
-    background-position: center top;
+    background-position: center 200px;
     background-repeat: no-repeat;
     margin-bottom: 10px;
     overflow: hidden;

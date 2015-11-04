@@ -2791,7 +2791,7 @@ a#login-recover:hover {
 }
 /* line 57, ../sass/gift-cards.scss */
 .gift-cards .gift-card {
-  margin-bottom: 60px;
+  margin: 0 20px 60px;
 }
 /* line 63, ../sass/gift-cards.scss */
 .gift-cards .gift-card .details, .gift-cards #product-images .details {

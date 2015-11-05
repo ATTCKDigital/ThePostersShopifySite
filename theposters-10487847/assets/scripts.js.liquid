@@ -254,6 +254,52 @@ $(document).ready(function () {
     // Go to child link href
     document.location = $(this).find('a').attr('href');
   });
+  var cycleSlides = function(){
+    
+  var slideshow = $('.product-slideshow');
+  var leftControl = $(slideshow).find('.left.control');
+  var rightControl = $(slideshow).find('.right.control');
+
+  var current = slideshow.find('.active-product');
+    var next = slideshow.find('.active-product').next().filter('.previewImage_container');
+    var prevPrev = current;
+    var nextNext = slideshow.find('.active-product').next().next().filter('.previewImage_container');
+
+    if (next.length <= 0) {
+      next = slideshow.find('.previewImage_container').first();
+    }
+
+    if (nextNext.length <= 0 && slideshow.find('.previewImage_container').last().hasClass('active-product')) {
+      nextNext = slideshow.find('.previewImage_container').first().next().filter('.previewImage_container');
+    } else if(nextNext.length <= 0) {
+      nextNext = slideshow.find('.previewImage_container').first().filter('.previewImage_container');
+    }
+
+    if (next.length > 0) {
+      current.removeClass('active-product').fadeOut(300, function(){
+        next.addClass('active-product').fadeIn(300);
+
+        if (prevPrev.length > 0) {
+          leftControl.addClass('active');
+          leftControl.find('.poster-preview').find('.image').html(prevPrev.find('img').clone());
+          leftControl.find('.poster-preview').find('.artist').text(prevPrev.find('.date').text());
+        }
+
+        if(nextNext.length > 0) {
+          rightControl.addClass('active');
+          rightControl.find('.poster-preview').find('.image').html(nextNext.find('img').clone());
+          rightControl.find('.poster-preview').find('.artist').text(nextNext.find('.date').text());
+        }
+      });
+    }
+  }
+  var cycleStart;
+
+  function cycleThrough() {
+    cycleStart = setInterval(cycleSlides, 3500);
+  }
+
+  cycleThrough();
   
   if ($('.product-slideshow').length > 0) {
     $('.product-slideshow').each(function (index, value) {
@@ -268,6 +314,7 @@ $(document).ready(function () {
       slideshow.find('.previewImage_container').hide().first().show().addClass('active-product');
 
       leftControl.on('click', function(){
+        clearInterval(cycleStart);
         var current = slideshow.find('.active-product');
         var prev = slideshow.find('.active-product').prev().filter('.previewImage_container');
         var prevPrev = slideshow.find('.active-product').prev().prev().filter('.previewImage_container');
@@ -304,6 +351,7 @@ $(document).ready(function () {
       });
 
       rightControl.on('click', function(){
+        clearInterval(cycleStart);
         var current = slideshow.find('.active-product');
         var next = slideshow.find('.active-product').next().filter('.previewImage_container');
         var prevPrev = current;
@@ -340,7 +388,6 @@ $(document).ready(function () {
 
     });
   }
-
 });
 
 /**

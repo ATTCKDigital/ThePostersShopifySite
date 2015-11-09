@@ -5,46 +5,11 @@
 {% endif %}
 
     <hr class="top" />
-    <h2 class="mission-title">Our Goal is to Fund</h2>
-    <h3 class="{% if fundedhours == 'whitebg' %}shadow-header{% else %}shadow-header-inverted{% endif %}"><span class="funded-hours" style="display:none;">{{settings.hours_funded}}</span> Hours</h3>
-    <h2 class="mission-footer">Of Art Classes by 2016</h2>
+    <h2 class="mission-footer">Every 3 posters sold pays for </h2>
+    <h3 class="{% if fundedhours == 'whitebg' %}shadow-header{% else %}shadow-header-inverted{% endif %}">1 Hour</h3>
+    <h2 class="mission-footer">Of Art Classes for kids</h2>
     <p><a href="/pages/mission" class="btn btn-default">Learn More About Our Mission</a></p>
     <hr class="bottom" />
 </div>
 
-<script type="text/javascript">
-	(function(){
-		var hasDoneMissionScroll = false;
-		$(window).scroll(function (e) {
-			if (($(window).scrollTop() > ($('.funded-hours').offset().top - 500)) && !hasDoneMissionScroll) {
-				hasDoneMissionScroll = true;
-			    doMissionScroll();
-			}     
-	    });  
-	})();
-	
-	function doMissionScroll() {
-		$('.funded-hours').show().each(function () {
-	       	var $this = $(this);
-	       	var numberLength = $this.text().length;
-	       	
-	       	jQuery({
-	       		'Counter': 0
-	       	}).animate({
-	       		'Counter': $this.text()
-	       	}, {
-	            'duration': 4000,
-	            'easing': 'easeInOutExpo',
-	            step: function () {
-	                // var s = Math.ceil(this.Counter) + "";
-	                // while (s.length < numberLength) {
-	                // 	s = "," + s;
-	                // }
-	                var s = (Math.ceil(this.Counter)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	                
-	                $this.text(s);
-	            }
-	        });
-	    });
-	}
-</script>
+

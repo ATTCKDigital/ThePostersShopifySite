@@ -1672,8 +1672,8 @@ footer#main-footer nav ul li:last-child a {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 23%;
-  margin: 20px 1%;
+  width: 38%;
+  margin: 20px 6%;
 }
 /* line 201, ../sass/product.scss */
 #active-products .for-sale-collection .product .image {
@@ -1681,7 +1681,7 @@ footer#main-footer nav ul li:last-child a {
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  height: 287px;
+  height: 385px;
 }
 /* line 210, ../sass/product.scss */
 #active-products .for-sale-collection .product .details {

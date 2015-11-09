@@ -8,7 +8,7 @@
         <div class="for-sale-header">
           <h1 class="shadow-header section-header">For Sale Now</h1>
         </div>
-        <div class="col-sm-10 for-sale-collection">
+        <div class="col-sm-8 for-sale-collection">
           {% for product in collection.products %}
             {% if product.metafields.visibility.expirationdate %}
               {% include 'product-loop' with collection.handle %}

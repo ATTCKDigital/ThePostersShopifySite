@@ -16,6 +16,10 @@
 	
 	&.black {
 		color: black;
+
+		a {
+			color: inherit;
+		}
 	}
 	
 	&.full-width {

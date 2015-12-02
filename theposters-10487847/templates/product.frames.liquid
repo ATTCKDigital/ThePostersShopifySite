@@ -66,7 +66,7 @@
                   <input id="quantity" type="text" name="quantity" value="1" class="tc item-quantity" />
                   <label>QTY</label>
                 </div>
-                <div class="add-to-cart-info" data-expdate="{{product.metafields.visibility.expirationdate}}">
+                <div class="add-to-cart-info">
                   {% assign variant = product.selected_or_first_available_variant %}
                   {% if variant.available %}
                     <div class="product-available">
@@ -74,26 +74,13 @@
                       <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to Bag" />
                       <small></small>
                     </div>
-                    <div class="product-unavailable">
-                      No Longer Available
-                    </div>
                   {% else %}
                     <div class="product-unavailable">
                       No Longer Available
                     </div>
                   {% endif %}
                 </div>
-                  <script type="text/javascript">
-                    $(document).ready(function(){
-                      if(moment().isBefore(moment($('.add-to-cart-info').data('expdate'), 'YYYY-MM-DD'))) {
-                        $('.add-to-cart-info').find('.product-available').show();
-                        $('.add-to-cart-info').find('.product-unavailable').hide();
-                      } else {
-                        $('.add-to-cart-info').find('.product-available').hide();
-                        $('.add-to-cart-info').find('.product-unavailable').show();
-                      }
-                    }); 
-                  </script>
+
             </div>
           </form>
           <script>

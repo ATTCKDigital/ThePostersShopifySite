@@ -21,7 +21,7 @@
         {% assign featuredproduct = product %}
         {% if featuredproduct.handle != blank  %}
 
-          <div class="previewImage_container anim1" data-expdate="{{featuredproduct.metafields.visibility.expirationdate}}">
+          <div class="previewImage_container anim1">
             <div class="sizer">
               <img src="{{ featuredproduct.featured_image | product_img_url: 'grande' }}" alt="{{ featuredproduct.title }}" />
               <!-- <hr class="top" />

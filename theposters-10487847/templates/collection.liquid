@@ -24,7 +24,7 @@
   <section id="archived-products" style="">
     <div class="container">
       <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
+        <div class="col-sm-12">
           <h1 class="shadow-header-grey section-header">The Archive<small>These posters are no longer available for sale. Every once in a while we may release some from our vault. Follow us on <a href="https://www.facebook.com/ThePosters.co" target="_blank">Facebook</a> and <a href="http://instagram.com/theposters.co">Instagram</a> for more info!</small></h1>
         </div>
       </div>
@@ -69,16 +69,18 @@
     });
 
     for(var i=0; i<datesArray.length; i++) {
+      var row = $('<div class="row products"><div class="col-sm-8"></div></div>');
       if(moment().isAfter(moment(datesArray[i], 'YYYY-MM'))) {
-        var row = $('<div class="row products"><div class="col-sm-9"></div></div>');
+        
 
         for(var j=0; j<productsArray[i].length; j++) {
           if(moment().isAfter(moment(productsArray[i][j].data('expdate'), 'YYYY-MM-DD'))) {
-            row.find('.col-sm-9').append(productsArray[i][j]);
+            row.find('.col-sm-8').append(productsArray[i][j]);
           }
         }
 
         $('#archived').append(row);
+        //$('#archived .row.products').remove();
       }
     }
 

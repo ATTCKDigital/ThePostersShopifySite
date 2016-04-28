@@ -135,7 +135,7 @@
                 var optionFrameID  = frameID;
                 var optionSelectFrameValue = $("#product-select option[value='"+optionFrameID+"']");
                 
-                $("#product-select option[value='"+optionFrameID+"']").attr('selected', 'selected').siblings().removeAttr('selected');
+                $("#product-select option[value='"+optionFrameID+"']").prop("selected", true).siblings().removeAttr('selected');
 
                 
 
